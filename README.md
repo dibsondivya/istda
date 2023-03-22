@@ -1,2 +1,2 @@
 # istda
-Introduction to Statistical Thinking and Data Analysis
+This repository contains all relevant code pertaining to the module Introduction to Statistical Thinking and Data Analysis.
