@@ -1,0 +1,428 @@
+---
+title: "problem set 5"
+author: "Divya Shridar"
+date: "11/9/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+```
+
+# B1
+Revisit the dataset neutron.csv about a clinical trial comparing two forms of radiotherapy for cancer treatment. Cancer patients were randomly allocated to receive the standard therapy using photon particles or a new form using neutrons. Randomisation was stratified for four sites of cancer. The outcomes of interest is whether the new neutron treatment affects cancer survival compared to standard of care photon therapy. 
+```{r data import}
+neutron <- read.csv("neutron.csv")
+neutron
+```
+
+a. Fit a logistic regression model to estimate the odds ratio of death within one year for patients receiving Neutron therapy compared to Proton therapy.
+  i. Choose an appropriate reference treatment group for this comparison and fit the logistic regression model.
+```{r a i}
+# y = death 1 year; made binary
+# x = treatment received
+
+# made binary
+neutron <- neutron %>% mutate(
+  death_int = ifelse(death1year == 'Yes', 1, 0)
+)
+
+# photons as reference group 
+  # i kept neutrons as ref group :(
+fit_1a <- glm(death_int ~ treatment,
+              family = binomial(link=logit),
+              data = neutron)
+summary(fit_1a)
+```
+  
+  ii. Write the estimated regression equation.
+```{r a ii}
+# log(odds) = 0.3067 - 0.4359*(treatment)
+  # x=1 if treatment by photons
+  # else x=0
+```
+  
+  iii. Use the regression equation to calculate the predicted log-odds and odds in each treatment group.
+```{r a iii}
+# if photons: log(odds) = 0.3067 - 0.4359 = -0.1292
+# if photons: odds = e^-0.1292 = 0.879
+# if neutrons: log(odds) = 0.3067
+# if neutrons: e^0.3067 = 1.359
+```
+  
+  iv. Interpret the odds ratio and its 95% confidence interval.
+```{r a iv}
+# odds ratio
+exp(coef(fit_1a))
+
+# CI for odds  ratio
+exp(confint.default(fit_1a))
+
+# Photon treatment associated  with 0.65 times lower odds of death than neutron therapy (95%   CI 0.33 to 1.24).
+```
+  
+  v. Compare the odds ratio, test statistic, and p-value to the inference from part B2(b) of the Problem Set 4 and the chi-squared test in part B2(e) of Problem Set 4.
+```{r a v}
+# Different.
+
+## should be the same; my mistake was using the wrong ref group in this problem set.
+## explore why the values should be the same
+```
+  
+b. Randomization was stratified by site of cancer, which means that we should adjust for cancer site in the analysis. First, examine the relationship between cancer site and death within one year.
+  i. Construct a contingency table to summarise the data about risk of death within 1 year by cancer site.
+```{r b i}
+b1_table <- table(neutron$site, neutron$death1year)
+b1_table
+```
+  
+  ii. Calculate the sample proportion and odds of death within 1 year by cancer site.
+```{r b ii}
+# sample proportion = x/n = p
+# odds of death = p/1-p
+b1_df <- as.data.frame.matrix(b1_table) 
+b1_df
+b1_df$p  <- b1_df$Yes/(b1_df$Yes + b1_df$No)
+b1_df$odds <- b1_df$p/(1-b1_df$p)
+b1_df
+```
+  
+  iii. Calculate the expected cell counts under the null hypothesis that there is no difference in probability of death by cancer site.
+```{r b iii}
+# null hypothesis = each cancer cite has same  p of death that is total p
+
+# add total row
+b1_df <- b1_df %>% add_row(No = sum(b1_df$No),
+                  Yes = sum(b1_df$Yes),
+                  p = Yes/(No+Yes),
+                  odds = p/(1-p))
+rownames(b1_df)[5] <- "Total"
+b1_df
+
+#  add expected
+b1_df$expectedYes <- (b1_df$No+b1_df$Yes)*b1_df[5,3]
+b1_df$expectedNo <- (b1_df$No+b1_df$Yes)*(1-b1_df[5,3])
+b1_df
+```
+  
+  iv. Calculate the chi-squared test statistic and p-value. Compare your results to the output reported by chisq.test(...).
+```{r b iv}
+# prepare matrices
+expected <- matrix(c(b1_df$expectedNo[-5], b1_df$expectedYes[-5]), # removed last row
+                      ncol=2,
+                      byrow=FALSE)
+colnames(expected) <- colnames(b1_table)
+rownames(expected) <- rownames(b1_table)
+expected
+
+# apply test stat
+chi_squared_test_stat <- sum(((b1_table-expected)^2)/expected)
+chi_squared_test_stat # 5.112912
+
+# p value
+pchisq(chi_squared_test_stat, df=3, lower.tail=FALSE) # 0.1637134
+
+#  comparison is true
+chisq.test(b1_table,
+           correct = FALSE)
+```
+  
+c. Fit a logistic regression model for the risk of death within one year by cancer site. Make cervix the reference category for site.
+```{r  c}
+# rewrite with reference category
+neutron$site <- relevel(as.factor(neutron$site), ref="Cervix")
+
+# fit model
+fit_1c <- glm(death_int ~ site,
+              family = binomial,
+              data = neutron)
+summary(fit_1c)
+```
+  
+  i. Write the estimated regression equation.
+$$log(odds) = -0.4353 + 0.8167*Bladder - 0.4810*Prostate + 0.6765*Rectum$$
+  ii. Calculate and interpret the odds ratio and 95% confidence interval associated with each of the reported regression coefficients.
+```{r c ii}
+# odds ratio
+exp(coef(fit_1c))
+
+# CI for odds  ratio
+exp(confint.default(fit_1c))
+
+# Bladder site  cancer associated  with 2.26 times higher odds of death than cervix (95%   CI 0.92 to 5.55)
+# Prostate site  cancer associated  with 0.62 times lower odds of death than cervix (95%   CI 0.10 to 3.76)
+# Rectum site  cancer associated  with 1.96 times higher odds of death than cervix (95%   CI 0.77 to 5.04)
+
+```
+  
+d. Fit a logistic regression for the effect of Neutron therapy versus Proton therapy adjusted for cancer site. 
+  i. Name the baseline treatment group.
+```{r d i}
+#  Baseline treatment group  is Neutrons.
+```
+  
+  ii. Write the regression equation.
+```{r d ii}
+fit_1d <- glm(death_int ~  site + treatment,
+              family = binomial,
+              data = neutron
+              )
+
+summary(fit_1d)
+
+# log(odds) = -0.1922 + 0.7536*Bladder - 0.6672*Prostate + 0.5829*Rectum - 0.4337*Photons
+
+## usually get wider CI as more parameters are added; implication: weaker CI means poorer predictor?
+```
+  
+  iii. Find the odds of death for a patient with cancer of the cervix who receives neutron therapy. 
+```{r d iii}
+logit_odds_cervix_neutron <- -0.1922 + 0.7536*0 - 0.6672*0 + 0.5829*0 - 0.4337*0
+odd_cervix_neutron <- exp(logit_odds_cervix_neutron)
+odd_cervix_neutron
+```
+  
+    iv. Find the odds of death for a patient with cancer of the bladder who receives neutron therapy.
+```{r d iv}
+logit_odds_bladder_neutron <- -0.1922 + 0.7536*1 - 0.6672*0 + 0.5829*0 - 0.4337*0
+odds_bladder_neutron <- exp(logit_odds_bladder_neutron)
+odds_bladder_neutron
+```
+    
+  v. Find the odds of death for a patient with cancer of the rectum who receives photon therapy.
+```{r d v}
+logit_odds_rectum_photon  <- -0.1922 + 0.7536*0 - 0.6672*0 + 0.5829*1 - 0.4337*1
+odds_rectum_photon <- exp(logit_odds_rectum_photon)
+odds_rectum_photon
+```
+  
+  vi. Interpret the odds ratio for treatment group and its 95% confidence interval and compare to the unadjusted odds ratio reported in part (a).
+```{r d vi}
+# odds ratio for treatment group
+exp(coef(fit_1d)) # 0.6481118 lower in photons
+
+# confint
+exp(confint.default(fit_1d)) # 0.33179670 1.265983 for treatment
+
+# Part (a) had: Photon treatment associated  with 0.65 times lower odds of death (95%   CI 0.33 to 1.24)
+# SAME
+```
+  
+# B2 
+The dataset ‘4s_trial.csv’ contains data from the Scandinavian Simvastatin Survival Study (4S) trial, looking at number of deaths for those allocated to placebo compared to those allocated to the simvastatin group. This trial recruited patients with coronary heart disease aged 35 to 70. 
+```{r import data}
+trial <- read.csv('4s_trial.csv')
+trial
+```
+a. Tabulate the results in any appropriate way.
+```{r a}
+# get counts
+table(trial$sim, trial$dead)
+```
+
+b. Produce any appropriate bar chart of the data.
+```{r b}
+library(ggplot2)
+library(dplyr)
+bar_data <- trial %>% count(sim, dead)
+bar_data
+
+ggplot(bar_data,aes(x = sim,
+                   y = n,
+                   fill=dead))+
+     geom_bar(stat="identity",position="dodge")
+```
+
+c. Use logistic regression to estimate the odds ratio of death for those allocated to simvastatin compared to those allocated to placebo.
+  i. Name the baseline group.
+```{r c i}
+#  Baseline group is allocated placebo
+```
+  
+  ii. Write the regression equation.
+```{r c iiHERE}
+trial <- trial %>% mutate(
+  death_int = ifelse(dead == "Dead", 1, 0)
+)
+trial
+
+fit_2c <- glm(death_int ~ sim,
+              binomial,
+              trial)
+summary(fit_2c)
+
+# log(odds) = -2.03909 - 0.37712*(Simvastatin)
+
+## p value of interest is that of exposure: simSimvastatin at 0.000217
+```
+  iii. Find the odds of death in each treatment group.
+```{r c iii}
+# if simvastatin: log(odds) = -2.03909 - 0.37712 = -2.41621
+# if simvastatin: odds is exp(-2.41621) = 0.08925927
+
+# if placebo: log(odds) = -2.03909 
+# if placebo: odds is exp(-2.03909) = 0.1301471
+```
+
+  iv. Express the null hypothesis that simvastatin allocation has no effect on risk of death in terms of the regression equation and interpret a test of this hypothesis.
+```{r c iv}
+# null hypothesis: simvastatin and placebo both result in the same proportion of deaths
+
+# log(odds(death_int)) = -2.03909  
+
+# odds(death_int) = exp(-2.03909) = 0.1301471
+# The odds of dying when on Simvastatin and Placeb is both equal to 0.13.
+
+## Strong evidence to reject as Pr(>|z|) is significant
+```
+  
+  v. Interpret the odds ratio and its 95% confidence interval.
+```{r c v}
+exp(coef(fit_2c))
+
+exp(confint.default(fit_2c))
+
+# Odds of dying when on Simvastatin is 0.6858333 times the odds of dying when on placebo. (95% CI 0.56 - 0.84)
+
+
+## alternative:
+#cbind("odds" = exp(coef(fit_2c)),
+#      exp(confint.default(fit_2c)))
+```
+
+d. Use logistic regression to estimate the effect of simvastatin on odds of death in separately in women and men.
+```{r d}
+# in women
+fit_2d_women <- glm(death_int ~ sim,
+              binomial,
+              trial %>% filter(gender=="Women"))
+summary(fit_2d_women)
+# log(odds) = -2.7600 + 0.1157*Simvastatin
+
+# in men
+fit_2d_men <- glm(death_int ~ sim,
+              binomial,
+              trial %>% filter(gender=="Men"))
+summary(fit_2d_men)
+# log(odds) = -1.91769 - 0.45286*Simvastatin
+```
+
+e. Use logistic regression to estimate the effect of simvastatin on odds of death, adjusted for gender. Use women as the reference category for gender.
+  i. Name the baseline treatment group.
+```{r e i}
+# Placebo is baseline treatment group.
+```
+  
+  ii. Write the regression equation.
+```{r e iiHERE}
+# rewrite with reference category
+trial$gender <- relevel(as.factor(trial$gender), ref="Women")
+
+fit_2e <- glm(death_int ~ gender + sim,
+              binomial, 
+              trial)
+summary(fit_2e)
+
+# log(odds) = -2.5298 + 0.5820*Man - 0.3812*Simvastatin
+
+## Intercept is women on placebo.
+
+## p value of interest is that of exposure: simSimvastatin at 0.000190
+```
+
+  iii. Use the estimated regression equation to find the predicted odds of death in women allocated to simvastatin and in women allocated to placebo. Then calculate the predicted odds of death for men allocated to simvastatin and to placebo.
+```{r e iii}
+# predicted odds of death in women allocated to simvastatin 
+  # log(odds) = -2.5298 + 0.5820*0 - 0.3812*1 = -2.5298- 0.3812 = -2.911
+  # odds = exp(-2.911) = 0.05442128
+
+# predicted odds in women allocated to placebo.
+  # log(odds) = -2.5298 + 0.5820*0 - 0.3812*0 = -2.5298
+  # odds = exp(-2.5298) = 0.07967495
+
+# predicted odds of death in men allocated to simvastatin 
+  # log(odds) = -2.5298 + 0.5820*1 - 0.3812*1 = -2.5298 + 0.5820- 0.3812 = -2.329
+  # odds = exp(-2.329) = 0.09739309
+
+# predicted odds in men allocated to placebo.
+  # log(odds) = -2.5298 + 0.5820*1 - 0.3812*0 = -2.5298 + 0.5820 = -1.9478
+  # odds = exp(-1.9478) = 0.1425874
+
+odds_table <- data.frame(log = c(-2.911, -2.5298, -2.329, -1.9478),
+                          odds = c(0.05442128, 0.07967495, 0.09739309, 0.1425874),
+                         gender = c("Woman", "Woman", "Man", "Man"),
+                         treatment = c("Simvastatin", "Placebo", "Simvastatin", "Placebo"))
+odds_table
+```
+  
+  iv. Convert the predicted odds of death by sex and treatment to the predicted probabiliyt of death.
+```{r e iv}
+odds_table$p <- odds_table$odds/(1+odds_table$odds)
+odds_table
+```
+  
+  v. Use the predicted odds and probability of death to estimate the (1) odds ratio, (2) risk ratio, and (3) risk difference of death by treatment group for women and for men.
+```{r e v}
+# odds ratio = odds/odds
+  # treatment across men; sim/placebo = 0.09739309/0.14258740 = 0.6830413
+  # treatment across women; sim/placebo = 0.05442128/0.07967495 = 0.6830413
+
+# risk ratio = p/p
+  ## different across men and woomen due to differences in baseline risk
+  # treatment across men; sim/placebo = 0.08874950/0.12479343 = 0.7111713
+  # treatment across women; sim/placebo = 0.05161246/0.07379531 = 0.6994003
+
+
+# risk difference = p -p
+  # treatment across men; sim - placebo = 0.08874950 - 0.12479343 = -0.03604393
+  # treatment across women; sim - placebo = 0.05442128 -0.07967495 = -0.02525367
+
+```
+  
+f. Use logistic regression to conduct a hypothesis test addressing the question: is the effect of simvastatin on odds of death is different in men to its effect in women?
+  i. Name the baseline group(s).
+```{r f i}
+# Baseline: placebo and women
+```
+  
+  ii. Write the regression equation for this model.
+```{r f ii}
+fit_2f <- glm(death_int ~ gender + sim + gender:sim, # gender + sim + gender:sim
+    binomial,
+    trial)
+
+summary(fit_2f)
+
+# log(odds) =  0.8423*Men +  0.1157 *Simvastatin -0.5685*(men x simvastatin)
+
+## Even if examining interactions, intercept represents women with placebo; when not men and nt simvastatin. genderMen:simSimvastatin = 1 only if men and simvastatin.
+```
+  
+  iii. Calculate the predicted odds in women allocated to each treatment group.
+```{r f iii}
+# women in simvastatin
+  # log(odds) =  0.8423*0 +  0.1157 *1 -0.5685*(0) = 0.1157
+  # odds = exp(0.1157) = 1.122659
+
+# women in placebo
+  # log(odds) =  0.8423*0 +  0.1157 *0 -0.5685*(0) = 0
+  # odds = exp(0) = 1
+```
+  
+  iv. Interpret the hypothesis test that the effect of simvastatin allocation differs by gender.
+```{r f iv}
+# Hypothesis test: odds ratio = 1
+
+# odds of men in simvastatin dying = exp(0.8423*1 +  0.1157 *1 -0.5685*(0)) = exp(0.958) = 2.606478
+# odds ratio = 2.606478/1.122659 = 2.321701 
+
+## Significant at (Intercept) and genderMen but pvalue of focus is the interaction one with p val of 0.063997. Thus, weak evidence against null hypothesis.
+```
+  
+  v. Based on these trial results, do you recommend that women should take simvastatin to lower their risk of death?
+```{r f v}
+# Women should not switch to simvastatin
+```
+  
+  

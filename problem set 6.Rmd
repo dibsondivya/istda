@@ -1,0 +1,186 @@
+---
+title: "problem set 6"
+author: "Divya Shridar"
+date: "11/21/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Install packages
+```{r}
+library(ggplot2)
+library(dplyr)
+library(survival)
+```
+
+## B1
+```{r b1 import data}
+data <- read.csv("rotterdam.csv")
+data
+```
+
+a. Read in the dataset. Calculate follow-up time for overall survival in years. Summarise the distribution of follow-up time both numerically and graphically.
+```{r a}
+# Calculate follow-up time = survival time in months to years
+data$ftime_years <- data$os/12
+head(data)
+
+# Summarise the distribution of follow-up time both numerically and graphically.
+summary(data$ftime_years)
+boxplot(data$ftime_years)
+```
+
+b. Use Poisson regression to estimate the log rate ratio for chemotherapy compared to no chemotherapy, adjusting for age at surgery.
+```{r b}
+# in glm: offset can be used to specify an a priori known component to be included in the linear predictor during fitting
+
+# the equation we want is: log(rate) = log(t) + intercept0 + intercept1*chemo + intercept2*age
+fit <- glm(formula = osi~chemo+age, # log(rate) = intercept0 + intercept1*chemo + intercept2*age
+           offset = log(ftime_years), # adding in log(t) into formula
+           family = 'poisson',
+           data = data)
+summary(fit)
+```
+
+c. Write down the fitted regression equation for the log rate. Calculate the expected rate for a 65 year old women who received chemotherapy and the expected rate for a 65 year old women who did not receive chemotherapy.
+$$
+log(rate) = -4.13226 + 0.33879*chemo + 0.02241*age
+$$
+```{r c}
+expected_rate_chemo <- exp(-4.13226 + 0.33879*1 + 0.02241*65)
+expected_rate_nochemo <- exp(-4.13226 + 0.33879*0 + 0.02241*65)
+c(expected_rate_chemo, expected_rate_nochemo)
+```
+
+d. Based on the fitted model, calculate the rate ratios and the associated 95% confidence intervals for chemo and for age. Interpret the results. Do the estimates make sense? What might be driving the observed associations?
+```{r d}
+# calculate rate ratio = exp(coefficients)
+exp(fit$coefficients)
+# with chemo: 40% higher rate of death ; maybe chemo only used for v high risk cases
+
+# confint
+exp(confint(fit))
+# chemo: [1.20323692 1.63245199]
+# age: [1.01771309 1.02765721]
+```
+
+#B2. 
+We will use data from the Veterans’ Administration Lung Cancer Study, a randomised trial of two treatment regimens for lung cancer to practice time-splitting. This dataset is included in the R package survival. Load the dataset and review a description of the dataset with the R commands:
+```{r b2 import}
+data(cancer, package = "survival")
+help("veteran")
+names(veteran)
+head(veteran)
+```
+
+a. Calculate follow-up time for overall survival in years (it is presently in days). Summarise the distribution of follow-up time both numerically and graphically. Do you notice any strange follow-up times?
+```{r}
+veteran$ftime_years <- veteran$time/365.25
+summary(veteran$ftime_years)
+boxplot(veteran$ftime_years) # some very very large values
+```
+
+b. Fit a Poisson regression model to these data to estimate the mortality rate ratio comparing the two treatment groups. Calculate and interpret the rate ratio and its 95% CI.
+```{r}
+fit <- glm(formula = status~trt,
+           offset = log(ftime_years),
+           family = poisson,
+           data = veteran)
+
+# rate ratio and CI
+cbind(exp(fit$coefficients), exp(confint(fit)))
+
+# those who receive the treatment had a 10% lower rate of death?
+```
+
+c. So far we have assumed a constant baseline rate throughout the follow-up period. We can relax this by splitting follow-up time into periods and estimating a separate rate in each period. Use the function survSplit() to split follow-up time into four periods at 0 to 0.25 years, 0.25 to 0.5 years, 0.5 to 1 year and greater than 1 year. Fit a Poisson model to this dataset to estimate the rate ratio for treatment group, allowing the baseline rate to vary over the follow-up periods. Is the estimate of the treatment effect similar or different to that from the model you fitted in part (b)? How do you interpret the parameters for the different follow-up time groups?
+```{r}
+# We can relax this by splitting follow-up time into periods and estimating a separate rate in each period
+  # Use the function survSplit() to split follow-up time into four periods at 0 to 0.25 years, 0.25 to 0.5 years, 0.5 to 1 year and greater than 1 year.
+  # needs formula of model, data, vector of timepoints to cut at
+
+ftime_periods <- c(0.25, 0.5, 1, 100) # to create 4 groups, need three periods. auto start from 0 since include.lowest is set to false by default
+
+# Fit a Poisson model to this dataset to estimate the rate ratio for treatment group, allowing the baseline rate to vary over the follow-up periods.
+timesplit_veteran <- survSplit(formula = Surv(ftime_years, status) ~ trt, # Surv takes time, time2, event
+          data = veteran,
+          cut = ftime_periods,
+          episode = "ftime_group") # episode refers to the new episode variable aka period # for each period created
+table(timesplit_veteran$ftime_group) # to check period
+
+## REMEMBER: also need to use time intervals per period instead of total follow up time
+timesplit_veteran$ftime_interval <- timesplit_veteran$ftime_years - timesplit_veteran$tstart
+
+# ACCOUNT FOR FOLLOW UP PERIODS BY + TO MODEL
+fit <- glm(formula = status~trt+factor(ftime_group), # use factor() so ftime_group isnt treated as numeric
+           offset = log(ftime_interval),
+           family = poisson,
+           data = timesplit_veteran)
+
+# Is the estimate of the treatment effect similar or different to that from the model you fitted in part (b)? 
+cbind(exp(fit$coefficients), exp(confint(fit)))
+#  estimate is a lot poorer this time, wth those who receive treatment having only a 2% lower chance of dyiing
+
+# How do you interpret the parameters for the different follow-up time groups?
+  # mortality is worst in time period 1 from 0 to 0.5 years since largest estimate 
+```
+
+# C1
+To motivate the analysis of survival using the Cox regression model, we will further explore question B2 part (c). In that exercise we split follow-up time into arbitrary intervals. We can take this approach further by splitting follow-up time at every failure time and estimating a separate baseline rate at each time of death.
+
+a) Split follow-up time at each death by creating a vector of each of the observed times of death, and then using the survSplit() function to create intervals split at each of these event times.
+```{r}
+veteran_deaths <- veteran %>% filter(status==1)
+veteran_deaths_times <- veteran_deaths$ftime_years # is a vector
+
+# step 1: create periods
+timesplit_death_veteran <- survSplit(formula = Surv(ftime_years, status) ~ trt, # Surv takes time, time2, event
+          data = veteran,
+          cut = veteran_deaths_times,
+          episode = "ftime_group")
+
+# step 2: get intervals of periods
+timesplit_death_veteran$ftime_interval <- timesplit_death_veteran$ftime_years - timesplit_death_veteran$tstart
+timesplit_death_veteran
+```
+
+b) Fit a Poisson regression model for the effect of treatment adjusted for the time-varying baseline mortality rate as a factor variable. (Note: do not attempt to call the confint() function on a model object with this many parameters. At best it will take forever and at worst it will cause your computer to run out of memory and freeze/crash.)
+```{r}
+fit <- glm(formula = status~trt+factor(ftime_group),
+           data = timesplit_death_veteran,
+           family = poisson,
+           offset = log(ftime_interval))
+```
+
+c) Splitting follow-up at each failure time can lead to massive datasets, which in turn can make it difficult to fit models. The veteran dataset is small enough that we could split at each follow-up up time and directly fit the model, but as the number of failure times increases, so does the computational burden.
+
+We can exploit the properties of the Poisson distribution to ease this computational burden. Rather than fitting a model consisting of one observation per-person, per-period, we can collapse the dataset so that we have just one observation for each pattern of covariates and follow-up period. We then fit the model where the outcome is the sum of the number of events, and the offset is the sum of the number of person years, for each pattern of covariates. Rather than this, we can collapse by trt and ftime_grp, summing status and py_interval.
+
+Collapse your data into this grouped form (hint: use the function aggregate() or in dplyr the functions group_by() and summarise()). Fit the appropriate Poisson model. Satisfy yourself that the model parameters and standard errors are equivalent to those from the model you fit in part (b).
+```{r}
+# we can collapse the dataset so that we have just one observation for each pattern of covariates and follow-up period.
+  # for every trt, theres one of each ftime_group
+
+# We then fit the model where the outcome is the sum of the number of events, and the offset is the sum of the number of person years, for each pattern of covariates.
+
+aggregated_death_veteran <- timesplit_death_veteran %>% 
+  group_by(trt, ftime_group) %>% 
+  summarise(status = sum(status), 
+            ftime_interval=sum(ftime_interval))
+
+
+# Fit the appropriate Poisson model. 
+latest_fit <- glm(formula = status~trt+factor(ftime_group),
+                  data = aggregated_death_veteran,
+                  family = poisson,
+                  offset = log(ftime_interval))
+
+
+# Satisfy yourself that the model parameters and standard errors are equivalent to those from the model you fit in part (b).
+ratio_of_coeff <- as.vector(latest_fit$coefficients/fit$coefficients)
+sum(ratio_of_coeff)/length(ratio_of_coeff) # average ratio is 1; parameters are equal
+```
+

@@ -1,0 +1,252 @@
+---
+title: "problem set 7"
+author: "Divya Shridar"
+date: "11/25/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Install packages
+```{r}
+library(ggplot2)
+library(dplyr)
+library(survival)
+#install.packages("ggsurvfit")
+library(ggsurvfit)
+```
+
+## B1
+```{r import data}
+data <- read.csv("example_surv.csv")
+data
+
+
+data %>% arrange(ftime_y)
+## follow up time used as time interval since when your treatment is administered doesn't matter but how long you survived on it does
+  ## can also use age if theres a large variability in age across the dataset since your age is a signfiicant determinant in treatment 
+## cannot mix follw up time and age though
+```
+
+a. Using the formualae from the lecture and Kirkwood and Sterne, calculate the Kaplan-Meier survival func- tion (Kirkwood and Sterne Section 26.3) and the Nelson-Aalen cumulative hazard function (Kirkwood and Sterne 26.4) ‘by hand’.
+$$
+Surv = S(t) = \prod_i (1 - \frac {d_i}{n_i})  
+= \prod_i (1 - \frac {no. of events at risk}{no. of people at risk})
+= (1 - \frac{1}{7}) * (1 - \frac{1}{4}) * (1 - \frac{1}{3}) *  (1 - \frac{1}{2})  
+= \frac{6}{7} * \frac{3}{4} * \frac{2}{3} * \frac{1}{2}
+= \frac{6}{28}
+= \frac{3}{14}
+$$
+
+$$
+Hazard = H(t) = \sum_i \frac{d_i}{n_i} = \frac{1}{7} + \frac{1}{4} + \frac{1}{3} + \frac{1}{2} 
+= \frac{12}{84} + \frac{21}{84} + \frac{28}{84} + \frac{42}{84} 
+= \frac{103}{84}
+= 1\frac{19}{84}
+= 1.23
+$$
+
+b. Read the data in to R and calculate the Kaplan-Meier and Nelson-Aalen estimates using the functions in the survival package. Confirm that they agree with what you calculated in part (a). Plot the estimated survival and cumulative hazard functions.
+```{r b}
+# Kaplan Meier
+km_surv <- survfit(Surv(ftime_y, status) ~ 1, # simple rate
+                   data = data) 
+km_estimate <- summary(km_surv)$surv[length(summary(km_surv)$surv)] # get final value of survival produced in summary
+km_estimate # 0.2142857, yes agrees with a ## cannot exceed 1
+# plot survival
+km_surv %>% 
+  ggsurvfit() +
+  labs(
+    x = "Time",
+    y = "Overall survival probability"
+  )
+
+# Nelson-Aalen estimate
+surv_cox <- coxph(Surv(ftime_y, status) ~ 1, data = data)
+na_hazard <- basehaz(coxph(Surv(ftime_y, status) ~ 1, data = data))
+na_estimate <- na_hazard[nrow(na_hazard),"hazard"]
+na_estimate # 1.22619, yes agrees with a ## note that hazard can exceed 1
+# plot hazard
+ggplot(data = na_hazard,
+       mapping = aes(x = time, y = hazard)) +
+  geom_line()
+```
+c. Repeat the calculations and plots from part (b) using age as the time-scale. You will need to calculate the ages at entry and end of follow-up based on the relevant dates.
+```{r c}
+# Kaplan Meier
+km_surv <- survfit(Surv(age_enter, age_endfup, status) ~ 1, data = data) 
+km_estimate <- summary(km_surv)$surv[length(summary(km_surv)$surv)] # get final value of survival produced in summary
+km_estimate # 0.2133333, smaller than a
+# plot survival
+km_surv %>% 
+  ggsurvfit() +
+  labs(
+    x = "Time",
+    y = "Overall survival probability"
+  )
+
+# Nelson-Aalen estimate
+surv_cox <- coxph(Surv(age_enter, age_endfup, status) ~ 1, data = data)
+na_hazard <- basehaz(surv_cox)
+na_estimate <- na_hazard[nrow(na_hazard),"hazard"]
+na_estimate # 1.233333, larger than a
+# plot hazard
+ggplot(data = na_hazard,
+       mapping = aes(x = time, y = hazard)) +
+  geom_line()
+```
+# B2
+```{r data import}
+data(cancer, package="survival")
+help("veteran")
+names(veteran)
+```
+
+a. Plot the Kaplan-Meier estimate for the survival function. What is the median time to death? What is the probability of surviving 180 days or longer? What is the probability of dying within the first 30 days? (Hint: see the times = argument in ?summary.survfit.)
+```{r a}
+# Plot the Kaplan-Meier estimate for the survival function.
+km_surv <- survfit(Surv(time, status) ~ 1, 
+                   data = veteran) 
+km_estimate <- summary(km_surv)$surv[length(summary(km_surv)$surv)] # get final value of survival produced in summary
+km_estimate # 0
+km_surv %>% 
+  ggsurvfit() +
+  labs(
+    x = "Time",
+    y = "Overall survival probability"
+  )
+
+# What is the median time to death? 
+summary(km_surv)$table['median'] # 80 days
+
+# What is the probability of surviving 180 days or longer? 
+  # survival is Probability of surviving up to a given time. Thus, need 1-
+1 - summary(km_surv, time=180)$surv # 0.7775886
+
+# What is the probability of dying within the first 30 days?
+summary(km_surv, time=30)$surv # 0.700435
+```
+
+
+b. Now, compare survival by treatment group. Plot the Kaplan-Meier estimate for the survival function stratified by treatment. What is the median survival for each group?
+```{r}
+# Plot the Kaplan-Meier estimate for the survival function.
+km_surv <- survfit(Surv(time, status) ~ trt, 
+                   data = veteran) 
+km_estimate <- summary(km_surv)$surv[length(summary(km_surv)$surv)] # get final value of survival produced in summary
+km_estimate # 0
+km_surv %>% 
+  ggsurvfit() +
+  labs(
+    x = "Time",
+    y = "Overall survival probability"
+  )
+
+# What is the median survival for each group?
+summary(km_surv)$table[,'median'] # 103 for trt1 and 52.5 for trt2 
+```
+
+c. Use the log-rank test to conduct a hypothesis test of whether there is a difference in survival between treatment groups. What is the null and alternative hypothesis? Interpret the results of the log-rank test.(Hint: see the survdiff function for conducting the log-rank test.)
+```{r}
+#survdiff: Tests if there is a difference between two or more survival curves using the G-rho family of tests, or for a single curve against a known alternative.
+
+# survdiff(formula of Surv ~ , data, rho=0, timefix=TRUE)
+
+survdiff(Surv(time, status) ~ trt,
+         data = veteran)
+
+# null: no difference between groups
+# alt: there is a diff in survival between treatment groups
+# p val is 0.9 so insufficient to reject null; there is no diff in survival between treatment groups
+```
+
+d. Fit a Cox proportional hazards regression model with follow-up time in days as the time-scale to estimate the hazard ratio for experimental versus standard treatment. Interpret the results of the model. How do the results compare to the results of the log-rank test in part (c)? What are the benefits of one or the other?
+```{r}
+# follow up time is already in days
+cox_fit <- coxph(formula = Surv(time, status) ~ trt, # Surv~
+      data = veteran)
+
+summary(cox_fit)
+
+# p val is still large, null hyp is not rejected
+
+# benefit is that the amount of difference in treatment across groups is modelled; 2% hgher mortality with experimental
+```
+
+e. Create a new variable for survival in years. Refit the Cox proportional hazards model with follow-up time in years as the time scale. How do the results compare to those in part (d)? Compare the estimates to the time-split Poisson models that you fit in problem set 6.
+```{r}
+veteran$time_years <- veteran$time/365.25
+
+cox_years_fit <- coxph(formula = Surv(time_years, status) ~ trt, # Surv~
+      data = veteran)
+
+summary(cox_years_fit) # to get CI as well
+
+# same p value and coefficent and CI 
+
+# compared across pset 6: estimated hazard ratio is very close 
+```
+
+f. Use cox.zph() to test the proportional hazards assumption. Plot the scaled-Schoenfeld residuals. Do you think the proportional hazards assumption is reasonable?
+```{r}
+cox.zph(fit = cox_years_fit) # get chisq, df and p value
+
+# plot residuals
+plot(cox.zph(fit = cox_years_fit))
+
+# line not straight; some interaction with time
+```
+
+#C1. 
+We will now relax the proportional hazards assumption by splitting follow-up time and allowing the HR for treatment to vary accross the periods of follow-up.
+
+a. Split the follow-up time at 3 months, 6 months, and 1 year. Re-fit the Cox model to the time-split data. Assure yourself that the model is equivalent to that you fit in part a.
+```{r ahelp}
+time_breaks <- c(0.25, 0.5, 1) # in years
+
+split_veteran <- survSplit(Surv(time_years, status)~.,
+          data = veteran,
+          cut = time_breaks,
+          episode = "ftime_group")
+
+# why include start time here but not when splitting??? ##help
+cox_split_fit <- coxph(formula = Surv(tstart,time_years, status) ~ trt+factor(ftime_group), # Surv~
+      data = split_veteran)
+summary(cox_split_fit)
+```
+
+b. Fit an interaction between treatment and the strata of follow-up time. Compare this model with the proportional hazards model you fit in part a.
+```{r}
+cox_interaction_fit <- coxph(formula = Surv(tstart,time_years, status) ~ trt*factor(ftime_group), # Surv~
+      data = split_veteran)
+summary(cox_interaction_fit)
+```
+
+c. Calculate HRs and normal approximation 95% CIs for treatment group for each follow-up interval. Interpret these estimates.
+```{r help}
+# standard model output: h(t) = baseline hazard x exp(log hazard ratio*x1 + .. + log hazard ratio*xj)
+
+## with interaction terms,,, what does it look like?
+```
+
+
+# C2. 
+It is known that different histological types (recorded here as celltype) have different prognoses. We would like to adjust for histological type, but we are not especially interested in estimating the HRs for the different groups. We can stratify the baseline hazard by histological type, so that risk-sets are created within type. This allows us to adjust for histological type, without the restrictive proportional hazards assumption. Fit the same model you fitted in C1 part b, stratifying the baseline hazard for histological type. Compare your results to those you obtained in C1 parts b and c.
+```{r help}
+# We can stratify the baseline hazard by histological type, so that risk-sets are created within type
+
+# stratify by +strata(var)
+cox_stratified_fit <- coxph(formula = Surv(tstart,time_years, status) ~ trt*factor(ftime_group) + strata(celltype), # Surv~
+      data = split_veteran)
+summary(cox_stratified_fit)
+
+# how to read this ##help
+```
+
+
+```{r}
+?survfit
+```
+

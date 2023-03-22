@@ -1,0 +1,1059 @@
+"id","sex","age","region","work_status_pre","hpw_pre","stroke_severity","randomisation_dte","alloc","rtw_flg","rtw_dte","exit_assessment_dte","essvr_complete_flg","health_score"
+1,"Male",61,"North West","Permanent",40,"Moderate",2020-06-05,"Usual Care",1,2021-05-17,2021-07-06,,36
+2,"Female",69,"South East","Permanent",45,"Moderate",2020-09-18,"Usual Care",0,,2021-08-24,,38
+3,"Male",59,"North East","FixedTerm",45,"Moderate",2020-08-18,"Usual Care",0,,2021-07-29,,29
+4,"Male",55,"North West","Casual",15,"Mild",2020-11-30,"ESSVR",1,2021-10-05,2021-12-16,1,49
+5,"Male",68,"West Midlands","FixedTerm",50,"Mild",2020-10-19,"ESSVR",1,2021-07-05,2021-11-01,1,48
+6,"Female",66,"North East","FixedTerm",45,"Moderate",2020-08-17,"ESSVR",1,2021-06-21,2021-08-10,0,73
+7,"Female",69,"North East","Permanent",40,"Moderate",2020-05-26,"ESSVR",1,2021-01-19,2021-04-27,1,29
+8,"Male",66,"South East","Permanent",40,"Mild",2020-11-13,"ESSVR",1,2021-06-07,2021-11-05,1,55
+9,"Female",63,"South East","Permanent",20,"Mild",2020-05-18,"ESSVR",1,2021-03-16,2021-06-04,1,60
+10,"Male",55,"West Midlands","SelfEmployed",40,"Severe",2020-09-08,"ESSVR",1,2021-06-28,2021-10-05,1,45
+11,"Female",66,"West Midlands","FixedTerm",40,"Mild",2020-10-02,"ESSVR",1,2021-06-28,2021-09-02,1,55
+12,"Male",47,"North West","FixedTerm",25,"Moderate",2020-11-06,"ESSVR",0,,2021-10-26,1,24
+13,"Male",67,"West Midlands","Permanent",40,"Severe",2020-11-03,"Usual Care",1,2021-06-08,2021-11-17,,44
+14,"Male",69,"South East","Permanent",45,"Mild",2020-05-28,"Usual Care",1,2021-01-18,2021-05-06,,36
+15,"Male",36,"North West","Casual",15,"Moderate",2020-05-06,"Usual Care",1,2021-03-24,2021-06-04,,63
+16,"Female",66,"North East","SelfEmployed",50,"Mild",2020-08-12,"ESSVR",1,2021-06-21,2021-07-30,1,78
+17,"Male",69,"South East","FixedTerm",40,"Moderate",2020-10-01,"Usual Care",1,2021-08-16,2021-09-27,,50
+18,"Male",54,"South East","Contractor",50,"Mild",2020-11-26,"ESSVR",1,2021-10-08,2021-11-10,1,44
+19,"Male",64,"West Midlands","Permanent",40,"Mild",2020-08-26,"Usual Care",0,,2021-08-18,,67
+20,"Female",38,"South East","SelfEmployed",40,"Moderate",2020-09-08,"ESSVR",0,2021-09-20,2021-09-20,1,68
+21,"Male",69,"North West","Permanent",20,"Moderate",2020-09-17,"Usual Care",1,2021-06-21,2021-10-20,,6
+22,"Female",68,"North East","Permanent",30,"Mild",2020-11-11,"ESSVR",1,2021-05-12,2021-11-10,0,33
+23,"Female",66,"North East","Permanent",25,"Mild",2020-10-05,"ESSVR",1,2021-09-20,2021-09-24,1,33
+24,"Female",65,"West Midlands","Permanent",20,"Moderate",2020-06-04,"Usual Care",1,2021-05-24,2021-06-01,,43
+25,"Male",66,"North West","SelfEmployed",45,"Moderate",2020-07-07,"ESSVR",1,2021-05-10,2021-07-12,1,33
+26,"Male",57,"North East","SelfEmployed",45,"Moderate",2020-05-15,"ESSVR",1,2020-12-21,2021-05-21,0,34
+27,"Male",61,"South East","Permanent",45,"Moderate",2020-09-16,"ESSVR",1,2021-06-04,2021-09-24,1,34
+28,"Male",57,"North East","FixedTerm",40,"Mild",2020-06-05,"ESSVR",1,2021-02-26,2021-06-21,1,45
+29,"Male",62,"South East","SelfEmployed",45,"Moderate",2020-08-13,"ESSVR",1,2021-04-09,2021-08-20,0,46
+30,"Male",58,"North West","SelfEmployed",30,"Mild",2020-10-30,"ESSVR",1,2021-05-27,2021-11-04,1,38
+31,"Female",56,"North East","FixedTerm",40,"Mild",2020-08-03,"ESSVR",0,,2021-08-02,1,25
+32,"Male",59,"South East","Permanent",50,"Severe",2020-09-04,"Usual Care",1,2021-06-02,2021-09-28,,40
+33,"Female",51,"North West","Permanent",45,"Moderate",2020-07-14,"ESSVR",1,2021-03-29,2021-07-05,1,73
+34,"Male",44,"North West","Permanent",40,"Mild",2020-09-21,"Usual Care",1,2021-07-16,2021-09-09,,39
+35,"Male",58,"West Midlands","Permanent",45,"Moderate",2020-10-26,"Usual Care",1,2021-07-05,2021-09-30,,41
+36,"Male",56,"North East","Permanent",40,"Mild",2020-06-26,"ESSVR",1,2020-11-12,2021-06-03,1,62
+37,"Male",58,"West Midlands","Contractor",30,"Mild",2020-11-17,"Usual Care",1,2021-11-01,2021-12-15,,34
+38,"Female",59,"West Midlands","Permanent",45,"Moderate",2020-11-27,"ESSVR",1,2021-09-20,2021-11-18,0,45
+39,"Male",63,"North West","Permanent",45,"Mild",2020-05-08,"Usual Care",1,,2021-04-13,,39
+40,"Male",58,"West Midlands","Casual",40,"Mild",2020-06-09,"ESSVR",1,2021-04-07,2021-07-08,1,56
+41,"Male",68,"North East","Permanent",40,"Mild",2020-05-05,"Usual Care",1,2021-03-08,2021-05-04,,33
+42,"Male",64,"South East","Permanent",45,"Moderate",2020-10-26,"Usual Care",1,2021-09-24,2021-09-29,,31
+43,"Male",69,"West Midlands","Contractor",50,"Mild",2020-07-27,"Usual Care",1,2021-02-04,2021-08-19,,37
+44,"Female",59,"North West","Permanent",25,"Moderate",2020-08-24,"Usual Care",1,2021-05-24,2021-08-23,,37
+45,"Male",49,"North West","FixedTerm",40,"Mild",2020-10-02,"ESSVR",0,2021-10-08,2021-10-14,1,41
+46,"Female",62,"South East","Permanent",25,"Moderate",2020-11-30,"ESSVR",1,2021-09-10,2021-11-25,1,33
+47,"Female",68,"South East","FixedTerm",45,"Mild",2020-07-31,"Usual Care",1,2021-07-13,2021-08-16,,46
+48,"Female",65,"North East","FixedTerm",40,"Moderate",2020-07-22,"Usual Care",1,2021-01-13,2021-08-11,,50
+49,"Male",60,"North East","Permanent",50,"Moderate",2020-08-13,"Usual Care",1,2021-03-01,2021-09-01,,39
+50,"Male",44,"North East","Permanent",45,"Mild",2020-06-04,"ESSVR",1,2021-01-25,2021-06-10,1,12
+51,"Male",54,"South East","FixedTerm",50,"Mild",2020-08-07,"Usual Care",1,2021-03-29,2021-07-21,,41
+52,"Male",61,"North West","SelfEmployed",20,"Mild",2020-09-03,"ESSVR",1,2021-04-26,2021-08-31,1,50
+53,"Male",66,"West Midlands","SelfEmployed",45,"Mild",2020-11-09,"Usual Care",1,2021-11-05,2021-11-23,,53
+54,"Female",39,"South East","Contractor",40,"Moderate",2020-09-22,"Usual Care",1,2021-09-20,2021-10-06,,14
+55,"Male",62,"South East","Permanent",25,"Mild",2020-09-08,"Usual Care",1,2021-05-03,2021-08-20,,53
+56,"Male",57,"North West","FixedTerm",45,"Moderate",2020-06-16,"Usual Care",0,,2021-05-26,,35
+57,"Male",63,"South East","FixedTerm",40,"Severe",2020-11-23,"Usual Care",0,,2021-12-10,,29
+58,"Male",63,"North West","Contractor",45,"Moderate",2020-10-01,"Usual Care",0,2021-10-05,2021-10-06,,39
+59,"Male",67,"North East","SelfEmployed",40,"Moderate",2020-07-01,"Usual Care",0,,2021-06-04,,53
+60,"Female",49,"South East","FixedTerm",40,"Mild",2020-07-27,"ESSVR",1,2021-05-03,2021-06-28,1,43
+61,"Male",67,"North East","FixedTerm",40,"Moderate",2020-09-07,"ESSVR",1,2021-03-11,2021-09-13,1,46
+62,"Male",65,"North East","Permanent",45,"Mild",2020-08-26,"Usual Care",0,,2021-09-02,,39
+63,"Female",66,"South East","Permanent",45,"Moderate",2020-07-17,"ESSVR",1,2021-06-03,2021-07-07,1,57
+64,"Male",57,"North West","FixedTerm",25,"Moderate",2020-10-15,"Usual Care",1,2021-06-17,2021-10-27,,27
+65,"Male",65,"North West","Permanent",45,"Mild",2020-07-10,"Usual Care",0,,2021-07-09,,30
+66,"Male",49,"South East","Casual",40,"Mild",2020-07-02,"Usual Care",1,2021-05-31,2021-07-22,,48
+67,"Male",48,"South East","Permanent",40,"Mild",2020-06-11,"Usual Care",0,2021-06-11,2021-07-02,,50
+68,"Male",56,"West Midlands","Permanent",45,"Mild",2020-08-05,"Usual Care",1,2021-07-29,2021-08-30,,42
+69,"Female",45,"West Midlands","FixedTerm",50,"Mild",2020-10-19,"Usual Care",0,,2021-10-25,,30
+70,"Male",51,"North East","Permanent",40,"Mild",2020-05-25,"ESSVR",1,2021-05-21,2021-05-26,1,50
+71,"Male",65,"North West","Permanent",50,"Mild",2020-11-18,"ESSVR",1,2021-07-19,2021-12-03,1,28
+72,"Male",65,"North East","SelfEmployed",45,"Moderate",2020-05-04,"ESSVR",1,2021-04-14,2021-04-15,1,57
+73,"Male",59,"South East","Permanent",50,"Mild",2020-08-12,"ESSVR",1,2021-02-11,2021-09-03,0,29
+74,"Male",65,"North West","Permanent",45,"Moderate",2020-11-03,"Usual Care",1,2021-08-27,2021-11-30,,27
+75,"Female",65,"North West","FixedTerm",50,"Severe",2020-08-05,"ESSVR",1,2021-07-29,2021-08-16,0,19
+76,"Male",59,"West Midlands","Contractor",50,"Moderate",2020-07-30,"ESSVR",1,2021-03-15,2021-08-11,1,26
+77,"Male",61,"South East","Casual",40,"Mild",2020-09-18,"ESSVR",1,2021-04-15,2021-08-23,0,74
+78,"Female",67,"North East","Contractor",45,"Mild",2020-09-21,"Usual Care",0,,2021-09-20,,53
+79,"Male",57,"North West","SelfEmployed",45,"Mild",2020-05-26,"ESSVR",1,2021-03-01,2021-05-20,1,75
+80,"Male",62,"North West","Casual",35,"Mild",2020-09-24,"Usual Care",0,,2021-10-08,,43
+81,"Male",64,"South East","Contractor",55,"Mild",2020-11-06,"Usual Care",1,2021-09-13,2021-11-04,,37
+82,"Female",53,"North East","Contractor",50,"Moderate",2020-09-02,"ESSVR",1,2021-08-05,2021-09-08,1,45
+83,"Male",42,"West Midlands","SelfEmployed",45,"Moderate",2020-07-17,"ESSVR",1,2021-05-10,2021-06-24,1,38
+84,"Male",54,"North East","Permanent",50,"Mild",2020-11-13,"Usual Care",1,2021-08-23,2021-12-01,,52
+85,"Female",58,"North West","Permanent",50,"Moderate",2020-05-26,"ESSVR",1,2021-02-11,2021-04-30,0,43
+86,"Female",61,"South East","Permanent",40,"Mild",2020-10-02,"Usual Care",1,2021-05-20,2021-09-21,,49
+87,"Male",59,"West Midlands","Contractor",25,"Moderate",2020-05-26,"ESSVR",1,2021-04-30,2021-06-23,1,38
+88,"Male",61,"North East","Contractor",45,"Severe",2020-11-18,"Usual Care",0,,2021-10-26,,19
+89,"Male",55,"North East","FixedTerm",40,"Moderate",2020-06-04,"Usual Care",1,2020-12-22,2021-06-25,,40
+90,"Male",63,"North East","Contractor",25,"Severe",2020-10-16,"ESSVR",1,2021-10-06,2021-10-13,1,29
+91,"Male",47,"North East","Casual",20,"Severe",2020-07-15,"Usual Care",0,,2021-07-28,,28
+92,"Male",31,"North West","Contractor",40,"Severe",2020-09-22,"ESSVR",1,2021-08-04,2021-08-27,1,37
+93,"Female",68,"North West","Permanent",45,"Moderate",2020-09-08,"Usual Care",1,2021-08-19,2021-08-25,,61
+94,"Female",55,"West Midlands","Permanent",45,"Mild",2020-07-13,"Usual Care",1,2021-06-25,2021-08-09,,55
+95,"Female",54,"North West","Permanent",25,"Mild",2020-08-19,"Usual Care",1,2021-05-17,2021-07-29,,40
+96,"Male",50,"South East","Permanent",50,"Mild",2020-11-25,"Usual Care",1,2021-09-27,2021-12-14,,32
+97,"Male",66,"West Midlands","Casual",45,"Mild",2020-11-04,"Usual Care",1,2021-08-16,2021-11-09,,39
+98,"Male",65,"West Midlands","FixedTerm",45,"Moderate",2020-10-23,"Usual Care",1,2021-09-27,2021-10-21,,36
+99,"Female",48,"West Midlands","Permanent",45,"Moderate",2020-05-11,"Usual Care",1,2021-02-22,2021-05-28,,40
+100,"Male",68,"South East","Contractor",40,"Mild",2020-06-22,"Usual Care",1,2021-04-08,2021-07-19,,42
+101,"Female",69,"South East","FixedTerm",40,"Moderate",2020-11-27,"ESSVR",1,2021-10-18,2021-12-22,0,28
+102,"Female",69,"North West","Casual",50,"Mild",2020-05-22,"Usual Care",1,2021-03-24,2021-05-14,,39
+103,"Female",55,"North West","FixedTerm",45,"Mild",2020-05-28,"Usual Care",0,,2021-05-03,,29
+104,"Male",64,"South East","Permanent",40,"Moderate",2020-05-18,"ESSVR",1,2021-01-04,2021-05-19,1,26
+105,"Male",65,"North East","Permanent",45,"Moderate",2020-05-27,"Usual Care",1,2021-04-12,2021-05-14,,50
+106,"Male",43,"North East","Permanent",20,"Moderate",2020-09-18,"ESSVR",1,2021-04-15,2021-09-28,1,46
+107,"Male",51,"West Midlands","Permanent",20,"Mild",2020-05-14,"Usual Care",1,2020-11-09,2021-05-28,,41
+108,"Female",60,"North East","Casual",25,"Mild",2020-10-06,"ESSVR",1,2021-09-06,2021-09-22,0,50
+109,"Female",62,"South East","Contractor",50,"Moderate",2020-10-30,"Usual Care",1,2021-03-29,2021-11-08,,31
+110,"Female",43,"West Midlands","FixedTerm",40,"Moderate",2020-05-15,"ESSVR",1,2020-11-17,2021-05-17,1,52
+111,"Female",63,"South East","Permanent",40,"Severe",2020-11-09,"ESSVR",1,2021-06-21,2021-10-11,0,36
+112,"Male",60,"West Midlands","Contractor",45,"Mild",2020-09-24,"Usual Care",1,2021-07-23,2021-10-14,,49
+113,"Male",67,"North West","SelfEmployed",40,"Severe",2020-10-01,"ESSVR",1,2021-08-27,2021-10-18,1,15
+114,"Male",52,"West Midlands","Permanent",45,"Moderate",2020-08-18,"ESSVR",1,2021-04-21,2021-08-18,0,20
+115,"Male",61,"South East","Casual",45,"Moderate",2020-08-06,"ESSVR",1,2021-05-28,2021-08-13,1,46
+116,"Female",63,"North West","Casual",55,"Moderate",2020-10-22,"Usual Care",0,,2021-10-15,,37
+117,"Male",43,"North East","Contractor",45,"Moderate",2020-08-13,"ESSVR",1,2021-05-14,2021-08-16,1,48
+118,"Male",50,"North East","FixedTerm",45,"Mild",2020-10-01,"Usual Care",0,2021-10-04,2021-10-19,,44
+119,"Female",69,"West Midlands","Permanent",45,"Mild",2020-08-24,"Usual Care",0,,2021-08-03,,36
+120,"Male",58,"West Midlands","Permanent",50,"Mild",2020-07-09,"ESSVR",1,2021-03-12,2021-07-22,1,44
+121,"Male",65,"North West","Contractor",40,"Moderate",2020-07-30,"ESSVR",1,2021-06-21,2021-08-17,0,37
+122,"Male",46,"West Midlands","FixedTerm",25,"Moderate",2020-09-14,"ESSVR",0,,2021-09-02,1,42
+123,"Male",68,"South East","Permanent",50,"Moderate",2020-05-21,"ESSVR",1,2021-02-25,2021-05-26,1,36
+124,"Female",65,"South East","Permanent",40,"Mild",2020-09-30,"Usual Care",1,2021-07-22,2021-10-26,,27
+125,"Male",67,"South East","SelfEmployed",40,"Mild",2020-07-17,"Usual Care",1,2021-02-17,2021-08-03,,32
+126,"Male",66,"West Midlands","FixedTerm",25,"Mild",2020-07-30,"Usual Care",0,,2021-08-17,,49
+127,"Male",57,"West Midlands","FixedTerm",50,"Moderate",2020-06-19,"ESSVR",1,2021-04-01,2021-05-26,1,15
+128,"Female",65,"West Midlands","Permanent",25,"Moderate",2020-08-13,"ESSVR",1,2021-07-26,2021-08-24,1,43
+129,"Female",65,"North West","Casual",35,"Moderate",2020-09-04,"ESSVR",1,2021-06-25,2021-09-28,0,21
+130,"Female",65,"South East","SelfEmployed",25,"Mild",2020-05-11,"Usual Care",0,,2021-04-26,,43
+131,"Male",54,"North East","FixedTerm",40,"Mild",2020-06-11,"ESSVR",1,2021-05-03,2021-05-19,1,38
+132,"Female",52,"North West","Casual",45,"Mild",2020-06-04,"Usual Care",1,2021-02-08,2021-06-22,,46
+133,"Male",66,"North West","Permanent",40,"Moderate",2020-10-07,"ESSVR",1,2021-06-23,2021-09-08,1,8
+134,"Female",67,"North East","FixedTerm",20,"Moderate",2020-09-10,"ESSVR",1,2020-11-23,2021-08-27,0,63
+135,"Male",47,"West Midlands","Contractor",55,"Severe",2020-09-10,"ESSVR",1,2021-02-22,2021-10-04,0,49
+136,"Female",47,"North West","Permanent",50,"Moderate",2020-08-21,"ESSVR",1,2021-07-15,2021-08-02,1,39
+137,"Male",63,"West Midlands","Permanent",40,"Mild",2020-06-16,"Usual Care",1,2021-06-14,2021-06-21,,67
+138,"Female",67,"West Midlands","SelfEmployed",50,"Moderate",2020-11-24,"ESSVR",1,2021-08-16,2021-11-22,1,52
+139,"Female",63,"South East","FixedTerm",20,"Moderate",2020-11-09,"Usual Care",0,,2021-11-02,,59
+140,"Female",54,"South East","Permanent",25,"Severe",2020-05-08,"Usual Care",1,2021-03-01,2021-05-18,,49
+141,"Male",68,"South East","Permanent",50,"Mild",2020-05-15,"Usual Care",0,,2021-05-18,,37
+142,"Female",58,"North West","Permanent",25,"Severe",2020-11-27,"ESSVR",1,2021-08-09,2021-11-03,0,51
+143,"Female",54,"North East","Contractor",40,"Mild",2020-08-06,"ESSVR",1,2021-05-24,2021-08-12,1,54
+144,"Male",55,"North West","Permanent",40,"Moderate",2020-09-18,"Usual Care",1,2021-06-14,2021-09-29,,13
+145,"Male",44,"North West","Permanent",45,"Moderate",2020-05-07,"ESSVR",1,2021-03-08,2021-05-11,0,45
+146,"Male",67,"North West","Contractor",40,"Moderate",2020-07-20,"Usual Care",0,2021-07-26,2021-07-26,,10
+147,"Male",57,"North East","FixedTerm",45,"Mild",2020-08-21,"ESSVR",1,2021-04-19,2021-08-04,1,33
+148,"Male",52,"North West","Contractor",45,"Mild",2020-05-22,"Usual Care",1,2021-04-21,2021-05-10,,68
+149,"Female",41,"North East","SelfEmployed",45,"Mild",2020-07-21,"Usual Care",1,2021-04-12,2021-07-08,,47
+150,"Female",54,"West Midlands","Permanent",45,"Mild",2020-06-16,"ESSVR",1,2021-06-09,2021-06-15,1,63
+151,"Male",51,"South East","Casual",20,"Mild",2020-05-08,"ESSVR",1,2021-02-18,2021-04-26,1,62
+152,"Female",67,"West Midlands","Permanent",50,"Mild",2020-07-01,"ESSVR",1,2021-04-15,2021-07-28,0,40
+153,"Male",58,"West Midlands","FixedTerm",25,"Mild",2020-10-02,"ESSVR",1,2021-08-02,2021-09-29,1,43
+154,"Male",32,"North East","Contractor",50,"Severe",2020-11-05,"ESSVR",1,2021-10-04,2021-12-02,0,40
+155,"Male",61,"South East","FixedTerm",40,"Severe",2020-11-30,"ESSVR",1,2021-11-08,2021-11-11,1,36
+156,"Female",65,"South East","Permanent",45,"Moderate",2020-09-18,"ESSVR",1,2021-05-12,2021-09-06,0,28
+157,"Female",51,"North West","Permanent",30,"Mild",2020-09-17,"Usual Care",1,2021-02-01,2021-09-28,,77
+158,"Male",67,"North East","SelfEmployed",40,"Moderate",2020-05-20,"Usual Care",0,,2021-05-27,,25
+159,"Female",63,"North West","Casual",15,"Mild",2020-11-03,"Usual Care",0,,2021-10-06,,40
+160,"Male",65,"South East","Permanent",45,"Severe",2020-06-01,"ESSVR",1,2021-03-01,2021-05-05,1,48
+161,"Male",42,"South East","Permanent",40,"Moderate",2020-06-29,"ESSVR",1,2021-03-03,2021-06-28,1,24
+162,"Male",69,"South East","SelfEmployed",45,"Moderate",2020-07-03,"ESSVR",1,2021-03-26,2021-07-13,1,30
+163,"Male",51,"North East","SelfEmployed",45,"Severe",2020-05-13,"ESSVR",1,2021-04-26,2021-05-28,0,42
+164,"Male",59,"South East","Permanent",20,"Mild",2020-07-23,"ESSVR",1,2021-05-17,2021-07-27,1,43
+165,"Female",58,"North West","Permanent",25,"Mild",2020-07-30,"Usual Care",1,2021-03-10,2021-08-17,,46
+166,"Male",37,"North West","Permanent",20,"Mild",2020-08-18,"ESSVR",1,2021-03-15,2021-08-05,1,23
+167,"Male",67,"West Midlands","Permanent",50,"Severe",2020-08-20,"Usual Care",0,2021-08-23,2021-08-26,,32
+168,"Male",68,"West Midlands","Contractor",45,"Severe",2020-11-02,"Usual Care",1,2021-09-21,2021-11-09,,13
+169,"Female",65,"South East","FixedTerm",25,"Moderate",2020-11-17,"ESSVR",1,2021-10-25,2021-11-11,0,41
+170,"Male",69,"West Midlands","SelfEmployed",45,"Moderate",2020-08-20,"Usual Care",1,2021-05-10,2021-07-22,,48
+171,"Male",66,"West Midlands","Contractor",25,"Mild",2020-10-29,"ESSVR",1,2021-10-27,2021-11-18,0,38
+172,"Male",42,"West Midlands","Permanent",45,"Moderate",2020-10-07,"Usual Care",0,,2021-10-14,,43
+173,"Male",68,"North West","Permanent",40,"Moderate",2020-05-11,"ESSVR",1,2020-12-01,2021-04-14,1,24
+174,"Male",69,"South East","FixedTerm",40,"Moderate",2020-11-23,"Usual Care",1,,2021-11-12,,48
+175,"Male",49,"West Midlands","Permanent",40,"Mild",2020-11-10,"ESSVR",1,2021-09-01,2021-11-09,1,49
+176,"Male",69,"North West","Contractor",45,"Moderate",2020-10-27,"ESSVR",1,2021-05-28,2021-10-29,0,32
+177,"Male",68,"West Midlands","Permanent",55,"Mild",2020-05-14,"Usual Care",0,,2021-05-03,,44
+178,"Male",66,"North West","Contractor",25,"Moderate",2020-11-09,"ESSVR",1,2021-08-19,2021-11-08,0,56
+179,"Male",60,"West Midlands","Casual",35,"Moderate",2020-11-04,"Usual Care",1,2021-05-24,2021-10-08,,52
+180,"Male",53,"South East","Permanent",40,"Moderate",2020-08-04,"ESSVR",1,2021-02-08,2021-07-20,1,29
+181,"Female",67,"North East","Casual",25,"Moderate",2020-09-03,"Usual Care",1,2021-06-29,2021-08-09,,24
+182,"Female",58,"North East","FixedTerm",25,"Moderate",2020-07-08,"Usual Care",1,2021-04-20,2021-06-22,,51
+183,"Female",63,"North East","FixedTerm",45,"Moderate",2020-10-30,"ESSVR",1,2021-08-16,2021-10-04,0,59
+184,"Male",68,"South East","SelfEmployed",20,"Moderate",2020-09-09,"Usual Care",1,2021-08-13,2021-09-01,,43
+185,"Male",62,"South East","Permanent",45,"Mild",2020-10-29,"Usual Care",1,2021-07-05,2021-11-15,,29
+186,"Male",67,"North East","Permanent",20,"Mild",2020-08-14,"ESSVR",1,2021-03-25,2021-07-22,1,59
+187,"Male",55,"North East","Permanent",30,"Mild",2020-10-14,"Usual Care",1,2021-07-26,2021-10-13,,61
+188,"Male",61,"North West","Contractor",25,"Severe",2020-05-28,"ESSVR",1,2021-01-04,2021-05-04,0,8
+189,"Male",66,"North East","Contractor",45,"Moderate",2020-05-29,"Usual Care",1,,2021-05-10,,30
+190,"Male",63,"South East","Permanent",45,"Severe",2020-10-07,"Usual Care",0,,2021-10-11,,29
+191,"Male",69,"South East","Contractor",40,"Mild",2020-10-14,"ESSVR",1,,2021-09-22,1,36
+192,"Male",67,"South East","Permanent",35,"Severe",2020-08-27,"ESSVR",1,2021-05-31,2021-09-16,0,49
+193,"Female",62,"North East","Permanent",40,"Mild",2020-06-15,"Usual Care",1,2020-12-08,2021-07-13,,64
+194,"Female",68,"West Midlands","Permanent",40,"Moderate",2020-11-02,"Usual Care",1,2021-07-16,2021-12-01,,59
+195,"Male",69,"North West","FixedTerm",45,"Mild",2020-10-19,"Usual Care",1,2021-08-30,2021-09-30,,33
+196,"Male",60,"North West","Contractor",55,"Mild",2020-09-29,"ESSVR",1,2021-06-25,2021-09-03,1,49
+197,"Female",69,"North West","Permanent",25,"Mild",2020-06-15,"Usual Care",1,2021-01-04,2021-07-01,,55
+198,"Male",54,"North East","Permanent",40,"Moderate",2020-07-28,"ESSVR",1,2021-03-15,2021-08-12,0,10
+199,"Male",64,"South East","Permanent",40,"Moderate",2020-08-28,"ESSVR",1,2021-05-14,2021-08-03,1,43
+200,"Female",52,"North East","FixedTerm",25,"Moderate",2020-07-06,"ESSVR",1,2021-04-19,2021-07-29,1,50
+201,"Male",68,"North East","Casual",20,"Mild",2020-06-11,"Usual Care",0,,2021-06-04,,72
+202,"Female",65,"North West","Permanent",50,"Severe",2020-06-15,"Usual Care",0,,2021-06-14,,56
+203,"Male",64,"South East","Contractor",40,"Mild",2020-06-17,"Usual Care",1,2021-03-18,2021-06-22,,49
+204,"Male",54,"West Midlands","Permanent",20,"Mild",2020-11-25,"Usual Care",1,2021-09-10,2021-10-27,,38
+205,"Female",59,"North West","SelfEmployed",25,"Moderate",2020-05-20,"ESSVR",1,2021-03-16,2021-05-07,1,32
+206,"Male",67,"North East","Permanent",45,"Mild",2020-11-12,"Usual Care",0,,2021-10-22,,47
+207,"Male",56,"West Midlands","Casual",40,"Mild",2020-11-02,"Usual Care",0,,2021-10-22,,19
+208,"Male",69,"North West","SelfEmployed",25,"Mild",2020-06-23,"ESSVR",1,2021-06-18,2021-06-30,0,31
+209,"Female",58,"West Midlands","FixedTerm",40,"Mild",2020-07-21,"ESSVR",0,2021-08-06,2021-08-09,1,32
+210,"Female",59,"West Midlands","Permanent",50,"Moderate",2020-08-26,"ESSVR",1,2021-06-17,2021-08-10,1,35
+211,"Male",67,"West Midlands","FixedTerm",50,"Moderate",2020-09-21,"ESSVR",0,,2021-09-07,0,29
+212,"Female",57,"West Midlands","FixedTerm",40,"Mild",2020-06-01,"ESSVR",1,2021-04-05,2021-05-11,1,67
+213,"Male",54,"South East","Contractor",50,"Mild",2020-08-24,"Usual Care",1,2021-02-10,2021-08-24,,40
+214,"Female",69,"North East","FixedTerm",40,"Severe",2020-06-08,"Usual Care",0,,2021-05-20,,39
+215,"Female",61,"North West","FixedTerm",20,"Mild",2020-06-29,"ESSVR",1,2021-04-07,2021-07-07,1,41
+216,"Male",65,"South East","FixedTerm",45,"Severe",2020-07-03,"ESSVR",1,2021-05-13,2021-07-20,0,41
+217,"Female",65,"West Midlands","Permanent",45,"Moderate",2020-06-30,"Usual Care",0,,2021-06-16,,22
+218,"Male",37,"North East","Contractor",45,"Moderate",2020-11-19,"ESSVR",1,2021-07-08,2021-10-20,1,40
+219,"Female",63,"South East","Permanent",40,"Moderate",2020-06-23,"Usual Care",0,,2021-06-23,,42
+220,"Male",67,"South East","Permanent",45,"Moderate",2020-06-09,"ESSVR",1,2020-12-21,2021-06-09,1,63
+221,"Female",63,"West Midlands","Casual",25,"Moderate",2020-05-06,"Usual Care",0,,2021-04-22,,18
+222,"Male",58,"North East","Permanent",40,"Moderate",2020-08-26,"Usual Care",1,2021-07-28,2021-08-23,,34
+223,"Male",60,"South East","Permanent",45,"Severe",2020-11-02,"ESSVR",1,2021-09-06,2021-10-19,0,35
+224,"Male",48,"West Midlands","Permanent",20,"Severe",2020-06-23,"Usual Care",1,2021-06-02,2021-06-29,,45
+225,"Male",52,"South East","FixedTerm",25,"Moderate",2020-06-30,"ESSVR",1,2021-04-19,2021-06-28,1,51
+226,"Female",53,"North East","FixedTerm",45,"Mild",2020-07-01,"ESSVR",1,2021-04-06,2021-06-23,1,51
+227,"Male",63,"North West","Permanent",50,"Moderate",2020-08-07,"ESSVR",1,2021-04-22,2021-07-26,1,48
+228,"Male",63,"North West","Casual",45,"Mild",2020-07-10,"ESSVR",1,2021-04-19,2021-07-14,1,53
+229,"Female",69,"North East","FixedTerm",45,"Moderate",2020-06-29,"Usual Care",0,,2021-07-14,,28
+230,"Female",64,"West Midlands","Permanent",45,"Moderate",2020-09-29,"ESSVR",1,2021-07-14,2021-10-21,1,13
+231,"Male",64,"South East","Casual",40,"Mild",2020-08-12,"ESSVR",1,2021-03-08,2021-08-31,1,37
+232,"Female",58,"South East","Permanent",45,"Mild",2020-05-13,"ESSVR",1,2021-03-15,2021-06-08,1,29
+233,"Male",58,"West Midlands","SelfEmployed",25,"Mild",2020-09-25,"Usual Care",1,2021-07-15,2021-10-05,,31
+234,"Male",60,"West Midlands","FixedTerm",20,"Severe",2020-08-07,"ESSVR",1,2021-04-26,2021-08-27,1,62
+235,"Female",40,"North East","Permanent",55,"Moderate",2020-11-18,"Usual Care",1,2021-10-22,2021-12-15,,44
+236,"Female",61,"South East","FixedTerm",25,"Mild",2020-06-09,"Usual Care",1,2021-01-18,2021-07-08,,25
+237,"Male",49,"North West","Permanent",30,"Moderate",2020-10-06,"ESSVR",1,2021-07-19,2021-10-29,0,44
+238,"Female",69,"South East","Permanent",30,"Mild",2020-11-04,"ESSVR",1,2021-06-28,2021-10-06,1,45
+239,"Female",65,"South East","Permanent",40,"Mild",2020-11-09,"ESSVR",1,2021-06-23,2021-11-18,1,52
+240,"Female",56,"North East","Permanent",40,"Moderate",2020-10-09,"Usual Care",1,2021-07-07,2021-10-20,,55
+241,"Male",62,"North East","Contractor",45,"Mild",2020-06-23,"ESSVR",1,2020-12-18,2021-06-17,0,45
+242,"Male",63,"North East","SelfEmployed",45,"Severe",2020-10-29,"Usual Care",1,2021-06-07,2021-10-06,,24
+243,"Male",61,"North West","FixedTerm",40,"Moderate",2020-11-13,"Usual Care",0,,2021-11-30,,56
+244,"Male",67,"South East","Casual",45,"Moderate",2020-07-21,"Usual Care",0,,2021-07-22,,37
+245,"Male",64,"West Midlands","Permanent",30,"Moderate",2020-05-13,"ESSVR",1,2021-03-08,2021-05-25,1,34
+246,"Male",68,"North West","Contractor",40,"Moderate",2020-07-17,"Usual Care",1,2021-02-02,2021-06-21,,60
+247,"Male",68,"South East","FixedTerm",45,"Mild",2020-05-27,"Usual Care",1,2021-05-10,2021-06-03,,49
+248,"Female",67,"West Midlands","Casual",15,"Mild",2020-05-28,"ESSVR",1,2020-12-23,2021-06-07,0,55
+249,"Female",68,"North West","FixedTerm",40,"Mild",2020-07-23,"ESSVR",1,2021-05-21,2021-08-12,0,62
+250,"Female",63,"South East","FixedTerm",45,"Mild",2020-06-22,"Usual Care",0,,2021-06-16,,54
+251,"Female",60,"West Midlands","Permanent",40,"Mild",2020-05-12,"ESSVR",1,2021-04-12,2021-04-13,0,44
+252,"Male",50,"North East","FixedTerm",50,"Mild",2020-05-19,"Usual Care",1,2021-01-18,2021-06-11,,2
+253,"Male",62,"West Midlands","FixedTerm",40,"Severe",2020-06-24,"ESSVR",1,2021-03-10,2021-07-20,0,43
+254,"Male",68,"West Midlands","Contractor",40,"Mild",2020-08-11,"Usual Care",1,2021-06-28,2021-07-13,,39
+255,"Male",66,"North East","Permanent",40,"Moderate",2020-06-16,"ESSVR",1,2021-06-07,2021-07-12,1,24
+256,"Male",68,"West Midlands","Permanent",25,"Moderate",2020-07-23,"Usual Care",1,2021-06-07,2021-08-09,,51
+257,"Male",68,"North West","Permanent",40,"Moderate",2020-07-27,"ESSVR",1,2021-04-14,2021-07-08,1,47
+258,"Male",68,"South East","FixedTerm",20,"Moderate",2020-07-15,"ESSVR",0,,2021-06-30,0,29
+259,"Female",50,"North East","Permanent",20,"Moderate",2020-07-20,"ESSVR",1,2021-05-10,2021-08-11,0,44
+260,"Male",57,"North West","FixedTerm",30,"Severe",2020-11-24,"Usual Care",1,2021-10-11,2021-11-10,,65
+261,"Male",50,"West Midlands","Contractor",40,"Mild",2020-08-28,"ESSVR",1,2021-04-14,2021-08-23,0,47
+262,"Male",61,"West Midlands","Casual",45,"Moderate",2020-09-09,"ESSVR",1,2021-06-14,2021-09-28,0,41
+263,"Male",56,"South East","Permanent",50,"Moderate",2020-09-15,"Usual Care",1,2021-07-19,2021-08-20,,56
+264,"Female",44,"North West","Permanent",45,"Mild",2020-06-30,"Usual Care",1,2021-02-24,2021-07-29,,51
+265,"Male",57,"West Midlands","Casual",20,"Moderate",2020-07-02,"ESSVR",1,2021-05-31,2021-07-20,1,49
+266,"Female",65,"North West","FixedTerm",45,"Mild",2020-09-21,"Usual Care",1,2021-08-02,2021-10-19,,44
+267,"Female",68,"South East","Casual",45,"Moderate",2020-11-23,"ESSVR",1,2021-10-11,2021-11-17,1,31
+268,"Female",40,"South East","SelfEmployed",45,"Mild",2020-06-04,"Usual Care",0,,2021-05-12,,28
+269,"Female",56,"West Midlands","Casual",15,"Mild",2020-11-18,"Usual Care",1,2021-06-30,2021-12-01,,42
+270,"Male",68,"North West","SelfEmployed",50,"Moderate",2020-09-03,"Usual Care",0,,2021-08-31,,35
+271,"Female",43,"North West","Casual",40,"Moderate",2020-08-17,"ESSVR",1,2021-04-05,2021-08-27,1,78
+272,"Female",51,"West Midlands","Permanent",50,"Mild",2020-08-12,"Usual Care",1,2021-06-29,2021-09-08,,17
+273,"Female",68,"South East","Permanent",45,"Moderate",2020-07-17,"ESSVR",1,2021-06-29,2021-07-27,1,24
+274,"Male",57,"West Midlands","Permanent",45,"Moderate",2020-09-08,"ESSVR",1,2021-05-20,2021-08-31,1,20
+275,"Male",51,"North West","Permanent",45,"Moderate",2020-05-20,"Usual Care",1,2020-12-31,2021-06-09,,24
+276,"Male",68,"South East","FixedTerm",45,"Mild",2020-07-21,"Usual Care",1,2021-07-19,2021-07-21,,49
+277,"Male",52,"North West","FixedTerm",40,"Mild",2020-09-24,"Usual Care",1,2021-06-17,2021-10-05,,63
+278,"Male",55,"North East","Permanent",40,"Moderate",2020-06-03,"Usual Care",1,2021-05-24,2021-06-04,,47
+279,"Male",58,"North East","Contractor",45,"Severe",2020-09-16,"ESSVR",1,,2021-08-26,0,42
+280,"Female",68,"North East","FixedTerm",45,"Mild",2020-10-20,"ESSVR",1,2021-09-06,2021-09-20,1,68
+281,"Female",60,"West Midlands","FixedTerm",35,"Moderate",2020-07-16,"Usual Care",1,2021-05-18,2021-07-21,,33
+282,"Female",57,"North West","Casual",50,"Moderate",2020-10-16,"Usual Care",1,2021-05-19,2021-10-04,,33
+283,"Male",59,"West Midlands","Permanent",25,"Mild",2020-07-08,"ESSVR",1,2021-03-24,2021-07-15,1,50
+284,"Male",66,"North East","Permanent",20,"Severe",2020-09-18,"Usual Care",0,,2021-09-02,,29
+285,"Female",62,"North West","Permanent",45,"Mild",2020-09-08,"Usual Care",0,,2021-09-21,,32
+286,"Male",69,"West Midlands","SelfEmployed",50,"Mild",2020-06-18,"ESSVR",1,2021-01-15,2021-06-14,1,33
+287,"Female",56,"North East","Permanent",45,"Moderate",2020-09-01,"Usual Care",1,2021-08-26,2021-09-16,,42
+288,"Male",68,"South East","Casual",25,"Severe",2020-06-15,"ESSVR",1,2021-06-11,2021-06-15,0,38
+289,"Female",68,"South East","SelfEmployed",50,"Moderate",2020-09-23,"Usual Care",0,,2021-10-20,,34
+290,"Male",49,"West Midlands","Permanent",45,"Moderate",2020-07-24,"Usual Care",1,2021-05-21,2021-08-17,,43
+291,"Female",54,"South East","Casual",35,"Mild",2020-05-26,"Usual Care",1,2020-11-03,2021-06-10,,38
+292,"Female",59,"West Midlands","Permanent",45,"Mild",2020-05-26,"Usual Care",1,2021-05-10,2021-06-04,,44
+293,"Male",65,"North East","SelfEmployed",40,"Mild",2020-05-12,"ESSVR",1,2021-03-22,2021-04-27,1,42
+294,"Male",66,"North West","Permanent",40,"Severe",2020-11-12,"Usual Care",1,2021-05-05,2021-11-08,,18
+295,"Male",56,"West Midlands","Contractor",40,"Moderate",2020-11-06,"Usual Care",1,2021-09-06,2021-11-22,,47
+296,"Female",41,"West Midlands","Casual",50,"Moderate",2020-07-23,"Usual Care",0,,2021-06-24,,28
+297,"Female",60,"North East","Permanent",45,"Mild",2020-11-20,"ESSVR",1,2021-08-19,2021-11-29,1,45
+298,"Male",69,"South East","Casual",50,"Mild",2020-11-03,"Usual Care",1,2021-10-06,2021-10-27,,54
+299,"Female",43,"West Midlands","Permanent",40,"Moderate",2020-08-24,"ESSVR",1,2021-06-30,2021-08-05,0,57
+300,"Male",54,"North East","SelfEmployed",50,"Moderate",2020-10-13,"Usual Care",1,,2021-09-24,,34
+301,"Male",67,"South East","Permanent",50,"Moderate",2020-11-02,"ESSVR",1,2021-06-21,2021-11-08,1,49
+302,"Male",57,"West Midlands","Casual",30,"Severe",2020-06-03,"ESSVR",1,2021-04-19,2021-05-19,1,21
+303,"Female",61,"South East","FixedTerm",25,"Mild",2020-09-09,"Usual Care",0,,2021-08-18,,39
+304,"Male",63,"North East","Permanent",45,"Mild",2020-09-17,"Usual Care",0,,2021-10-04,,46
+305,"Female",45,"North East","Casual",25,"Mild",2020-10-12,"ESSVR",1,2021-06-28,2021-10-15,1,47
+306,"Male",64,"West Midlands","Permanent",40,"Severe",2020-11-06,"ESSVR",1,2021-10-04,2021-11-15,0,41
+307,"Female",54,"North East","FixedTerm",45,"Mild",2020-11-20,"ESSVR",1,2021-09-24,2021-11-25,0,21
+308,"Male",67,"North East","Contractor",40,"Mild",2020-09-21,"Usual Care",1,2021-05-25,2021-09-21,,62
+309,"Male",69,"West Midlands","Permanent",45,"Mild",2020-05-11,"ESSVR",1,,2021-04-21,0,45
+310,"Male",48,"North West","Permanent",45,"Mild",2020-11-12,"ESSVR",1,2021-09-03,2021-11-18,1,53
+311,"Male",61,"North East","SelfEmployed",45,"Severe",2020-10-13,"ESSVR",0,,2021-10-07,0,38
+312,"Female",56,"North West","Casual",40,"Mild",2020-06-10,"ESSVR",1,2020-12-01,2021-06-17,0,40
+313,"Male",68,"South East","Casual",50,"Mild",2020-10-09,"Usual Care",1,2021-07-26,2021-10-13,,36
+314,"Female",54,"West Midlands","Permanent",45,"Severe",2020-06-01,"Usual Care",1,2021-02-01,2021-06-02,,56
+315,"Female",68,"West Midlands","Permanent",30,"Mild",2020-11-05,"ESSVR",1,2021-02-16,2021-11-12,0,31
+316,"Female",64,"North West","FixedTerm",45,"Moderate",2020-08-13,"ESSVR",0,2021-08-23,2021-09-06,0,59
+317,"Female",45,"West Midlands","Casual",35,"Severe",2020-10-29,"Usual Care",0,,2021-10-06,,45
+318,"Male",54,"North West","Permanent",45,"Moderate",2020-11-27,"ESSVR",1,2021-06-23,2021-11-30,1,34
+319,"Female",69,"North East","FixedTerm",45,"Moderate",2020-07-15,"Usual Care",0,,2021-07-01,,40
+320,"Male",64,"West Midlands","Contractor",45,"Mild",2020-06-12,"ESSVR",1,2021-01-28,2021-07-06,1,50
+321,"Male",65,"North West","Contractor",40,"Moderate",2020-09-04,"ESSVR",1,2021-08-02,2021-08-27,1,30
+322,"Female",63,"North East","FixedTerm",25,"Mild",2020-10-15,"Usual Care",0,,2021-11-08,,55
+323,"Male",58,"West Midlands","SelfEmployed",45,"Mild",2020-06-22,"Usual Care",1,2021-06-14,2021-06-14,,43
+324,"Female",62,"North West","Permanent",40,"Mild",2020-06-26,"ESSVR",1,2021-05-31,2021-06-18,1,55
+325,"Male",45,"North West","FixedTerm",55,"Moderate",2020-10-05,"ESSVR",1,2021-08-20,2021-10-20,1,53
+326,"Male",67,"North West","Casual",30,"Moderate",2020-09-14,"Usual Care",0,,2021-09-22,,41
+327,"Female",63,"South East","SelfEmployed",40,"Severe",2020-08-28,"Usual Care",1,2021-04-26,2021-09-08,,32
+328,"Female",63,"North East","Casual",45,"Severe",2020-07-20,"Usual Care",1,2021-07-05,2021-07-05,,45
+329,"Female",45,"North East","Casual",20,"Moderate",2020-08-03,"ESSVR",1,2021-03-22,2021-08-04,0,62
+330,"Male",67,"North West","Permanent",40,"Mild",2020-05-25,"Usual Care",1,2020-12-14,2021-05-12,,35
+331,"Male",38,"West Midlands","Contractor",20,"Mild",2020-05-13,"Usual Care",1,2021-02-08,2021-06-02,,54
+332,"Male",61,"South East","FixedTerm",40,"Moderate",2020-09-11,"ESSVR",1,2021-06-23,2021-09-07,1,43
+333,"Male",67,"North East","Permanent",40,"Moderate",2020-11-05,"ESSVR",1,2021-09-03,2021-11-10,1,36
+334,"Male",68,"North East","FixedTerm",45,"Mild",2020-06-01,"Usual Care",0,,2021-05-31,,51
+335,"Female",53,"South East","Permanent",20,"Mild",2020-10-23,"ESSVR",0,2021-10-25,2021-11-08,0,52
+336,"Male",55,"North East","FixedTerm",45,"Moderate",2020-09-11,"ESSVR",1,2021-08-30,2021-09-30,1,55
+337,"Female",68,"West Midlands","Casual",40,"Mild",2020-07-29,"Usual Care",0,2021-08-04,2021-08-23,,55
+338,"Male",52,"South East","SelfEmployed",30,"Moderate",2020-07-23,"Usual Care",1,2021-06-07,2021-07-09,,22
+339,"Male",59,"West Midlands","Casual",40,"Moderate",2020-11-03,"ESSVR",1,2021-10-20,2021-11-24,1,48
+340,"Male",58,"North East","Casual",50,"Severe",2020-11-24,"ESSVR",1,2021-09-20,2021-11-05,0,19
+341,"Male",54,"West Midlands","FixedTerm",45,"Severe",2020-08-04,"ESSVR",1,2021-05-27,2021-08-02,1,43
+342,"Female",68,"South East","FixedTerm",40,"Mild",2020-06-23,"Usual Care",1,2021-03-25,2021-06-30,,24
+343,"Male",67,"West Midlands","Permanent",20,"Moderate",2020-06-01,"Usual Care",0,,2021-06-16,,21
+344,"Male",57,"West Midlands","FixedTerm",50,"Moderate",2020-11-20,"Usual Care",1,2021-10-25,2021-11-29,,27
+345,"Male",67,"South East","FixedTerm",25,"Severe",2020-09-24,"Usual Care",1,2021-09-13,2021-10-08,,19
+346,"Male",59,"North West","Permanent",35,"Severe",2020-06-05,"Usual Care",1,,2021-05-14,,31
+347,"Male",57,"North East","Permanent",20,"Mild",2020-09-30,"Usual Care",0,,2021-10-28,,37
+348,"Male",59,"North East","Contractor",40,"Severe",2020-06-25,"ESSVR",1,2021-03-01,2021-07-20,1,38
+349,"Male",69,"South East","Permanent",25,"Moderate",2020-05-26,"Usual Care",1,2021-02-22,2021-06-09,,56
+350,"Male",61,"North West","Permanent",25,"Moderate",2020-05-27,"ESSVR",1,2021-04-29,2021-06-11,0,51
+351,"Male",53,"North East","FixedTerm",40,"Moderate",2020-07-22,"ESSVR",1,2021-07-19,2021-07-21,0,37
+352,"Male",68,"South East","Contractor",45,"Moderate",2020-08-03,"Usual Care",1,2021-05-14,2021-07-15,,25
+353,"Male",56,"North West","FixedTerm",40,"Mild",2020-08-25,"ESSVR",1,2021-07-07,2021-09-07,0,32
+354,"Male",61,"North West","FixedTerm",45,"Moderate",2020-10-13,"ESSVR",1,2021-10-07,2021-11-08,1,34
+355,"Female",69,"North East","Casual",15,"Mild",2020-09-18,"ESSVR",1,2021-07-07,2021-09-09,1,35
+356,"Male",68,"North West","Permanent",50,"Moderate",2020-08-14,"Usual Care",1,2021-05-31,2021-08-05,,41
+357,"Female",61,"North West","FixedTerm",25,"Moderate",2020-08-05,"ESSVR",1,,2021-07-08,1,15
+358,"Male",43,"North West","Permanent",45,"Severe",2020-10-22,"Usual Care",0,,2021-10-13,,39
+359,"Male",69,"North East","Permanent",45,"Moderate",2020-08-14,"Usual Care",0,,2021-08-10,,37
+360,"Female",66,"West Midlands","FixedTerm",40,"Moderate",2020-10-22,"Usual Care",1,2021-09-07,2021-10-06,,48
+361,"Male",58,"North East","Contractor",50,"Mild",2020-06-17,"Usual Care",1,2021-04-05,2021-06-15,,33
+362,"Male",67,"West Midlands","Contractor",45,"Severe",2020-09-02,"Usual Care",1,2021-05-24,2021-08-31,,23
+363,"Male",67,"West Midlands","Casual",45,"Mild",2020-06-09,"Usual Care",1,2021-03-24,2021-06-17,,41
+364,"Male",62,"North West","Permanent",25,"Moderate",2020-06-19,"Usual Care",0,,2021-06-30,,27
+365,"Female",56,"North East","FixedTerm",25,"Mild",2020-08-06,"Usual Care",1,2021-05-25,2021-07-09,,41
+366,"Male",62,"North East","Contractor",45,"Mild",2020-08-24,"ESSVR",1,2021-05-24,2021-08-03,1,57
+367,"Female",66,"South East","Casual",35,"Moderate",2020-08-11,"Usual Care",0,,2021-07-14,,32
+368,"Male",68,"North West","Permanent",40,"Mild",2020-10-29,"Usual Care",1,2021-08-16,2021-10-04,,30
+369,"Male",66,"North West","SelfEmployed",45,"Moderate",2020-09-10,"Usual Care",0,,2021-09-27,,22
+370,"Male",69,"North East","Permanent",45,"Moderate",2020-10-07,"ESSVR",1,2021-05-10,2021-09-30,1,40
+371,"Male",53,"North East","Permanent",25,"Moderate",2020-08-12,"Usual Care",1,2021-07-20,2021-08-24,,38
+372,"Male",42,"South East","Permanent",40,"Mild",2020-07-16,"ESSVR",1,2021-04-06,2021-07-13,1,64
+373,"Female",50,"South East","Casual",40,"Moderate",2020-11-04,"ESSVR",0,,2021-11-11,1,53
+374,"Male",61,"West Midlands","SelfEmployed",45,"Moderate",2020-10-22,"ESSVR",1,2021-09-02,2021-10-19,1,54
+375,"Male",63,"West Midlands","Permanent",45,"Moderate",2020-05-27,"ESSVR",1,2021-02-03,2021-05-05,1,47
+376,"Male",64,"South East","Casual",20,"Moderate",2020-08-25,"ESSVR",1,2020-11-25,2021-09-20,1,53
+377,"Male",64,"North West","Permanent",40,"Severe",2020-06-03,"Usual Care",1,2021-02-15,2021-05-12,,31
+378,"Female",69,"South East","Permanent",45,"Moderate",2020-10-13,"ESSVR",1,2021-04-26,2021-10-20,1,69
+379,"Male",68,"South East","Permanent",20,"Moderate",2020-11-17,"ESSVR",0,2021-11-19,2021-12-07,1,54
+380,"Male",52,"North West","Permanent",45,"Moderate",2020-11-30,"Usual Care",1,2021-08-17,2021-11-11,,33
+381,"Male",62,"West Midlands","Permanent",40,"Moderate",2020-08-14,"ESSVR",1,2021-06-16,2021-08-25,1,40
+382,"Male",63,"North East","Casual",30,"Moderate",2020-07-22,"Usual Care",1,2021-02-22,2021-08-18,,27
+383,"Female",56,"South East","Permanent",40,"Mild",2020-06-04,"Usual Care",1,2021-05-10,2021-05-24,,49
+384,"Female",67,"West Midlands","Casual",20,"Mild",2020-10-16,"ESSVR",1,2021-08-18,2021-10-05,0,51
+385,"Male",52,"North West","SelfEmployed",45,"Mild",2020-09-09,"Usual Care",1,2021-04-23,2021-09-22,,25
+386,"Male",67,"West Midlands","SelfEmployed",40,"Moderate",2020-06-02,"Usual Care",0,,2021-06-17,,20
+387,"Female",54,"North East","FixedTerm",25,"Moderate",2020-09-03,"ESSVR",0,,2021-09-28,1,53
+388,"Female",61,"North West","Permanent",50,"Moderate",2020-05-13,"ESSVR",1,2021-02-22,2021-06-03,1,21
+389,"Female",64,"North East","Casual",20,"Severe",2020-09-01,"ESSVR",1,2021-06-30,2021-09-13,0,40
+390,"Male",61,"North West","Permanent",25,"Mild",2020-10-15,"ESSVR",1,2021-09-06,2021-09-30,1,26
+391,"Female",68,"West Midlands","Permanent",25,"Moderate",2020-06-12,"Usual Care",1,2021-01-25,2021-07-02,,32
+392,"Male",56,"South East","Contractor",45,"Moderate",2020-06-19,"Usual Care",0,,2021-06-10,,38
+393,"Male",61,"South East","FixedTerm",50,"Moderate",2020-05-27,"ESSVR",0,,2021-06-03,0,40
+394,"Male",63,"North West","Contractor",40,"Mild",2020-05-08,"ESSVR",1,2021-01-04,2021-04-13,0,50
+395,"Female",44,"West Midlands","Casual",55,"Mild",2020-10-23,"Usual Care",0,,2021-10-27,,65
+396,"Male",68,"South East","FixedTerm",55,"Moderate",2020-09-29,"ESSVR",1,2021-06-21,2021-10-26,0,43
+397,"Female",57,"South East","Casual",15,"Mild",2020-09-01,"Usual Care",0,,2021-09-15,,50
+398,"Male",36,"South East","Contractor",40,"Severe",2020-06-30,"ESSVR",1,2021-02-11,2021-07-20,1,12
+399,"Male",69,"West Midlands","Contractor",45,"Mild",2020-11-23,"ESSVR",1,2021-07-23,2021-10-29,1,14
+400,"Male",64,"North East","Casual",15,"Mild",2020-11-24,"Usual Care",0,,2021-12-10,,58
+401,"Male",34,"North West","Permanent",50,"Severe",2020-07-22,"Usual Care",1,2021-05-24,2021-08-03,,48
+402,"Female",67,"North East","FixedTerm",45,"Severe",2020-06-24,"ESSVR",1,2021-03-03,2021-07-13,0,37
+403,"Female",63,"North West","FixedTerm",45,"Moderate",2020-08-17,"ESSVR",0,,2021-07-19,1,24
+404,"Male",42,"West Midlands","Contractor",45,"Moderate",2020-05-06,"ESSVR",1,2020-11-30,2021-06-02,1,43
+405,"Male",47,"West Midlands","Contractor",45,"Mild",2020-07-20,"Usual Care",1,2021-06-07,2021-06-24,,41
+406,"Male",62,"North West","Permanent",25,"Moderate",2020-09-28,"Usual Care",0,,2021-09-27,,17
+407,"Male",63,"North East","Casual",20,"Mild",2020-05-01,"Usual Care",1,2021-02-01,2021-05-10,,62
+408,"Male",61,"North East","FixedTerm",45,"Moderate",2020-07-02,"ESSVR",1,2020-12-08,2021-06-16,1,28
+409,"Female",68,"North West","FixedTerm",40,"Moderate",2020-06-26,"Usual Care",1,2021-05-25,2021-06-08,,39
+410,"Male",57,"North East","Permanent",30,"Mild",2020-11-12,"ESSVR",1,2021-08-16,2021-11-08,1,33
+411,"Male",66,"South East","Permanent",30,"Moderate",2020-10-08,"Usual Care",1,2021-09-16,2021-10-22,,37
+412,"Male",68,"West Midlands","FixedTerm",45,"Mild",2020-05-27,"ESSVR",0,,2021-05-04,1,60
+413,"Male",67,"North West","Permanent",50,"Mild",2020-10-05,"Usual Care",0,,2021-10-25,,31
+414,"Male",62,"North East","Contractor",40,"Mild",2020-05-11,"ESSVR",1,2020-11-23,2021-04-19,0,32
+415,"Female",62,"North West","Casual",20,"Moderate",2020-06-11,"ESSVR",1,2021-03-22,2021-06-09,1,35
+416,"Female",57,"North East","FixedTerm",45,"Moderate",2020-05-15,"Usual Care",0,,2021-05-04,,57
+417,"Male",63,"North West","Permanent",25,"Mild",2020-06-03,"Usual Care",1,2021-04-19,2021-07-01,,39
+418,"Male",63,"South East","SelfEmployed",50,"Moderate",2020-05-01,"Usual Care",0,,2021-04-08,,31
+419,"Male",62,"West Midlands","Permanent",40,"Severe",2020-07-14,"Usual Care",0,,2021-07-16,,39
+420,"Female",67,"North West","Contractor",40,"Moderate",2020-11-04,"ESSVR",1,2021-11-03,2021-11-23,1,23
+421,"Male",63,"North East","Contractor",40,"Mild",2020-10-14,"ESSVR",1,2021-09-13,2021-09-29,1,48
+422,"Female",65,"South East","FixedTerm",45,"Moderate",2020-11-17,"Usual Care",0,2021-11-23,2021-12-02,,37
+423,"Female",62,"North East","Permanent",40,"Moderate",2020-08-04,"ESSVR",1,2021-06-09,2021-08-17,1,27
+424,"Female",63,"West Midlands","Contractor",25,"Moderate",2020-06-05,"Usual Care",0,,2021-05-24,,25
+425,"Male",65,"South East","SelfEmployed",45,"Severe",2020-07-16,"Usual Care",1,2021-05-21,2021-07-21,,29
+426,"Male",62,"West Midlands","Casual",25,"Moderate",2020-11-11,"ESSVR",1,2021-07-28,2021-10-28,1,21
+427,"Male",66,"South East","Casual",45,"Moderate",2020-09-11,"Usual Care",0,2021-09-23,2021-09-30,,26
+428,"Female",62,"West Midlands","Permanent",40,"Severe",2020-06-18,"ESSVR",1,2021-05-06,2021-05-31,1,37
+429,"Male",66,"North West","Permanent",25,"Mild",2020-07-06,"ESSVR",1,2021-02-22,2021-07-22,1,37
+430,"Female",51,"North West","Permanent",40,"Moderate",2020-06-17,"Usual Care",1,2021-05-17,2021-07-09,,36
+431,"Female",40,"West Midlands","Permanent",25,"Mild",2020-10-27,"Usual Care",1,2021-06-09,2021-10-14,,38
+432,"Female",47,"North West","FixedTerm",45,"Mild",2020-05-04,"ESSVR",1,2020-11-03,2021-05-05,1,36
+433,"Male",58,"West Midlands","Permanent",45,"Severe",2020-10-30,"ESSVR",1,2021-09-27,2021-11-26,0,32
+434,"Male",57,"North West","Permanent",55,"Severe",2020-08-18,"ESSVR",1,2021-06-09,2021-09-03,1,41
+435,"Male",47,"North East","FixedTerm",50,"Mild",2020-10-28,"ESSVR",1,2021-08-24,2021-10-22,0,30
+436,"Male",57,"South East","SelfEmployed",40,"Mild",2020-10-29,"ESSVR",1,2021-04-19,2021-11-25,1,29
+437,"Male",50,"West Midlands","Casual",35,"Mild",2020-05-11,"Usual Care",1,2021-01-21,2021-05-04,,58
+438,"Male",63,"North West","FixedTerm",25,"Moderate",2020-06-16,"ESSVR",1,2021-04-27,2021-05-25,1,36
+439,"Female",59,"West Midlands","Casual",20,"Moderate",2020-06-30,"ESSVR",1,2021-06-15,2021-06-16,1,52
+440,"Male",42,"South East","FixedTerm",40,"Mild",2020-05-22,"Usual Care",1,2021-05-14,2021-06-07,,75
+441,"Male",66,"North East","Permanent",50,"Moderate",2020-06-10,"ESSVR",1,2021-04-08,2021-05-18,1,38
+442,"Male",67,"North West","FixedTerm",25,"Mild",2020-06-29,"ESSVR",1,2021-03-22,2021-07-19,1,66
+443,"Female",58,"North East","Casual",55,"Moderate",2020-05-12,"ESSVR",1,2021-03-24,2021-04-29,0,73
+444,"Female",68,"South East","SelfEmployed",25,"Mild",2020-07-03,"ESSVR",1,,2021-06-18,1,31
+445,"Male",65,"West Midlands","SelfEmployed",25,"Mild",2020-08-31,"Usual Care",1,2021-07-14,2021-08-04,,49
+446,"Female",58,"North East","Contractor",30,"Mild",2020-06-19,"ESSVR",1,2021-05-17,2021-06-22,1,31
+447,"Female",69,"South East","Casual",15,"Mild",2020-09-25,"ESSVR",1,2021-07-30,2021-08-27,0,71
+448,"Female",59,"North West","Contractor",40,"Moderate",2020-07-01,"ESSVR",1,2021-03-29,2021-07-14,0,66
+449,"Male",64,"North East","Casual",35,"Mild",2020-05-15,"Usual Care",1,2021-03-02,2021-06-01,,35
+450,"Male",45,"North East","Permanent",20,"Mild",2020-07-10,"ESSVR",1,2021-01-13,2021-07-08,1,68
+451,"Male",59,"South East","Permanent",40,"Severe",2020-11-24,"Usual Care",0,,2021-11-17,,55
+452,"Male",66,"North West","Permanent",20,"Moderate",2020-09-22,"ESSVR",1,2021-06-08,2021-08-31,0,41
+453,"Male",66,"West Midlands","Permanent",50,"Mild",2020-08-03,"Usual Care",1,2021-07-05,2021-07-16,,49
+454,"Female",59,"West Midlands","Permanent",40,"Moderate",2020-08-04,"ESSVR",1,2021-03-10,2021-07-21,1,28
+455,"Female",60,"North East","FixedTerm",20,"Moderate",2020-07-29,"Usual Care",0,,2021-07-30,,64
+456,"Female",55,"South East","Casual",30,"Mild",2020-09-07,"ESSVR",1,2021-08-09,2021-09-07,1,34
+457,"Female",60,"North West","FixedTerm",45,"Moderate",2020-05-01,"Usual Care",0,,2021-05-28,,32
+458,"Female",58,"North West","Casual",35,"Severe",2020-11-02,"ESSVR",1,2021-08-16,2021-10-29,0,69
+459,"Male",62,"West Midlands","Permanent",45,"Severe",2020-09-23,"ESSVR",1,2021-08-06,2021-10-12,0,35
+460,"Male",41,"North West","SelfEmployed",45,"Mild",2020-08-07,"Usual Care",0,,2021-08-13,,24
+461,"Female",65,"West Midlands","SelfEmployed",55,"Mild",2020-08-03,"Usual Care",0,,2021-07-21,,44
+462,"Female",47,"South East","Permanent",20,"Mild",2020-07-17,"Usual Care",1,2021-07-06,2021-07-22,,41
+463,"Male",65,"South East","SelfEmployed",45,"Severe",2020-05-21,"ESSVR",1,2021-04-14,2021-06-03,1,25
+464,"Female",61,"West Midlands","SelfEmployed",45,"Moderate",2020-10-02,"ESSVR",0,,2021-09-16,1,46
+465,"Male",53,"North East","Contractor",45,"Mild",2020-08-21,"ESSVR",1,2021-06-17,2021-08-11,0,51
+466,"Female",69,"South East","SelfEmployed",45,"Mild",2020-10-26,"ESSVR",1,2021-06-21,2021-10-12,1,48
+467,"Female",67,"North West","Permanent",50,"Moderate",2020-07-01,"ESSVR",1,2021-03-24,2021-06-23,1,12
+468,"Male",61,"North East","Permanent",45,"Severe",2020-07-10,"Usual Care",0,,2021-06-22,,38
+469,"Female",64,"North West","Permanent",45,"Moderate",2020-06-19,"ESSVR",1,2020-12-22,2021-05-26,1,47
+470,"Female",59,"South East","Permanent",25,"Mild",2020-10-15,"ESSVR",1,2021-06-28,2021-11-18,1,55
+471,"Male",65,"North West","SelfEmployed",45,"Moderate",2020-09-23,"ESSVR",1,2021-07-20,2021-10-08,1,20
+472,"Male",52,"North East","Casual",30,"Moderate",2020-09-01,"ESSVR",1,2021-03-12,2021-08-24,1,49
+473,"Male",66,"North East","Permanent",40,"Mild",2020-09-21,"ESSVR",1,2021-06-02,2021-10-04,1,44
+474,"Male",57,"North East","FixedTerm",40,"Moderate",2020-05-05,"Usual Care",0,,2021-05-25,,30
+475,"Male",67,"North East","Casual",25,"Mild",2020-07-17,"ESSVR",1,2021-05-24,2021-06-18,1,25
+476,"Female",63,"North West","Permanent",45,"Mild",2020-09-09,"Usual Care",1,2021-08-19,2021-08-19,,40
+477,"Female",54,"North West","Permanent",35,"Moderate",2020-08-28,"Usual Care",0,,2021-07-30,,59
+478,"Male",60,"South East","Casual",45,"Mild",2020-05-13,"Usual Care",0,,2021-04-23,,34
+479,"Female",61,"North East","Permanent",45,"Moderate",2020-08-24,"ESSVR",1,2021-07-05,2021-09-01,1,33
+480,"Female",55,"West Midlands","Contractor",40,"Moderate",2020-07-30,"ESSVR",1,2021-06-04,2021-08-26,1,44
+481,"Female",48,"North West","Permanent",45,"Severe",2020-07-17,"Usual Care",0,,2021-06-29,,44
+482,"Female",65,"North East","Permanent",25,"Mild",2020-07-07,"Usual Care",0,,2021-07-28,,79
+483,"Male",69,"North East","SelfEmployed",45,"Mild",2020-08-31,"ESSVR",0,,2021-08-04,1,29
+484,"Male",54,"South East","SelfEmployed",45,"Moderate",2020-07-01,"ESSVR",1,2021-02-09,2021-06-30,1,49
+485,"Male",66,"West Midlands","SelfEmployed",25,"Moderate",2020-09-22,"Usual Care",0,,2021-10-01,,13
+486,"Female",65,"North East","Casual",15,"Moderate",2020-05-12,"Usual Care",1,,2021-04-20,,61
+487,"Male",66,"North East","Permanent",45,"Mild",2020-11-13,"Usual Care",1,2021-08-05,2021-11-17,,33
+488,"Male",66,"North East","Permanent",45,"Moderate",2020-11-04,"Usual Care",0,,2021-11-18,,37
+489,"Male",68,"North West","SelfEmployed",55,"Moderate",2020-09-09,"ESSVR",0,,2021-09-28,1,31
+490,"Male",60,"North East","FixedTerm",45,"Moderate",2020-10-05,"Usual Care",1,2021-07-30,2021-10-19,,47
+491,"Female",57,"North East","FixedTerm",50,"Mild",2020-10-26,"Usual Care",0,,2021-11-16,,38
+492,"Male",69,"South East","Casual",25,"Moderate",2020-07-31,"ESSVR",1,2021-04-09,2021-07-20,1,49
+493,"Male",68,"West Midlands","Contractor",40,"Moderate",2020-05-22,"ESSVR",1,2021-02-16,2021-06-17,1,29
+494,"Male",62,"South East","SelfEmployed",40,"Mild",2020-10-16,"Usual Care",1,2021-08-02,2021-10-06,,43
+495,"Male",57,"West Midlands","Permanent",40,"Severe",2020-10-08,"Usual Care",0,,2021-09-29,,33
+496,"Female",58,"North East","FixedTerm",25,"Moderate",2020-11-30,"ESSVR",0,,2021-12-07,1,56
+497,"Male",54,"North West","Permanent",50,"Moderate",2020-10-05,"ESSVR",1,2021-06-17,2021-10-20,1,20
+498,"Female",45,"North East","Casual",20,"Mild",2020-06-04,"Usual Care",1,2021-04-07,2021-06-30,,32
+499,"Male",66,"North East","Casual",20,"Mild",2020-11-09,"ESSVR",1,2021-09-28,2021-12-08,1,28
+500,"Male",49,"West Midlands","Permanent",20,"Mild",2020-10-27,"ESSVR",1,2021-05-04,2021-11-23,1,59
+501,"Male",61,"South East","Casual",25,"Moderate",2020-11-23,"ESSVR",1,2021-09-02,2021-12-17,0,34
+502,"Male",55,"West Midlands","Casual",15,"Severe",2020-10-23,"ESSVR",1,2021-09-20,2021-11-03,1,42
+503,"Male",53,"North West","FixedTerm",40,"Severe",2020-09-29,"Usual Care",0,2021-10-11,2021-10-22,,19
+504,"Female",67,"North West","FixedTerm",50,"Moderate",2020-07-22,"ESSVR",1,2021-05-03,2021-07-13,1,74
+505,"Male",65,"West Midlands","FixedTerm",50,"Mild",2020-06-19,"Usual Care",0,,2021-06-25,,27
+506,"Female",43,"North East","FixedTerm",25,"Severe",2020-10-07,"ESSVR",0,,2021-10-06,0,39
+507,"Female",62,"South East","Permanent",40,"Moderate",2020-10-15,"ESSVR",1,2021-08-24,2021-09-21,1,36
+508,"Female",65,"West Midlands","FixedTerm",25,"Severe",2020-10-05,"ESSVR",1,2021-03-23,2021-09-09,1,52
+509,"Male",67,"West Midlands","SelfEmployed",40,"Mild",2020-10-01,"ESSVR",1,2021-08-25,2021-09-21,0,35
+510,"Male",43,"South East","SelfEmployed",45,"Severe",2020-05-07,"ESSVR",1,2020-11-18,2021-05-24,1,16
+511,"Male",46,"South East","FixedTerm",50,"Moderate",2020-10-08,"Usual Care",1,2021-08-23,2021-09-10,,61
+512,"Female",63,"North East","FixedTerm",45,"Mild",2020-05-07,"ESSVR",1,2021-01-04,2021-05-11,0,27
+513,"Female",68,"North West","Casual",45,"Moderate",2020-09-02,"Usual Care",1,2021-05-27,2021-08-03,,32
+514,"Female",56,"West Midlands","Permanent",45,"Mild",2020-06-09,"Usual Care",1,2021-05-11,2021-05-19,,60
+515,"Male",54,"South East","FixedTerm",25,"Severe",2020-06-12,"ESSVR",0,,2021-06-22,1,41
+516,"Male",67,"North West","Permanent",45,"Mild",2020-07-02,"ESSVR",1,2021-03-29,2021-07-29,1,49
+517,"Female",54,"West Midlands","Casual",30,"Mild",2020-06-25,"ESSVR",1,2021-04-05,2021-06-10,1,56
+518,"Male",67,"North West","SelfEmployed",45,"Mild",2020-08-13,"ESSVR",1,2021-07-20,2021-07-22,1,68
+519,"Male",56,"North West","Permanent",40,"Mild",2020-06-22,"ESSVR",1,2021-01-04,2021-06-01,0,56
+520,"Male",69,"South East","Permanent",45,"Moderate",2020-11-11,"Usual Care",1,2021-05-27,2021-11-24,,41
+521,"Male",69,"North West","Permanent",25,"Moderate",2020-05-01,"ESSVR",1,2020-11-26,2021-05-28,1,58
+522,"Male",66,"West Midlands","FixedTerm",45,"Severe",2020-06-02,"ESSVR",0,,2021-05-18,1,11
+523,"Male",67,"West Midlands","Contractor",45,"Moderate",2020-10-07,"ESSVR",1,2021-08-12,2021-10-18,1,18
+524,"Female",69,"South East","Permanent",45,"Mild",2020-10-12,"Usual Care",0,2021-11-08,2021-11-08,,41
+525,"Female",67,"West Midlands","SelfEmployed",40,"Severe",2020-11-03,"ESSVR",0,,2021-11-18,0,20
+526,"Female",61,"South East","Contractor",40,"Mild",2020-09-09,"Usual Care",0,,2021-09-27,,68
+527,"Female",65,"South East","FixedTerm",45,"Moderate",2020-11-26,"ESSVR",0,,2021-11-15,1,41
+528,"Male",60,"North East","Permanent",40,"Mild",2020-11-04,"Usual Care",1,2021-08-19,2021-10-11,,49
+529,"Male",49,"West Midlands","Permanent",40,"Severe",2020-09-04,"ESSVR",1,2021-06-29,2021-09-10,0,39
+530,"Male",62,"North East","Contractor",45,"Mild",2020-10-15,"Usual Care",0,,2021-10-01,,37
+531,"Female",67,"South East","FixedTerm",25,"Moderate",2020-07-31,"Usual Care",0,,2021-08-11,,33
+532,"Male",65,"South East","Permanent",25,"Mild",2020-07-22,"Usual Care",1,2021-05-03,2021-07-22,,39
+533,"Male",69,"South East","Contractor",30,"Mild",2020-08-18,"ESSVR",1,2021-06-18,2021-09-08,1,47
+534,"Male",66,"South East","Permanent",50,"Moderate",2020-07-22,"ESSVR",0,,2021-07-12,0,43
+535,"Male",61,"West Midlands","Permanent",50,"Mild",2020-08-10,"ESSVR",1,2021-02-22,2021-09-09,1,24
+536,"Male",67,"West Midlands","Permanent",25,"Moderate",2020-06-01,"Usual Care",1,2020-12-21,2021-05-25,,23
+537,"Female",57,"North West","Permanent",40,"Moderate",2020-05-01,"Usual Care",1,2020-11-10,2021-04-22,,26
+538,"Male",40,"North West","Permanent",40,"Moderate",2020-06-03,"Usual Care",1,2021-03-04,2021-05-21,,27
+539,"Male",59,"West Midlands","Casual",30,"Moderate",2020-10-20,"Usual Care",1,2021-08-23,2021-10-15,,44
+540,"Female",66,"North West","Permanent",40,"Moderate",2020-09-01,"Usual Care",1,2021-08-17,2021-09-10,,49
+541,"Female",59,"South East","Permanent",20,"Mild",2020-06-30,"ESSVR",1,2021-03-19,2021-05-31,1,66
+542,"Male",55,"West Midlands","SelfEmployed",45,"Mild",2020-07-13,"Usual Care",0,,2021-07-23,,41
+543,"Male",69,"North East","Permanent",45,"Moderate",2020-07-16,"ESSVR",1,2021-03-30,2021-06-22,0,35
+544,"Female",46,"North West","FixedTerm",55,"Moderate",2020-07-29,"Usual Care",1,2021-07-21,2021-07-21,,26
+545,"Male",68,"North East","Casual",45,"Mild",2020-06-08,"Usual Care",0,,2021-06-02,,33
+546,"Male",66,"North West","Contractor",40,"Mild",2020-08-31,"ESSVR",1,2021-06-24,2021-08-27,1,33
+547,"Male",65,"South East","Permanent",45,"Severe",2020-09-23,"Usual Care",1,2021-07-30,2021-09-09,,29
+548,"Male",54,"North East","Contractor",45,"Moderate",2020-05-01,"Usual Care",0,2021-05-24,2021-05-27,,27
+549,"Male",47,"South East","Permanent",40,"Moderate",2020-09-11,"Usual Care",0,,2021-09-22,,37
+550,"Male",57,"West Midlands","FixedTerm",25,"Mild",2020-05-28,"Usual Care",0,,2021-04-29,,21
+551,"Male",69,"West Midlands","SelfEmployed",30,"Moderate",2020-08-27,"ESSVR",1,2021-06-22,2021-09-01,1,27
+552,"Male",56,"South East","SelfEmployed",45,"Mild",2020-10-28,"ESSVR",1,2021-08-05,2021-10-28,1,45
+553,"Male",56,"North East","SelfEmployed",45,"Mild",2020-11-30,"ESSVR",1,2021-06-24,2021-12-13,1,34
+554,"Female",63,"North East","Permanent",50,"Mild",2020-11-24,"ESSVR",1,2021-09-02,2021-11-01,1,51
+555,"Male",62,"North West","Casual",40,"Severe",2020-06-09,"ESSVR",1,2021-03-08,2021-07-01,1,30
+556,"Male",68,"North East","FixedTerm",45,"Mild",2020-06-05,"ESSVR",1,2021-02-19,2021-06-17,1,28
+557,"Male",60,"North West","FixedTerm",45,"Moderate",2020-05-19,"Usual Care",0,,2021-05-14,,26
+558,"Male",57,"North West","Permanent",40,"Moderate",2020-09-11,"Usual Care",0,2021-09-13,2021-09-22,,22
+559,"Male",61,"North West","Permanent",45,"Mild",2020-11-04,"ESSVR",1,2021-09-27,2021-12-02,1,40
+560,"Male",41,"South East","SelfEmployed",40,"Moderate",2020-11-17,"Usual Care",0,,2021-11-29,,32
+561,"Male",58,"North West","Contractor",20,"Mild",2020-11-24,"ESSVR",1,2021-07-28,2021-12-13,1,50
+562,"Female",44,"South East","FixedTerm",20,"Moderate",2020-10-07,"ESSVR",1,2021-05-21,2021-09-15,1,27
+563,"Male",58,"North East","Permanent",40,"Moderate",2020-10-30,"ESSVR",1,2021-05-14,2021-10-01,1,45
+564,"Female",66,"West Midlands","Permanent",50,"Moderate",2020-08-10,"ESSVR",1,2021-05-17,2021-08-09,1,39
+565,"Female",66,"North East","Casual",15,"Moderate",2020-09-28,"ESSVR",1,2021-06-15,2021-10-25,1,53
+566,"Female",62,"North West","Casual",25,"Mild",2020-06-15,"ESSVR",1,2021-05-17,2021-06-23,1,33
+567,"Male",65,"North East","FixedTerm",45,"Mild",2020-11-18,"Usual Care",0,,2021-11-10,,51
+568,"Female",61,"North East","Permanent",25,"Mild",2020-07-17,"Usual Care",1,2021-03-01,2021-08-03,,35
+569,"Female",67,"North East","Permanent",25,"Mild",2020-07-07,"Usual Care",1,2021-06-07,2021-07-21,,49
+570,"Female",61,"South East","FixedTerm",40,"Moderate",2020-07-29,"Usual Care",0,,2021-07-08,,55
+571,"Male",69,"North East","Contractor",25,"Moderate",2020-06-05,"ESSVR",1,2021-03-11,2021-05-11,0,38
+572,"Male",52,"North West","Permanent",50,"Moderate",2020-08-11,"ESSVR",1,2021-03-29,2021-07-22,1,44
+573,"Male",56,"South East","FixedTerm",30,"Mild",2020-05-06,"ESSVR",1,2021-03-04,2021-05-17,1,49
+574,"Female",66,"West Midlands","Permanent",25,"Moderate",2020-08-11,"Usual Care",0,,2021-08-06,,81
+575,"Male",63,"South East","FixedTerm",50,"Mild",2020-07-24,"ESSVR",0,,2021-07-07,0,52
+576,"Female",65,"West Midlands","Permanent",45,"Moderate",2020-06-19,"ESSVR",1,2021-06-21,2021-06-22,0,27
+577,"Female",68,"North West","FixedTerm",45,"Moderate",2020-06-17,"ESSVR",1,2021-05-07,2021-06-09,1,31
+578,"Male",68,"West Midlands","Contractor",40,"Moderate",2020-05-18,"ESSVR",1,2021-01-04,2021-06-17,1,43
+579,"Female",64,"North West","Contractor",20,"Moderate",2020-10-15,"Usual Care",1,2021-08-02,2021-09-23,,27
+580,"Male",53,"North West","SelfEmployed",45,"Severe",2020-05-11,"Usual Care",0,2021-05-17,2021-05-31,,36
+581,"Male",58,"North West","Permanent",45,"Mild",2020-05-06,"ESSVR",1,2021-03-04,2021-04-29,1,28
+582,"Male",64,"West Midlands","SelfEmployed",40,"Mild",2020-05-29,"Usual Care",1,2021-05-26,2021-06-01,,47
+583,"Male",61,"North West","Permanent",50,"Moderate",2020-11-13,"Usual Care",1,2021-07-26,2021-11-29,,44
+584,"Female",68,"North East","FixedTerm",45,"Moderate",2020-11-13,"ESSVR",1,2021-06-10,2021-11-04,0,32
+585,"Male",69,"North West","Permanent",45,"Mild",2020-06-12,"Usual Care",1,2021-04-12,2021-06-28,,25
+586,"Male",50,"South East","Contractor",40,"Severe",2020-10-01,"ESSVR",1,2021-04-14,2021-09-24,0,36
+587,"Female",55,"North West","Permanent",40,"Moderate",2020-11-17,"Usual Care",1,2021-09-17,2021-12-02,,40
+588,"Male",66,"North East","Casual",30,"Moderate",2020-11-05,"Usual Care",0,,2021-11-08,,16
+589,"Male",56,"South East","Permanent",30,"Moderate",2020-08-06,"ESSVR",0,,2021-08-31,1,45
+590,"Female",69,"North West","Permanent",45,"Moderate",2020-10-12,"Usual Care",0,,2021-11-10,,48
+591,"Female",66,"North East","Permanent",50,"Severe",2020-11-06,"ESSVR",1,2021-05-27,2021-10-19,1,50
+592,"Male",48,"West Midlands","Permanent",40,"Moderate",2020-06-05,"ESSVR",1,2021-01-14,2021-06-01,1,21
+593,"Male",56,"South East","SelfEmployed",45,"Mild",2020-07-03,"ESSVR",1,2021-03-31,2021-08-02,1,35
+594,"Male",65,"North East","FixedTerm",45,"Moderate",2020-10-12,"Usual Care",1,2021-09-06,2021-09-30,,23
+595,"Male",55,"North West","SelfEmployed",45,"Severe",2020-06-22,"Usual Care",1,2021-02-08,2021-06-22,,37
+596,"Male",66,"North East","Permanent",45,"Mild",2020-10-12,"ESSVR",1,2021-05-31,2021-11-04,1,100
+597,"Female",38,"North West","SelfEmployed",50,"Moderate",2020-11-19,"Usual Care",1,2021-10-06,2021-11-10,,51
+598,"Female",69,"North East","FixedTerm",40,"Moderate",2020-07-08,"ESSVR",0,,2021-06-23,1,57
+599,"Male",63,"South East","FixedTerm",25,"Mild",2020-09-07,"Usual Care",0,,2021-08-16,,48
+600,"Male",53,"West Midlands","Permanent",45,"Mild",2020-11-26,"ESSVR",1,2021-09-21,2021-12-14,0,31
+601,"Male",50,"North West","Permanent",45,"Moderate",2020-08-05,"ESSVR",1,2021-03-29,2021-08-31,1,47
+602,"Female",67,"North East","FixedTerm",45,"Moderate",2020-11-26,"ESSVR",1,2021-09-10,2021-11-11,1,41
+603,"Male",51,"West Midlands","FixedTerm",45,"Severe",2020-06-29,"Usual Care",0,,2021-06-07,,54
+604,"Male",56,"North West","Casual",55,"Moderate",2020-10-05,"ESSVR",1,2021-08-09,2021-11-02,1,21
+605,"Female",54,"North East","Casual",15,"Severe",2020-08-06,"ESSVR",1,2021-02-25,2021-08-30,1,21
+606,"Male",68,"West Midlands","FixedTerm",45,"Moderate",2020-07-01,"ESSVR",0,,2021-07-02,0,26
+607,"Female",68,"West Midlands","Casual",40,"Mild",2020-08-07,"Usual Care",1,2021-05-07,2021-07-19,,46
+608,"Female",68,"North West","Permanent",30,"Moderate",2020-08-26,"ESSVR",1,2021-07-16,2021-09-21,1,31
+609,"Male",54,"North East","Permanent",25,"Mild",2020-06-08,"ESSVR",1,2021-02-15,2021-05-25,1,50
+610,"Male",62,"West Midlands","SelfEmployed",40,"Mild",2020-07-14,"Usual Care",1,2021-06-11,2021-07-16,,58
+611,"Male",53,"North East","Permanent",45,"Moderate",2020-05-27,"ESSVR",1,2021-01-21,2021-05-21,1,44
+612,"Male",53,"South East","Contractor",25,"Mild",2020-05-05,"ESSVR",1,2021-03-03,2021-05-03,1,56
+613,"Female",67,"North East","FixedTerm",40,"Mild",2020-08-11,"Usual Care",0,,2021-08-06,,42
+614,"Male",60,"North West","Permanent",50,"Moderate",2020-09-29,"Usual Care",1,,2021-09-14,,25
+615,"Male",64,"North West","Contractor",45,"Severe",2020-07-27,"ESSVR",1,2021-07-09,2021-07-09,1,51
+616,"Female",59,"North West","FixedTerm",45,"Severe",2020-05-22,"ESSVR",1,2021-05-03,2021-05-18,1,49
+617,"Female",66,"North West","FixedTerm",40,"Moderate",2020-06-18,"Usual Care",1,2021-04-07,2021-07-15,,43
+618,"Male",57,"West Midlands","Permanent",45,"Mild",2020-05-19,"Usual Care",0,,2021-05-04,,70
+619,"Male",57,"West Midlands","Casual",35,"Mild",2020-07-14,"ESSVR",1,2021-05-17,2021-07-12,1,55
+620,"Female",58,"North East","SelfEmployed",45,"Mild",2020-05-29,"Usual Care",1,2020-12-25,2021-06-07,,45
+621,"Female",69,"North West","Casual",25,"Severe",2020-07-10,"ESSVR",1,2021-03-08,2021-06-30,1,43
+622,"Female",61,"South East","FixedTerm",45,"Mild",2020-08-20,"Usual Care",0,2021-08-26,2021-09-06,,25
+623,"Female",55,"North West","Casual",30,"Mild",2020-11-27,"Usual Care",1,2021-11-25,2021-12-21,,50
+624,"Female",62,"North West","Casual",30,"Moderate",2020-07-06,"Usual Care",0,2021-07-06,2021-07-22,,56
+625,"Male",66,"West Midlands","FixedTerm",60,"Moderate",2020-05-28,"Usual Care",0,,2021-05-26,,23
+626,"Male",60,"North East","SelfEmployed",50,"Mild",2020-05-19,"ESSVR",1,2020-11-12,2021-05-31,1,56
+627,"Female",60,"West Midlands","FixedTerm",50,"Mild",2020-11-24,"Usual Care",1,2021-10-22,2021-10-26,,48
+628,"Male",63,"North West","Permanent",45,"Moderate",2020-10-06,"ESSVR",1,2021-08-13,2021-10-14,1,32
+629,"Female",68,"North West","FixedTerm",25,"Moderate",2020-07-24,"ESSVR",1,2021-05-10,2021-07-12,1,31
+630,"Male",65,"West Midlands","Permanent",40,"Mild",2020-06-05,"ESSVR",1,2021-03-10,2021-06-23,1,57
+631,"Male",57,"South East","Contractor",40,"Moderate",2020-11-11,"ESSVR",1,2021-08-17,2021-12-07,1,38
+632,"Male",69,"West Midlands","Permanent",40,"Severe",2020-05-19,"ESSVR",1,2021-02-08,2021-05-05,1,19
+633,"Male",69,"West Midlands","Permanent",45,"Moderate",2020-10-20,"Usual Care",1,2021-09-01,2021-10-29,,42
+634,"Male",68,"South East","FixedTerm",25,"Mild",2020-05-21,"Usual Care",0,,2021-06-18,,33
+635,"Male",44,"South East","SelfEmployed",50,"Severe",2020-11-16,"Usual Care",0,,2021-11-24,,49
+636,"Female",51,"North East","Permanent",40,"Severe",2020-10-29,"ESSVR",1,2021-09-30,2021-11-08,1,42
+637,"Female",65,"West Midlands","Casual",20,"Mild",2020-08-21,"Usual Care",0,,2021-07-23,,50
+638,"Male",69,"South East","Permanent",25,"Mild",2020-11-19,"Usual Care",1,2021-06-22,2021-12-16,,42
+639,"Female",66,"West Midlands","Permanent",45,"Mild",2020-09-21,"ESSVR",1,2021-06-28,2021-09-16,1,35
+640,"Female",39,"North East","SelfEmployed",20,"Mild",2020-08-03,"Usual Care",1,2021-06-04,2021-07-21,,53
+641,"Male",69,"South East","Permanent",20,"Moderate",2020-08-18,"Usual Care",0,,2021-09-06,,60
+642,"Male",67,"West Midlands","Permanent",45,"Mild",2020-10-14,"Usual Care",1,2021-07-05,2021-09-15,,14
+643,"Male",62,"North West","SelfEmployed",45,"Moderate",2020-10-01,"Usual Care",1,2021-08-19,2021-09-01,,27
+644,"Female",53,"North East","FixedTerm",40,"Mild",2020-06-17,"ESSVR",1,2021-03-05,2021-06-15,0,36
+645,"Male",64,"South East","SelfEmployed",45,"Mild",2020-06-29,"Usual Care",1,,2021-06-16,,61
+646,"Male",49,"North East","SelfEmployed",45,"Mild",2020-05-22,"ESSVR",1,2020-12-30,2021-06-04,1,24
+647,"Male",68,"North East","Permanent",45,"Mild",2020-09-25,"ESSVR",1,2021-07-29,2021-10-15,1,40
+648,"Female",62,"North West","Permanent",50,"Mild",2020-06-17,"ESSVR",1,2021-03-05,2021-07-07,1,39
+649,"Female",61,"North West","FixedTerm",40,"Moderate",2020-08-10,"ESSVR",1,2021-06-23,2021-07-14,1,45
+650,"Female",57,"West Midlands","Casual",45,"Mild",2020-09-29,"Usual Care",0,,2021-09-06,,30
+651,"Male",67,"West Midlands","Permanent",45,"Mild",2020-07-24,"ESSVR",1,2021-02-26,2021-07-23,1,62
+652,"Male",69,"South East","Permanent",40,"Mild",2020-11-19,"Usual Care",1,2021-10-07,2021-11-26,,23
+653,"Female",65,"North East","Permanent",20,"Mild",2020-08-13,"ESSVR",1,2021-03-11,2021-08-17,0,67
+654,"Male",59,"South East","SelfEmployed",45,"Mild",2020-06-08,"Usual Care",0,,2021-06-23,,51
+655,"Male",65,"South East","FixedTerm",45,"Severe",2020-11-05,"Usual Care",0,,2021-11-24,,24
+656,"Male",63,"North East","Permanent",20,"Moderate",2020-10-02,"ESSVR",0,,2021-10-04,1,19
+657,"Female",69,"West Midlands","FixedTerm",45,"Mild",2020-08-24,"ESSVR",1,2021-05-31,2021-07-26,0,44
+658,"Male",54,"West Midlands","Permanent",40,"Moderate",2020-06-12,"Usual Care",1,2021-02-05,2021-06-23,,66
+659,"Female",64,"South East","Permanent",25,"Mild",2020-10-02,"ESSVR",1,2021-06-18,2021-10-08,0,36
+660,"Male",66,"North West","Permanent",50,"Moderate",2020-08-18,"Usual Care",0,,2021-08-30,,28
+661,"Male",68,"North West","Permanent",45,"Moderate",2020-06-11,"Usual Care",1,2021-01-11,2021-06-29,,15
+662,"Male",63,"North East","Casual",25,"Mild",2020-09-09,"Usual Care",1,2021-06-23,2021-08-10,,19
+663,"Male",62,"North East","FixedTerm",40,"Mild",2020-09-28,"Usual Care",1,2021-06-22,2021-09-07,,45
+664,"Female",65,"North East","Permanent",40,"Moderate",2020-09-22,"ESSVR",1,2021-08-02,2021-10-21,0,36
+665,"Male",68,"North East","SelfEmployed",40,"Moderate",2020-10-13,"Usual Care",0,,2021-10-26,,8
+666,"Male",37,"North West","Permanent",20,"Moderate",2020-07-23,"ESSVR",1,2021-02-17,2021-06-30,1,48
+667,"Male",66,"West Midlands","Casual",20,"Mild",2020-10-14,"Usual Care",1,2021-08-02,2021-09-15,,44
+668,"Female",64,"West Midlands","Casual",20,"Mild",2020-09-24,"Usual Care",1,2021-07-08,2021-10-18,,61
+669,"Male",68,"North West","Permanent",25,"Moderate",2020-06-15,"ESSVR",1,2021-02-17,2021-06-30,1,16
+670,"Female",66,"North East","Permanent",45,"Moderate",2020-11-02,"Usual Care",0,,2021-11-19,,41
+671,"Male",58,"North West","Contractor",40,"Moderate",2020-08-27,"ESSVR",1,2021-05-05,2021-08-04,1,58
+672,"Female",46,"North East","FixedTerm",40,"Moderate",2020-05-18,"Usual Care",1,2021-05-03,2021-06-15,,23
+673,"Male",67,"South East","SelfEmployed",45,"Mild",2020-08-10,"Usual Care",0,,2021-08-09,,37
+674,"Male",56,"West Midlands","Permanent",25,"Moderate",2020-05-11,"Usual Care",0,,2021-06-08,,54
+675,"Male",68,"South East","Permanent",40,"Moderate",2020-06-01,"ESSVR",1,2020-11-03,2021-05-25,0,66
+676,"Male",68,"North West","FixedTerm",25,"Mild",2020-09-24,"ESSVR",0,,2021-09-28,1,48
+677,"Male",67,"North West","FixedTerm",40,"Severe",2020-11-06,"ESSVR",1,2021-08-30,2021-10-29,0,27
+678,"Male",55,"West Midlands","FixedTerm",20,"Moderate",2020-05-27,"ESSVR",1,2021-02-02,2021-06-04,0,50
+679,"Female",56,"North East","Casual",25,"Mild",2020-07-20,"Usual Care",1,,2021-06-28,,53
+680,"Male",65,"North West","FixedTerm",45,"Mild",2020-07-27,"ESSVR",1,2021-03-22,2021-07-07,1,49
+681,"Male",60,"South East","Contractor",25,"Severe",2020-11-12,"ESSVR",1,2021-09-13,2021-11-05,1,23
+682,"Male",67,"North West","SelfEmployed",40,"Mild",2020-07-14,"ESSVR",1,2021-05-20,2021-08-05,1,36
+683,"Male",62,"South East","Permanent",45,"Severe",2020-11-02,"Usual Care",0,,2021-10-15,,48
+684,"Male",61,"South East","Casual",25,"Severe",2020-08-24,"ESSVR",0,,2021-09-16,0,49
+685,"Male",59,"West Midlands","Contractor",45,"Moderate",2020-08-13,"Usual Care",0,,2021-08-27,,52
+686,"Male",45,"North West","FixedTerm",40,"Mild",2020-10-05,"ESSVR",1,2021-05-18,2021-11-02,0,23
+687,"Male",62,"North West","Permanent",55,"Moderate",2020-07-20,"Usual Care",1,2021-04-29,2021-07-14,,48
+688,"Male",69,"North East","Contractor",45,"Severe",2020-08-10,"ESSVR",1,2021-07-26,2021-07-27,0,2
+689,"Female",63,"West Midlands","Casual",30,"Mild",2020-08-07,"Usual Care",0,,2021-07-12,,40
+690,"Female",57,"North East","FixedTerm",25,"Moderate",2020-10-26,"Usual Care",1,2021-09-27,2021-10-04,,42
+691,"Female",68,"North East","Casual",40,"Mild",2020-10-23,"ESSVR",1,2021-09-22,2021-10-04,1,46
+692,"Female",53,"North East","SelfEmployed",30,"Severe",2020-10-19,"Usual Care",1,2021-09-10,2021-10-11,,45
+693,"Female",60,"West Midlands","FixedTerm",20,"Mild",2020-10-21,"Usual Care",1,2021-08-16,2021-10-18,,46
+694,"Female",45,"South East","FixedTerm",20,"Severe",2020-11-19,"ESSVR",0,,2021-11-18,1,44
+695,"Female",60,"West Midlands","FixedTerm",40,"Mild",2020-07-21,"Usual Care",0,,2021-08-09,,30
+696,"Female",65,"West Midlands","Casual",20,"Moderate",2020-08-05,"Usual Care",0,,2021-08-19,,48
+697,"Male",63,"North West","Permanent",25,"Mild",2020-05-08,"Usual Care",1,2021-01-25,2021-04-09,,43
+698,"Female",60,"North West","Permanent",45,"Moderate",2020-09-17,"Usual Care",0,,2021-09-14,,32
+699,"Male",65,"West Midlands","Casual",35,"Moderate",2020-05-13,"Usual Care",1,2021-02-25,2021-05-07,,33
+700,"Female",40,"West Midlands","Permanent",20,"Moderate",2020-05-28,"Usual Care",0,,2021-05-14,,65
+701,"Female",59,"South East","FixedTerm",25,"Moderate",2020-09-25,"Usual Care",1,2021-09-02,2021-10-20,,36
+702,"Male",47,"West Midlands","FixedTerm",45,"Severe",2020-08-12,"ESSVR",1,,2021-07-22,1,19
+703,"Male",64,"North East","Permanent",25,"Severe",2020-11-03,"Usual Care",0,,2021-10-29,,32
+704,"Male",61,"West Midlands","Permanent",40,"Mild",2020-08-06,"Usual Care",1,2021-04-29,2021-07-26,,55
+705,"Male",69,"West Midlands","SelfEmployed",40,"Mild",2020-11-19,"ESSVR",1,2021-11-04,2021-12-07,0,41
+706,"Female",55,"North West","FixedTerm",55,"Moderate",2020-08-27,"ESSVR",1,2021-07-19,2021-09-21,1,23
+707,"Female",59,"North West","FixedTerm",45,"Moderate",2020-11-10,"Usual Care",1,2021-10-11,2021-12-10,,22
+708,"Male",63,"South East","Permanent",45,"Moderate",2020-05-08,"Usual Care",1,2021-04-12,2021-05-20,,61
+709,"Male",67,"South East","SelfEmployed",20,"Mild",2020-06-16,"ESSVR",1,2021-03-10,2021-05-31,0,21
+710,"Male",68,"North East","Permanent",45,"Moderate",2020-06-12,"Usual Care",0,,2021-06-11,,18
+711,"Female",59,"South East","FixedTerm",45,"Moderate",2020-11-12,"Usual Care",1,2021-08-17,2021-12-15,,38
+712,"Male",49,"North West","Casual",15,"Mild",2020-09-08,"ESSVR",1,2021-07-05,2021-09-15,0,78
+713,"Female",44,"West Midlands","Permanent",20,"Mild",2020-08-14,"ESSVR",1,2021-06-14,2021-08-10,1,24
+714,"Female",52,"North West","FixedTerm",40,"Moderate",2020-07-27,"Usual Care",0,,2021-07-21,,37
+715,"Male",63,"West Midlands","Permanent",45,"Moderate",2020-07-20,"Usual Care",1,2021-05-28,2021-07-16,,27
+716,"Male",67,"North East","Permanent",45,"Mild",2020-05-04,"Usual Care",1,2021-04-02,2021-05-06,,34
+717,"Female",66,"North East","Permanent",20,"Mild",2020-10-26,"ESSVR",1,2021-09-13,2021-10-05,1,36
+718,"Male",54,"West Midlands","Permanent",20,"Mild",2020-06-16,"Usual Care",1,2021-05-07,2021-05-19,,55
+719,"Female",56,"South East","Permanent",20,"Moderate",2020-05-05,"Usual Care",1,2021-04-14,2021-06-01,,11
+720,"Female",68,"North West","SelfEmployed",20,"Mild",2020-07-30,"Usual Care",1,2021-07-15,2021-07-28,,58
+721,"Male",62,"South East","Permanent",25,"Severe",2020-09-22,"ESSVR",1,2021-06-21,2021-08-31,1,25
+722,"Female",64,"North West","Casual",40,"Moderate",2020-05-04,"ESSVR",1,2021-02-02,2021-05-26,0,57
+723,"Male",67,"North East","Contractor",30,"Mild",2020-08-28,"Usual Care",0,2021-09-22,2021-09-24,,51
+724,"Male",66,"North West","Permanent",45,"Severe",2020-10-16,"Usual Care",1,2021-06-14,2021-10-05,,21
+725,"Male",64,"South East","Casual",30,"Mild",2020-05-13,"Usual Care",1,2021-04-12,2021-06-08,,38
+726,"Male",57,"North West","FixedTerm",20,"Severe",2020-09-22,"Usual Care",1,2021-03-29,2021-09-10,,24
+727,"Male",56,"North East","SelfEmployed",40,"Severe",2020-10-16,"Usual Care",0,,2021-10-08,,13
+728,"Male",61,"North West","Permanent",25,"Moderate",2020-08-03,"ESSVR",1,2021-01-28,2021-08-26,0,19
+729,"Male",65,"West Midlands","Contractor",40,"Severe",2020-06-04,"Usual Care",1,2021-03-31,2021-05-07,,30
+730,"Male",59,"North East","Permanent",40,"Mild",2020-10-27,"Usual Care",0,2021-10-27,2021-11-05,,43
+731,"Female",68,"North West","FixedTerm",45,"Mild",2020-07-17,"Usual Care",1,2020-12-14,2021-07-01,,35
+732,"Male",67,"North East","Permanent",40,"Moderate",2020-05-13,"Usual Care",1,2021-03-09,2021-05-14,,26
+733,"Male",50,"North West","SelfEmployed",40,"Moderate",2020-07-13,"Usual Care",1,2021-02-01,2021-07-01,,39
+734,"Male",63,"North East","Casual",25,"Severe",2020-06-16,"ESSVR",1,2021-03-17,2021-06-29,0,46
+735,"Male",69,"South East","FixedTerm",40,"Moderate",2020-10-02,"Usual Care",0,,2021-09-14,,39
+736,"Male",59,"South East","Permanent",25,"Moderate",2020-11-20,"ESSVR",1,2021-08-10,2021-11-22,1,28
+737,"Female",66,"North West","FixedTerm",30,"Moderate",2020-11-24,"Usual Care",0,,2021-11-23,,16
+738,"Male",53,"North West","Casual",20,"Moderate",2020-06-12,"Usual Care",1,2021-03-22,2021-05-24,,43
+739,"Female",61,"West Midlands","Casual",15,"Moderate",2020-06-16,"ESSVR",1,2021-03-04,2021-05-18,0,59
+740,"Male",59,"West Midlands","Permanent",50,"Severe",2020-08-03,"Usual Care",1,2021-06-04,2021-07-15,,33
+741,"Male",56,"North East","FixedTerm",40,"Mild",2020-07-16,"Usual Care",1,2021-04-19,2021-06-24,,58
+742,"Male",60,"North East","Permanent",25,"Moderate",2020-11-19,"Usual Care",0,2021-11-22,2021-12-01,,53
+743,"Male",67,"North West","Contractor",25,"Mild",2020-11-18,"ESSVR",1,2021-10-06,2021-11-23,1,54
+744,"Male",56,"West Midlands","Contractor",55,"Severe",2020-09-24,"ESSVR",1,2020-12-28,2021-09-20,1,60
+745,"Male",61,"North West","Casual",25,"Severe",2020-06-15,"Usual Care",1,2021-01-08,2021-07-09,,41
+746,"Male",69,"South East","Permanent",25,"Mild",2020-08-24,"Usual Care",0,2021-09-02,2021-09-03,,40
+747,"Male",48,"North East","Permanent",45,"Mild",2020-09-15,"ESSVR",1,2021-05-17,2021-09-20,0,60
+748,"Female",50,"West Midlands","Permanent",35,"Moderate",2020-11-26,"Usual Care",1,2021-08-05,2021-12-15,,58
+749,"Male",60,"North West","Permanent",45,"Mild",2020-08-04,"Usual Care",1,2021-01-18,2021-08-17,,36
+750,"Male",49,"West Midlands","Permanent",45,"Mild",2020-06-15,"ESSVR",1,2021-02-01,2021-06-14,1,60
+751,"Male",69,"North West","FixedTerm",20,"Moderate",2020-08-20,"ESSVR",1,2021-03-25,2021-08-12,1,36
+752,"Female",67,"West Midlands","Permanent",40,"Moderate",2020-06-05,"ESSVR",1,2020-12-18,2021-06-14,1,29
+753,"Male",55,"North East","Casual",15,"Mild",2020-07-07,"Usual Care",0,,2021-06-21,,41
+754,"Male",69,"North East","SelfEmployed",45,"Severe",2020-06-25,"ESSVR",1,2021-03-29,2021-06-23,1,23
+755,"Male",39,"South East","SelfEmployed",50,"Mild",2020-11-05,"ESSVR",1,2021-09-03,2021-11-19,1,61
+756,"Female",69,"North East","Permanent",50,"Moderate",2020-11-10,"ESSVR",1,2021-06-21,2021-10-20,1,48
+757,"Male",58,"West Midlands","Contractor",50,"Severe",2020-10-02,"ESSVR",1,2021-06-24,2021-09-28,1,47
+758,"Female",69,"South East","Permanent",30,"Moderate",2020-09-02,"ESSVR",1,2021-06-11,2021-08-18,1,52
+759,"Female",58,"North West","SelfEmployed",50,"Moderate",2020-05-06,"ESSVR",1,2021-04-05,2021-05-17,1,55
+760,"Male",58,"West Midlands","Casual",45,"Moderate",2020-09-18,"ESSVR",1,2021-05-19,2021-09-14,0,51
+761,"Male",66,"West Midlands","Permanent",45,"Moderate",2020-07-03,"Usual Care",0,,2021-06-23,,9
+762,"Male",59,"North West","Permanent",45,"Severe",2020-11-03,"ESSVR",1,,2021-10-07,1,43
+763,"Male",67,"North West","Permanent",45,"Mild",2020-05-06,"ESSVR",1,2021-02-08,2021-05-19,1,26
+764,"Female",39,"North West","FixedTerm",45,"Mild",2020-07-21,"Usual Care",1,2021-04-19,2021-07-02,,62
+765,"Female",67,"West Midlands","SelfEmployed",45,"Moderate",2020-08-12,"Usual Care",0,,2021-08-10,,81
+766,"Male",68,"North West","Contractor",45,"Severe",2020-07-09,"ESSVR",0,,2021-08-06,0,32
+767,"Male",58,"West Midlands","SelfEmployed",50,"Moderate",2020-08-20,"Usual Care",1,2021-05-31,2021-09-07,,48
+768,"Male",52,"West Midlands","Permanent",30,"Mild",2020-06-16,"Usual Care",1,2021-02-12,2021-06-14,,34
+769,"Male",60,"North West","Casual",40,"Mild",2020-05-22,"ESSVR",1,2021-03-01,2021-06-03,1,45
+770,"Male",63,"West Midlands","SelfEmployed",25,"Mild",2020-09-23,"ESSVR",1,2021-09-06,2021-09-10,1,20
+771,"Male",60,"North East","Permanent",45,"Severe",2020-09-23,"ESSVR",1,2021-09-14,2021-09-20,1,23
+772,"Male",56,"West Midlands","Contractor",45,"Moderate",2020-06-25,"Usual Care",0,,2021-06-09,,24
+773,"Male",64,"West Midlands","Permanent",40,"Severe",2020-05-14,"Usual Care",0,,2021-05-26,,40
+774,"Male",58,"North East","Permanent",40,"Moderate",2020-10-26,"Usual Care",1,2021-04-05,2021-10-22,,49
+775,"Male",64,"North West","Permanent",25,"Moderate",2020-09-21,"Usual Care",1,2021-08-19,2021-09-29,,50
+776,"Male",69,"North East","Contractor",20,"Moderate",2020-07-15,"ESSVR",1,2021-05-03,2021-07-07,0,37
+777,"Male",63,"South East","Permanent",40,"Mild",2020-07-30,"Usual Care",1,2021-05-10,2021-07-14,,30
+778,"Male",66,"South East","Contractor",25,"Mild",2020-11-16,"Usual Care",0,2021-12-15,2021-12-16,,37
+779,"Female",67,"South East","FixedTerm",45,"Moderate",2020-07-28,"Usual Care",1,2021-05-24,2021-07-05,,41
+780,"Female",60,"North East","FixedTerm",45,"Mild",2020-07-06,"ESSVR",1,2021-04-12,2021-06-28,0,56
+781,"Male",62,"North East","Permanent",45,"Moderate",2020-11-19,"ESSVR",1,2021-11-10,2021-11-10,0,44
+782,"Male",66,"North West","Permanent",30,"Mild",2020-11-24,"Usual Care",1,2021-09-07,2021-11-29,,37
+783,"Female",63,"West Midlands","Permanent",45,"Severe",2020-09-15,"Usual Care",0,,2021-08-26,,31
+784,"Male",38,"West Midlands","Permanent",50,"Moderate",2020-05-27,"Usual Care",1,2021-03-26,2021-06-10,,33
+785,"Female",69,"North East","Permanent",30,"Moderate",2020-09-03,"ESSVR",1,,2021-08-24,1,22
+786,"Male",65,"West Midlands","SelfEmployed",20,"Mild",2020-08-07,"Usual Care",1,2021-08-09,2021-08-12,,30
+787,"Male",60,"North East","Permanent",40,"Mild",2020-09-30,"Usual Care",1,2021-09-13,2021-10-20,,42
+788,"Female",65,"North East","Casual",20,"Moderate",2020-05-29,"ESSVR",1,2021-02-12,2021-06-17,1,56
+789,"Male",68,"South East","Permanent",20,"Moderate",2020-09-25,"ESSVR",1,2021-05-13,2021-10-13,0,20
+790,"Male",51,"West Midlands","Permanent",40,"Moderate",2020-10-01,"Usual Care",1,2021-09-13,2021-10-22,,41
+791,"Female",62,"West Midlands","SelfEmployed",45,"Mild",2020-11-09,"Usual Care",1,2021-08-16,2021-11-15,,22
+792,"Female",64,"North West","Permanent",45,"Moderate",2020-09-23,"Usual Care",1,,2021-08-30,,26
+793,"Male",65,"West Midlands","Permanent",45,"Moderate",2020-09-07,"ESSVR",1,2021-07-13,2021-09-14,1,56
+794,"Female",68,"South East","Permanent",25,"Moderate",2020-11-24,"ESSVR",1,2021-08-09,2021-11-24,1,51
+795,"Male",63,"North West","FixedTerm",40,"Moderate",2020-08-26,"ESSVR",1,2021-06-11,2021-07-27,1,12
+796,"Male",57,"North East","Casual",30,"Severe",2020-11-05,"ESSVR",1,2021-06-23,2021-10-20,0,43
+797,"Male",62,"West Midlands","Contractor",45,"Severe",2020-07-02,"Usual Care",1,2021-05-18,2021-07-08,,51
+798,"Male",69,"North West","Permanent",40,"Mild",2020-11-20,"Usual Care",1,2021-08-18,2021-11-15,,31
+799,"Male",61,"North West","SelfEmployed",40,"Severe",2020-08-13,"ESSVR",1,,2021-07-29,1,36
+800,"Female",60,"North West","Permanent",20,"Mild",2020-09-08,"ESSVR",1,2021-08-02,2021-09-16,1,28
+801,"Male",57,"North East","Casual",50,"Mild",2020-09-24,"ESSVR",1,2021-04-19,2021-09-20,0,25
+802,"Male",64,"North East","Permanent",40,"Moderate",2020-07-17,"ESSVR",1,2021-06-08,2021-07-14,0,40
+803,"Female",61,"South East","Permanent",50,"Severe",2020-05-22,"Usual Care",0,,2021-06-23,,17
+804,"Male",61,"North West","Contractor",40,"Mild",2020-07-09,"Usual Care",1,2020-12-08,2021-06-29,,50
+805,"Female",49,"South East","Permanent",50,"Mild",2020-08-05,"ESSVR",1,2021-07-08,2021-07-19,1,58
+806,"Male",51,"North West","Permanent",40,"Moderate",2020-11-23,"ESSVR",1,2021-06-21,2021-12-03,1,47
+807,"Male",68,"West Midlands","Contractor",45,"Mild",2020-09-25,"Usual Care",1,2021-08-09,2021-09-14,,37
+808,"Female",67,"West Midlands","Permanent",50,"Moderate",2020-08-28,"ESSVR",1,2021-06-15,2021-09-23,1,36
+809,"Female",61,"South East","Permanent",40,"Mild",2020-11-19,"ESSVR",1,2021-04-05,2021-12-03,0,39
+810,"Female",57,"North West","Casual",10,"Moderate",2020-11-13,"Usual Care",1,2021-10-25,2021-12-08,,48
+811,"Male",55,"North West","SelfEmployed",45,"Moderate",2020-07-30,"ESSVR",1,2021-05-17,2021-07-28,1,20
+812,"Male",42,"North West","SelfEmployed",45,"Moderate",2020-06-02,"Usual Care",1,2021-05-31,2021-06-04,,66
+813,"Male",33,"South East","FixedTerm",45,"Mild",2020-06-04,"Usual Care",1,2021-03-19,2021-05-26,,56
+814,"Male",67,"North East","FixedTerm",40,"Mild",2020-07-02,"ESSVR",1,2021-05-17,2021-06-09,1,38
+815,"Male",54,"West Midlands","Permanent",25,"Mild",2020-07-30,"ESSVR",1,2021-03-01,2021-06-30,1,44
+816,"Male",69,"South East","Permanent",40,"Severe",2020-10-19,"Usual Care",0,,2021-11-11,,7
+817,"Female",66,"North West","Permanent",25,"Moderate",2020-07-29,"ESSVR",1,2021-03-02,2021-07-13,0,23
+818,"Female",68,"South East","FixedTerm",45,"Mild",2020-05-18,"Usual Care",1,2021-05-14,2021-05-19,,52
+819,"Male",64,"West Midlands","SelfEmployed",25,"Severe",2020-11-26,"Usual Care",1,2021-11-25,2021-12-03,,55
+820,"Male",59,"South East","Permanent",40,"Moderate",2020-05-28,"ESSVR",1,2021-01-13,2021-06-18,1,31
+821,"Female",67,"North East","Contractor",50,"Mild",2020-06-10,"ESSVR",1,2021-02-15,2021-05-21,1,33
+822,"Male",51,"North East","Contractor",20,"Moderate",2020-09-09,"ESSVR",1,2021-03-05,2021-08-23,1,38
+823,"Female",56,"South East","Permanent",20,"Mild",2020-05-28,"Usual Care",1,2021-01-15,2021-06-23,,51
+824,"Female",56,"South East","Casual",35,"Mild",2020-08-17,"Usual Care",0,,2021-07-30,,56
+825,"Male",60,"North East","FixedTerm",40,"Moderate",2020-07-22,"Usual Care",1,2021-05-24,2021-07-23,,35
+826,"Male",55,"North West","FixedTerm",40,"Moderate",2020-09-17,"Usual Care",0,,2021-08-31,,34
+827,"Male",63,"South East","Permanent",25,"Moderate",2020-08-14,"Usual Care",0,2021-09-13,2021-09-16,,39
+828,"Female",68,"South East","SelfEmployed",45,"Moderate",2020-07-06,"ESSVR",1,2021-02-08,2021-07-09,1,32
+829,"Female",49,"West Midlands","Permanent",25,"Mild",2020-11-18,"Usual Care",0,,2021-12-06,,46
+830,"Male",68,"South East","SelfEmployed",45,"Moderate",2020-05-26,"ESSVR",0,,2021-04-28,1,35
+831,"Male",54,"South East","Contractor",45,"Moderate",2020-09-23,"Usual Care",1,2021-07-22,2021-09-03,,32
+832,"Male",66,"North West","FixedTerm",40,"Severe",2020-08-25,"ESSVR",0,,2021-09-06,0,25
+833,"Male",63,"South East","Permanent",20,"Severe",2020-08-04,"ESSVR",1,2021-06-16,2021-07-27,0,24
+834,"Male",66,"West Midlands","Permanent",45,"Moderate",2020-05-22,"Usual Care",1,2021-04-19,2021-06-10,,79
+835,"Male",57,"North East","Permanent",25,"Severe",2020-09-22,"ESSVR",1,2021-08-12,2021-09-15,1,51
+836,"Male",67,"South East","Permanent",45,"Mild",2020-06-25,"ESSVR",1,2021-04-19,2021-05-31,1,47
+837,"Male",63,"South East","Casual",15,"Moderate",2020-11-04,"ESSVR",1,2021-10-12,2021-11-04,1,26
+838,"Male",59,"North West","FixedTerm",25,"Severe",2020-08-13,"Usual Care",0,,2021-07-22,,34
+839,"Female",40,"North East","Permanent",20,"Mild",2020-09-28,"ESSVR",1,2021-05-11,2021-09-29,1,47
+840,"Male",51,"South East","Permanent",40,"Moderate",2020-09-07,"Usual Care",0,,2021-08-26,,25
+841,"Male",68,"West Midlands","SelfEmployed",40,"Mild",2020-09-02,"Usual Care",0,,2021-08-27,,24
+842,"Male",60,"North East","Permanent",40,"Moderate",2020-09-16,"Usual Care",0,,2021-09-08,,34
+843,"Male",60,"North East","Contractor",40,"Mild",2020-08-14,"ESSVR",1,2021-03-26,2021-09-14,1,54
+844,"Male",68,"North East","Permanent",45,"Moderate",2020-06-15,"Usual Care",1,2021-05-03,2021-06-11,,51
+845,"Male",60,"North West","Permanent",40,"Mild",2020-08-11,"ESSVR",1,2021-06-07,2021-08-17,1,33
+846,"Male",67,"North East","Contractor",35,"Mild",2020-10-28,"Usual Care",1,2021-10-14,2021-11-05,,29
+847,"Female",67,"South East","Permanent",50,"Moderate",2020-09-25,"ESSVR",1,,2021-08-30,1,81
+848,"Male",63,"West Midlands","Permanent",25,"Severe",2020-08-27,"Usual Care",1,2021-08-18,2021-08-27,,23
+849,"Female",59,"North West","FixedTerm",25,"Mild",2020-07-21,"ESSVR",1,2021-01-18,2021-08-04,1,30
+850,"Male",68,"North West","SelfEmployed",45,"Mild",2020-08-10,"ESSVR",1,2021-06-24,2021-09-07,1,44
+851,"Female",61,"North East","Casual",50,"Mild",2020-06-23,"Usual Care",1,2021-06-21,2021-07-19,,47
+852,"Male",57,"West Midlands","SelfEmployed",45,"Mild",2020-07-14,"Usual Care",0,,2021-07-14,,62
+853,"Male",69,"South East","Permanent",50,"Mild",2020-05-05,"Usual Care",0,,2021-05-04,,24
+854,"Male",67,"West Midlands","Casual",25,"Mild",2020-07-15,"ESSVR",1,2021-06-18,2021-06-30,0,32
+855,"Male",60,"North East","FixedTerm",45,"Severe",2020-07-16,"ESSVR",0,2021-08-09,2021-08-17,1,11
+856,"Female",51,"South East","Permanent",25,"Mild",2020-11-17,"Usual Care",1,2021-10-06,2021-11-17,,47
+857,"Male",54,"North West","Permanent",40,"Severe",2020-07-07,"ESSVR",1,2021-06-30,2021-08-05,0,25
+858,"Male",64,"North West","Permanent",40,"Mild",2020-10-27,"Usual Care",1,2021-07-19,2021-10-19,,61
+859,"Female",65,"South East","Contractor",20,"Severe",2020-06-24,"Usual Care",1,2021-06-08,2021-06-16,,21
+860,"Female",66,"North East","FixedTerm",40,"Moderate",2020-07-06,"Usual Care",0,,2021-06-11,,46
+861,"Male",56,"North West","FixedTerm",50,"Mild",2020-10-16,"Usual Care",1,2021-09-20,2021-09-30,,42
+862,"Female",55,"South East","Permanent",50,"Mild",2020-09-16,"Usual Care",1,2021-06-17,2021-09-16,,22
+863,"Female",58,"North East","Casual",20,"Moderate",2020-06-16,"ESSVR",0,,2021-06-23,1,28
+864,"Male",59,"North West","Contractor",25,"Mild",2020-06-18,"ESSVR",1,2021-02-02,2021-07-05,0,62
+865,"Male",59,"North West","Casual",10,"Moderate",2020-10-23,"ESSVR",1,2021-07-26,2021-10-15,1,34
+866,"Male",66,"North West","Permanent",45,"Mild",2020-08-24,"ESSVR",1,2021-05-26,2021-08-25,1,30
+867,"Female",67,"North East","Permanent",25,"Moderate",2020-09-03,"ESSVR",1,2021-04-21,2021-08-24,0,49
+868,"Female",47,"North East","FixedTerm",45,"Moderate",2020-11-19,"ESSVR",1,2021-08-02,2021-11-22,1,53
+869,"Female",66,"South East","Permanent",45,"Mild",2020-09-24,"ESSVR",1,,2021-08-27,1,48
+870,"Male",59,"North East","Permanent",40,"Severe",2020-08-07,"ESSVR",1,2021-06-23,2021-08-04,1,46
+871,"Male",60,"North West","Permanent",45,"Severe",2020-11-12,"Usual Care",1,2021-08-23,2021-12-01,,32
+872,"Male",59,"South East","Permanent",25,"Mild",2020-06-25,"ESSVR",1,2021-01-04,2021-07-13,1,56
+873,"Male",56,"North West","Contractor",40,"Mild",2020-11-25,"ESSVR",1,2021-07-06,2021-10-28,1,38
+874,"Male",64,"South East","Casual",15,"Mild",2020-09-07,"Usual Care",1,2021-07-12,2021-08-10,,27
+875,"Male",63,"South East","Contractor",45,"Moderate",2020-09-29,"ESSVR",1,2021-06-29,2021-09-20,1,63
+876,"Male",68,"North West","Permanent",40,"Mild",2020-06-23,"ESSVR",1,2020-11-30,2021-07-09,0,46
+877,"Male",57,"West Midlands","FixedTerm",40,"Moderate",2020-08-05,"ESSVR",1,2021-06-14,2021-08-19,1,32
+878,"Male",48,"North West","Contractor",45,"Severe",2020-07-31,"ESSVR",1,2021-06-28,2021-08-26,0,38
+879,"Female",61,"North East","Casual",20,"Moderate",2020-07-08,"Usual Care",0,,2021-07-21,,24
+880,"Male",65,"North East","Permanent",40,"Mild",2020-11-02,"Usual Care",1,2021-11-01,2021-11-01,,32
+881,"Male",66,"North East","Permanent",40,"Mild",2020-08-20,"Usual Care",1,2021-06-01,2021-09-20,,52
+882,"Male",57,"North East","SelfEmployed",45,"Severe",2020-06-16,"Usual Care",1,2021-04-16,2021-07-06,,17
+883,"Male",69,"West Midlands","Permanent",45,"Moderate",2020-08-10,"ESSVR",1,2021-04-26,2021-08-16,0,55
+884,"Female",68,"South East","Permanent",40,"Mild",2020-06-29,"ESSVR",1,2021-02-15,2021-07-26,1,67
+885,"Male",63,"West Midlands","Permanent",45,"Severe",2020-08-26,"ESSVR",1,2021-08-20,2021-09-03,0,65
+886,"Female",51,"West Midlands","FixedTerm",40,"Mild",2020-11-04,"Usual Care",1,2021-10-25,2021-11-09,,49
+887,"Male",59,"West Midlands","Permanent",25,"Moderate",2020-06-05,"Usual Care",1,2021-02-22,2021-06-28,,31
+888,"Male",62,"North East","FixedTerm",30,"Moderate",2020-09-16,"ESSVR",1,2021-04-29,2021-09-10,1,46
+889,"Male",52,"West Midlands","Permanent",25,"Moderate",2020-06-18,"ESSVR",1,2021-02-08,2021-06-11,0,45
+890,"Male",62,"South East","FixedTerm",50,"Mild",2020-05-04,"Usual Care",0,,2021-04-20,,44
+891,"Male",62,"West Midlands","Permanent",45,"Mild",2020-08-07,"ESSVR",1,2021-03-08,2021-07-16,1,31
+892,"Female",60,"North East","Permanent",50,"Moderate",2020-07-15,"ESSVR",1,2021-05-13,2021-06-16,1,47
+893,"Male",69,"South East","FixedTerm",45,"Moderate",2020-07-24,"ESSVR",1,2021-03-08,2021-08-06,1,38
+894,"Male",54,"West Midlands","Permanent",45,"Mild",2020-06-26,"ESSVR",1,2021-05-07,2021-06-30,1,7
+895,"Female",67,"South East","FixedTerm",25,"Mild",2020-09-28,"ESSVR",0,,2021-10-25,0,39
+896,"Male",51,"West Midlands","Permanent",45,"Moderate",2020-08-17,"Usual Care",1,2021-07-13,2021-08-13,,50
+897,"Female",68,"West Midlands","Casual",25,"Severe",2020-06-10,"Usual Care",0,,2021-06-11,,29
+898,"Male",65,"North East","Permanent",45,"Mild",2020-09-22,"ESSVR",1,2021-06-02,2021-10-13,1,29
+899,"Male",44,"North West","Contractor",25,"Moderate",2020-09-24,"Usual Care",1,2021-05-26,2021-10-18,,16
+900,"Male",67,"South East","SelfEmployed",50,"Mild",2020-05-05,"ESSVR",1,2021-01-29,2021-05-20,0,37
+901,"Female",61,"North East","Permanent",25,"Moderate",2020-11-06,"Usual Care",1,2021-08-24,2021-10-27,,76
+902,"Male",65,"North West","SelfEmployed",45,"Moderate",2020-09-29,"Usual Care",1,2021-08-09,2021-09-03,,52
+903,"Male",69,"North East","FixedTerm",30,"Moderate",2020-05-29,"ESSVR",1,2021-03-17,2021-06-22,1,44
+904,"Male",67,"North East","Permanent",45,"Moderate",2020-10-14,"Usual Care",0,,2021-11-12,,15
+905,"Male",49,"West Midlands","Contractor",40,"Mild",2020-05-20,"Usual Care",1,,2021-05-04,,48
+906,"Male",48,"North West","Permanent",40,"Moderate",2020-11-09,"Usual Care",0,,2021-12-06,,60
+907,"Female",47,"West Midlands","Permanent",45,"Severe",2020-06-24,"Usual Care",1,2020-12-28,2021-07-21,,49
+908,"Male",65,"North East","Permanent",45,"Mild",2020-11-04,"ESSVR",1,2021-06-07,2021-11-18,1,48
+909,"Female",67,"North West","Casual",35,"Severe",2020-08-13,"ESSVR",1,2021-07-09,2021-08-23,0,50
+910,"Male",68,"North East","Casual",20,"Mild",2020-06-05,"ESSVR",1,2021-01-13,2021-05-07,0,37
+911,"Female",57,"North East","FixedTerm",45,"Moderate",2020-11-05,"ESSVR",1,2021-10-04,2021-11-01,1,41
+912,"Female",54,"West Midlands","Permanent",45,"Mild",2020-06-05,"Usual Care",1,2021-02-04,2021-06-11,,36
+913,"Male",46,"South East","Permanent",25,"Mild",2020-07-21,"Usual Care",1,2021-03-22,2021-06-23,,48
+914,"Male",57,"North West","Permanent",30,"Mild",2020-06-12,"ESSVR",1,2021-04-09,2021-06-08,0,40
+915,"Male",69,"West Midlands","Permanent",30,"Moderate",2020-09-24,"ESSVR",1,2021-06-08,2021-09-17,0,57
+916,"Male",68,"North West","Contractor",20,"Mild",2020-11-18,"ESSVR",1,2021-08-25,2021-11-11,1,51
+917,"Female",58,"North West","Casual",50,"Moderate",2020-08-06,"ESSVR",1,2021-03-01,2021-08-12,1,21
+918,"Male",62,"West Midlands","Casual",30,"Severe",2020-09-08,"ESSVR",1,2021-03-29,2021-08-12,1,14
+919,"Male",66,"South East","Contractor",50,"Moderate",2020-07-16,"ESSVR",1,2021-04-16,2021-08-03,0,45
+920,"Male",53,"North West","SelfEmployed",45,"Moderate",2020-08-04,"ESSVR",1,2021-04-20,2021-09-01,1,40
+921,"Female",65,"South East","Casual",25,"Moderate",2020-11-10,"ESSVR",1,2021-08-23,2021-11-16,0,63
+922,"Male",62,"North West","SelfEmployed",40,"Moderate",2020-08-28,"ESSVR",1,2021-07-26,2021-08-05,1,11
+923,"Female",63,"West Midlands","Permanent",45,"Mild",2020-09-11,"ESSVR",1,2021-01-19,2021-10-05,1,29
+924,"Female",55,"North West","Casual",15,"Mild",2020-10-12,"Usual Care",1,2021-05-10,2021-09-20,,66
+925,"Female",48,"North East","SelfEmployed",20,"Mild",2020-10-23,"ESSVR",1,2021-07-09,2021-11-02,1,27
+926,"Male",68,"South East","Casual",25,"Moderate",2020-08-26,"ESSVR",1,2021-06-24,2021-09-23,1,25
+927,"Female",66,"North West","Contractor",20,"Severe",2020-09-17,"Usual Care",0,,2021-09-28,,35
+928,"Male",67,"North East","Casual",40,"Mild",2020-11-10,"Usual Care",1,2021-10-19,2021-11-10,,23
+929,"Female",63,"North West","Permanent",45,"Moderate",2020-11-06,"ESSVR",1,2021-08-10,2021-11-02,0,56
+930,"Female",53,"North West","Contractor",25,"Severe",2020-05-25,"Usual Care",0,,2021-05-14,,18
+931,"Male",54,"North West","Permanent",45,"Mild",2020-10-01,"ESSVR",1,2021-06-16,2021-09-20,1,62
+932,"Male",69,"North East","Permanent",45,"Moderate",2020-07-08,"ESSVR",1,2021-02-19,2021-08-04,0,45
+933,"Male",53,"West Midlands","Contractor",40,"Mild",2020-10-09,"ESSVR",1,2021-06-15,2021-10-27,1,65
+934,"Female",50,"North East","Permanent",50,"Mild",2020-09-08,"Usual Care",1,2021-05-07,2021-08-30,,34
+935,"Male",62,"North East","Permanent",25,"Moderate",2020-05-15,"Usual Care",1,2021-02-11,2021-06-03,,39
+936,"Female",43,"North East","Permanent",45,"Moderate",2020-06-19,"Usual Care",1,2021-02-22,2021-07-06,,69
+937,"Male",63,"North West","Contractor",30,"Moderate",2020-10-28,"Usual Care",1,2021-08-09,2021-09-29,,28
+938,"Female",47,"North West","Permanent",45,"Mild",2020-11-25,"Usual Care",0,,2021-12-06,,12
+939,"Male",55,"South East","Permanent",50,"Severe",2020-06-12,"ESSVR",1,2021-01-07,2021-06-03,1,26
+940,"Male",65,"North West","Permanent",40,"Moderate",2020-08-14,"ESSVR",1,2021-07-08,2021-08-06,1,40
+941,"Male",46,"North East","SelfEmployed",40,"Severe",2020-08-07,"ESSVR",1,2021-08-06,2021-09-08,1,31
+942,"Female",45,"North West","Permanent",25,"Moderate",2020-07-20,"Usual Care",1,2020-12-30,2021-08-04,,41
+943,"Female",55,"North East","SelfEmployed",25,"Mild",2020-06-09,"ESSVR",1,2021-03-09,2021-05-18,0,52
+944,"Male",41,"North East","Permanent",40,"Mild",2020-10-29,"ESSVR",1,2021-04-30,2021-11-15,1,45
+945,"Male",62,"North West","Permanent",45,"Mild",2020-05-22,"ESSVR",1,2020-10-06,2021-05-10,1,54
+946,"Male",55,"North West","FixedTerm",50,"Severe",2020-10-08,"Usual Care",1,2021-07-02,2021-09-29,,45
+947,"Male",68,"North West","SelfEmployed",40,"Mild",2020-06-29,"ESSVR",1,2021-04-14,2021-07-26,1,53
+948,"Male",67,"North West","FixedTerm",40,"Moderate",2020-10-06,"Usual Care",1,2021-09-16,2021-10-08,,24
+949,"Male",60,"South East","Permanent",25,"Severe",2020-10-28,"Usual Care",0,,2021-10-06,,25
+950,"Male",65,"North East","SelfEmployed",45,"Mild",2020-05-21,"ESSVR",1,2021-01-14,2021-05-14,1,33
+951,"Male",68,"North East","Permanent",25,"Mild",2020-06-18,"ESSVR",1,2020-12-01,2021-06-07,1,42
+952,"Female",63,"West Midlands","FixedTerm",25,"Mild",2020-06-01,"ESSVR",0,,2021-05-21,1,32
+953,"Female",69,"North West","SelfEmployed",50,"Moderate",2020-10-05,"Usual Care",0,,2021-09-24,,39
+954,"Male",69,"West Midlands","Contractor",20,"Severe",2020-07-20,"Usual Care",0,,2021-07-02,,18
+955,"Male",65,"North West","Casual",30,"Moderate",2020-10-14,"Usual Care",1,2021-08-18,2021-10-18,,28
+956,"Male",57,"North West","Casual",50,"Moderate",2020-08-18,"Usual Care",1,2021-06-04,2021-08-13,,44
+957,"Male",33,"West Midlands","Permanent",20,"Mild",2020-09-03,"ESSVR",1,2021-04-05,2021-08-27,1,31
+958,"Female",58,"South East","Casual",35,"Mild",2020-06-26,"Usual Care",1,2021-02-11,2021-06-24,,62
+959,"Female",57,"North West","Permanent",20,"Mild",2020-05-01,"Usual Care",1,2021-02-22,2021-04-05,,50
+960,"Male",65,"North East","Contractor",25,"Mild",2020-05-25,"Usual Care",0,,2021-05-27,,65
+961,"Male",67,"West Midlands","Permanent",40,"Moderate",2020-08-19,"ESSVR",1,2021-05-13,2021-08-31,1,27
+962,"Male",62,"South East","Permanent",45,"Moderate",2020-10-21,"ESSVR",1,2021-08-13,2021-10-06,1,36
+963,"Male",64,"West Midlands","Contractor",45,"Mild",2020-10-22,"Usual Care",1,2021-08-17,2021-10-08,,24
+964,"Female",62,"West Midlands","Permanent",45,"Severe",2020-05-22,"ESSVR",1,2021-02-05,2021-05-12,1,26
+965,"Male",62,"North West","Permanent",40,"Severe",2020-11-26,"Usual Care",1,2021-11-19,2021-12-08,,36
+966,"Male",51,"West Midlands","FixedTerm",45,"Moderate",2020-11-30,"Usual Care",1,2021-11-23,2021-12-14,,32
+967,"Male",50,"North East","Permanent",50,"Mild",2020-11-24,"Usual Care",1,2021-04-07,2021-12-22,,52
+968,"Female",67,"North West","FixedTerm",40,"Mild",2020-10-09,"ESSVR",1,2021-08-23,2021-10-11,0,40
+969,"Male",67,"North East","Permanent",45,"Mild",2020-07-30,"ESSVR",1,2021-07-12,2021-08-11,1,64
+970,"Female",57,"North East","FixedTerm",40,"Mild",2020-09-09,"ESSVR",1,2021-06-21,2021-08-31,0,29
+971,"Male",48,"North East","FixedTerm",45,"Mild",2020-08-26,"ESSVR",1,2021-08-17,2021-09-21,1,49
+972,"Male",52,"North West","Casual",35,"Mild",2020-10-22,"Usual Care",1,2021-08-09,2021-10-18,,45
+973,"Male",64,"South East","Permanent",40,"Moderate",2020-09-14,"Usual Care",1,2021-03-22,2021-08-27,,23
+974,"Male",61,"South East","SelfEmployed",25,"Moderate",2020-09-11,"Usual Care",1,2021-08-04,2021-09-15,,62
+975,"Male",62,"West Midlands","SelfEmployed",40,"Mild",2020-05-12,"Usual Care",1,2021-02-08,2021-04-20,,58
+976,"Female",51,"South East","FixedTerm",40,"Mild",2020-09-14,"ESSVR",1,2021-07-19,2021-08-17,1,47
+977,"Female",58,"North East","Permanent",45,"Moderate",2020-09-07,"Usual Care",1,2021-07-23,2021-08-16,,44
+978,"Male",59,"West Midlands","Permanent",45,"Mild",2020-09-22,"Usual Care",1,2021-08-02,2021-09-02,,32
+979,"Male",58,"North East","SelfEmployed",40,"Mild",2020-10-12,"ESSVR",1,2021-02-01,2021-10-14,1,53
+980,"Male",68,"West Midlands","SelfEmployed",40,"Moderate",2020-08-10,"Usual Care",1,2021-07-06,2021-08-17,,68
+981,"Male",49,"North East","FixedTerm",40,"Mild",2020-10-07,"ESSVR",1,2021-05-31,2021-10-05,0,37
+982,"Female",54,"North East","Permanent",50,"Mild",2020-08-18,"ESSVR",1,2021-06-07,2021-09-07,1,40
+983,"Male",64,"North East","FixedTerm",45,"Mild",2020-08-13,"Usual Care",0,,2021-08-11,,54
+984,"Female",68,"West Midlands","Permanent",25,"Moderate",2020-11-19,"Usual Care",0,,2021-11-16,,31
+985,"Male",63,"North East","Permanent",25,"Mild",2020-10-15,"ESSVR",1,2021-07-15,2021-11-09,1,43
+986,"Male",66,"West Midlands","FixedTerm",30,"Severe",2020-06-04,"Usual Care",1,2021-04-26,2021-05-14,,28
+987,"Female",61,"West Midlands","SelfEmployed",50,"Mild",2020-06-08,"Usual Care",1,2021-05-06,2021-06-02,,56
+988,"Male",49,"North East","Permanent",40,"Moderate",2020-08-11,"ESSVR",1,2021-05-03,2021-08-09,1,41
+989,"Male",40,"North West","Permanent",40,"Severe",2020-09-07,"Usual Care",1,2021-07-28,2021-09-23,,50
+990,"Female",69,"South East","Permanent",30,"Moderate",2020-07-22,"ESSVR",1,2021-03-29,2021-07-06,1,44
+991,"Male",69,"North West","Contractor",50,"Moderate",2020-06-17,"ESSVR",1,2021-02-02,2021-06-11,1,59
+992,"Male",53,"West Midlands","SelfEmployed",45,"Mild",2020-07-09,"Usual Care",1,2021-05-31,2021-06-17,,24
+993,"Female",68,"South East","Casual",20,"Mild",2020-07-28,"ESSVR",1,2021-05-03,2021-08-24,1,69
+994,"Female",62,"South East","Permanent",40,"Moderate",2020-07-03,"Usual Care",1,2021-05-03,2021-07-30,,48
+995,"Female",69,"South East","Permanent",45,"Mild",2020-10-13,"ESSVR",1,2021-07-12,2021-09-13,1,53
+996,"Female",48,"South East","Permanent",40,"Mild",2020-10-16,"ESSVR",1,2021-09-20,2021-10-20,1,36
+997,"Male",42,"North East","Permanent",20,"Moderate",2020-11-18,"Usual Care",1,2021-08-12,2021-12-16,,36
+998,"Male",63,"North West","SelfEmployed",45,"Moderate",2020-06-12,"Usual Care",1,2021-05-27,2021-07-01,,41
+999,"Female",57,"West Midlands","FixedTerm",50,"Moderate",2020-06-25,"Usual Care",1,,2021-06-03,,63
+1000,"Male",47,"West Midlands","Permanent",50,"Moderate",2020-09-30,"Usual Care",1,2021-08-13,2021-09-20,,45
+1001,"Male",69,"South East","Contractor",40,"Moderate",2020-06-17,"ESSVR",1,2021-05-06,2021-06-24,1,52
+1002,"Male",65,"South East","Permanent",45,"Moderate",2020-06-23,"Usual Care",1,2021-04-29,2021-06-23,,5
+1003,"Male",67,"West Midlands","Permanent",30,"Severe",2020-06-05,"Usual Care",1,2021-03-15,2021-06-15,,40
+1004,"Male",62,"North West","SelfEmployed",40,"Mild",2020-11-02,"ESSVR",1,2021-05-10,2021-11-19,1,31
+1005,"Male",66,"South East","Permanent",45,"Severe",2020-09-21,"Usual Care",0,,2021-09-07,,31
+1006,"Male",61,"West Midlands","SelfEmployed",40,"Moderate",2020-11-11,"Usual Care",1,2021-10-29,2021-11-26,,40
+1007,"Female",69,"North West","Permanent",50,"Mild",2020-08-31,"ESSVR",1,2021-05-17,2021-09-14,1,53
+1008,"Male",66,"North East","Permanent",50,"Mild",2020-08-26,"ESSVR",1,2021-04-21,2021-07-30,0,43
+1009,"Male",59,"North West","Casual",45,"Mild",2020-11-11,"Usual Care",0,,2021-11-04,,34
+1010,"Female",63,"North West","FixedTerm",25,"Mild",2020-05-18,"ESSVR",1,2021-04-12,2021-06-01,0,27
+1011,"Male",52,"North East","Permanent",45,"Mild",2020-11-11,"Usual Care",0,2021-11-25,2021-12-02,,43
+1012,"Male",64,"North East","Permanent",40,"Mild",2020-07-10,"Usual Care",1,2021-04-05,2021-07-30,,62
+1013,"Female",53,"West Midlands","FixedTerm",50,"Moderate",2020-06-29,"ESSVR",0,2021-07-15,2021-07-22,0,60
+1014,"Male",67,"South East","Contractor",50,"Moderate",2020-08-04,"ESSVR",1,2021-02-12,2021-08-17,0,37
+1015,"Male",56,"North West","SelfEmployed",45,"Moderate",2020-05-12,"Usual Care",1,2021-03-01,2021-06-03,,49
+1016,"Male",59,"North West","Permanent",45,"Mild",2020-05-22,"Usual Care",1,2021-05-13,2021-05-26,,20
+1017,"Male",66,"South East","Casual",10,"Moderate",2020-07-09,"Usual Care",1,2021-06-22,2021-06-30,,35
+1018,"Male",59,"North West","Casual",50,"Moderate",2020-06-24,"Usual Care",1,2021-02-15,2021-06-28,,26
+1019,"Female",59,"North West","Permanent",45,"Severe",2020-10-02,"ESSVR",0,,2021-10-06,0,0
+1020,"Male",65,"North West","Permanent",50,"Moderate",2020-05-05,"Usual Care",0,2021-05-24,2021-06-04,,33
+1021,"Male",58,"North West","Permanent",45,"Severe",2020-10-27,"ESSVR",1,2021-06-14,2021-11-15,1,38
+1022,"Female",67,"South East","SelfEmployed",40,"Mild",2020-11-17,"ESSVR",1,2021-10-04,2021-11-17,0,37
+1023,"Male",62,"North West","Permanent",45,"Moderate",2020-10-02,"ESSVR",1,2021-08-09,2021-10-14,1,16
+1024,"Male",54,"South East","FixedTerm",45,"Moderate",2020-09-17,"Usual Care",0,2021-10-01,2021-10-01,,50
+1025,"Female",54,"West Midlands","SelfEmployed",20,"Moderate",2020-11-04,"Usual Care",1,2021-10-25,2021-10-27,,18
+1026,"Male",69,"West Midlands","Contractor",50,"Severe",2020-08-19,"ESSVR",0,,2021-07-20,1,25
+1027,"Male",64,"South East","SelfEmployed",45,"Severe",2020-06-18,"Usual Care",0,,2021-06-29,,20
+1028,"Male",66,"North West","Casual",20,"Mild",2020-10-02,"ESSVR",1,2021-06-21,2021-09-09,0,27
+1029,"Male",37,"North East","Contractor",45,"Severe",2020-10-19,"Usual Care",1,2021-05-10,2021-09-24,,37
+1030,"Male",67,"West Midlands","Contractor",20,"Severe",2020-06-29,"ESSVR",1,2021-05-13,2021-07-16,1,39
+1031,"Male",48,"West Midlands","FixedTerm",50,"Moderate",2020-08-03,"Usual Care",0,,2021-08-10,,40
+1032,"Female",58,"North West","FixedTerm",45,"Mild",2020-11-11,"Usual Care",0,,2021-10-26,,36
+1033,"Female",62,"North East","SelfEmployed",40,"Mild",2020-08-19,"ESSVR",1,2021-07-27,2021-09-10,0,39
+1034,"Female",56,"North East","SelfEmployed",45,"Mild",2020-11-03,"ESSVR",1,2021-10-06,2021-11-22,1,58
+1035,"Female",46,"North West","Permanent",55,"Mild",2020-07-10,"ESSVR",1,2021-03-22,2021-06-17,1,66
+1036,"Female",50,"South East","Permanent",20,"Mild",2020-05-22,"Usual Care",1,2021-01-15,2021-06-15,,79
+1037,"Male",67,"North West","SelfEmployed",30,"Severe",2020-06-18,"ESSVR",1,2021-05-04,2021-05-19,1,39
+1038,"Male",61,"North East","SelfEmployed",40,"Mild",2020-08-12,"Usual Care",1,2021-06-07,2021-07-13,,31
+1039,"Male",44,"South East","Permanent",45,"Mild",2020-07-21,"ESSVR",1,2021-03-22,2021-07-16,1,48
+1040,"Female",60,"North East","Permanent",25,"Moderate",2020-06-01,"Usual Care",0,,2021-06-18,,50
+1041,"Male",64,"South East","Contractor",25,"Mild",2020-07-10,"ESSVR",1,2020-10-26,2021-07-28,1,40
+1042,"Male",59,"North West","Permanent",45,"Moderate",2020-06-18,"ESSVR",1,2021-02-19,2021-07-16,0,34
+1043,"Male",46,"North East","Casual",40,"Mild",2020-11-09,"Usual Care",1,2021-06-14,2021-11-19,,25
+1044,"Female",69,"West Midlands","Permanent",40,"Moderate",2020-07-06,"ESSVR",0,2021-07-09,2021-07-29,1,44
+1045,"Female",52,"North East","Permanent",45,"Mild",2020-11-23,"ESSVR",1,2021-09-24,2021-11-08,1,47
+1046,"Male",66,"North East","Permanent",40,"Moderate",2020-10-20,"ESSVR",1,2021-06-22,2021-11-17,1,19
+1047,"Male",49,"West Midlands","FixedTerm",40,"Mild",2020-08-04,"ESSVR",1,2021-07-23,2021-08-05,0,31
+1048,"Male",55,"North West","FixedTerm",40,"Mild",2020-06-26,"ESSVR",1,2021-03-29,2021-07-12,0,34
+1049,"Female",67,"North West","Casual",20,"Moderate",2020-05-06,"ESSVR",1,2021-04-05,2021-04-21,0,33
+1050,"Female",67,"South East","FixedTerm",45,"Moderate",2020-11-02,"ESSVR",1,2021-09-16,2021-10-25,0,33
+1051,"Male",65,"North East","Permanent",45,"Moderate",2020-11-18,"ESSVR",1,2021-08-10,2021-12-14,1,17
+1052,"Male",46,"West Midlands","SelfEmployed",25,"Mild",2020-07-31,"Usual Care",1,2021-06-01,2021-07-12,,43
+1053,"Male",63,"North East","Permanent",45,"Moderate",2020-06-04,"ESSVR",1,2021-04-15,2021-06-17,1,28
+1054,"Female",62,"West Midlands","SelfEmployed",25,"Moderate",2020-06-16,"Usual Care",0,,2021-07-05,,29
+1055,"Female",64,"North West","FixedTerm",40,"Mild",2020-05-04,"ESSVR",1,2021-01-08,2021-05-31,1,42
+1056,"Male",65,"South East","Contractor",25,"Mild",2020-08-03,"Usual Care",1,2021-01-18,2021-07-26,,18
+1057,"Male",65,"West Midlands","Permanent",50,"Mild",2020-07-01,"ESSVR",1,2021-02-05,2021-07-30,1,58
+1058,"Male",58,"South East","SelfEmployed",40,"Severe",2020-07-28,"ESSVR",1,2021-07-02,2021-08-10,0,48

@@ -1,0 +1,540 @@
+---
+title: "problem set 4"
+author: "Divya Shridar"
+date: "11/2/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, echo = TRUE)
+library(dplyr)
+```
+
+# B1
+The dataset neutron.csv contains data from a clinical trial comparing two forms of radiotherapy for cancer treatment. Cancer patients were randomly allocated to receive the standard therapy using photon particles or a new form using neutrons. Randomisation was stratified for four sites of cancer. The outcomes of interest is whether the new neutron treatment affects cancer survival compared to standard of care photon therapy. The table below describes the variables in this dataset.
+
+```{r importing data}
+neutron <- read.csv("neutron.csv")
+head(neutron)
+# treatment is either neutrons or photons
+# randomisation for sites
+# outcomoe is cancer survival; stime
+```
+
+a. Estimate the probability of death within one year of cancer diagnosis (assuming that the treatment has no effect on survival) and calculate the 95% confidence interval for the probability.
+```{r a}
+# p of death1year assuming treatment has no effect
+prop.table(table(neutron$death1year))[2] # 0.5324675
+prob <- prop.table(table(neutron$death1year))[2]
+
+# find 95% CI
+standard_error <- sqrt((prob*(1-prob))/nrow(neutron))
+confidence_interval <- c(prob - 1.96*standard_error, prob + 1.96*standard_error)
+names(confidence_interval) <- c('lower','upper')
+confidence_interval
+```
+
+b. Is the probability of death within one year below 60%? Articulate a null and alternative hypothesis to address the question. Construct an appropriate test statistic and calculate a one-sided p-value. Interpret the results of your test.
+```{r b}
+# Null hypothesis: Probability of death within a year is >= 60%
+# Alternative hypothesis: Probability of death within a year is < 60%
+
+# Data processing
+  # change yes to 1 and no to 0
+neutron <- neutron %>% mutate(
+  num_death1year = ifelse(death1year=='Yes',
+                           1,
+                           0)
+  )
+neutron
+
+# Conduct proportion test
+prop.test(x = sum(neutron$num_death1year), # number of successes
+          n = nrow(neutron), # number of trials
+          p = 0.6, # reference proportion for hyp test
+          alternative = 'less',
+          conf.level = 0.95,
+          correct = FALSE) 
+
+# P value is 0.04357
+
+# As p value < 0.05, we reject nulll hypothesis.
+```
+c. Repeat your analysis in (b) applying the continuity correction. How do the results change? Which analysis do you prefer and why?
+```{r c}
+# Conduct proportion test
+prop.test(x = sum(neutron$num_death1year), # number of successes
+          n = nrow(neutron), # number of trials
+          p = 0.6, # reference proportion for hyp test
+          alternative = 'less',
+          conf.level = 0.95,
+          correct = TRUE) 
+
+# P value increases
+```
+
+d. Use the binomial distribution to calculate the probability observing the number of deaths seen in our sample or fewer, if the true probability of death within one year is 60%. (Hint: use the function pbinom() in R. Also think about how to get the same result using the function dbinom().)
+
+```{r d}
+# pbinom looks up P(X<q) where X ~ binom(size, prob)
+pbinom(q = 0.6,
+       size = nrow(neutron),
+       prob = prob)
+
+# Prof's method with diff answerL
+  # pnorm(test stat)
+  # with continuity correction: add 0.5 
+```
+
+# B2
+In this question, use the neutron.csv dataset to assess whether neutron treatment compared to receiving proton treatment affects the probability of death within one year.
+
+a. Construct a 2x2 contingency table summarising the relationship between treatment assignment and death within one year. Calculate the sample proportion to estimate the probability of death and the odds of death for each treatment group.
+```{r a}
+# expoosure as rows, outcome as columns
+contingency_table <- table(neutron$treatment, neutron$death1year)
+contingency_table
+
+#sample_prop
+sample_prop_neutrons <- contingency_table[1,2]/sum(contingency_table[1,]) # died within a year/total
+sample_prop_neutrons
+sample_prop_protons <- contingency_table[2,2]/sum(contingency_table[2,]) # died within a year/total
+sample_prop_protons
+
+# odds =p/(1-p)
+odds_neutrons <- sample_prop_neutrons/(1-sample_prop_neutrons)
+odds_neutrons
+odds_protons <- sample_prop_protons/(1-sample_prop_protons)
+odds_protons
+```
+
+b. Estimate the risk difference, risk ratio, and odds ratio and 95% confidence intervals for each outcome. Interpret your estimates for each of these measures of difference.
+```{r b}
+
+risk_difference <- sample_prop_neutrons-sample_prop_protons
+risk_difference
+# Absolute risk of dying within a year was 10.8% higher in those who received neutrons rather than protons.
+standard_error_risk_difference <- sqrt((sample_prop_neutrons*(1-sample_prop_neutrons)/sum(contingency_table[1,])) + (sample_prop_protons*(1-sample_prop_protons)/sum(contingency_table[2,])))
+# confint = risk difference ± 𝑧× standard error for risk difference
+confidence_interval_risk_difference <- c(risk_difference-1.96*standard_error_risk_difference, risk_difference+1.96*standard_error_risk_difference)
+confidence_interval_risk_difference
+
+risk_ratio <- sample_prop_neutrons/sample_prop_protons
+risk_ratio
+# Risk of dying within a year in those who received neutrons was 1.23 that of those who received protons.
+standard_error_log_risk_ratio <- sqrt(1/53 + 1/29 - 1/(39+53) - 1/(33+29))
+confidence_interval_risk_ratio <- c(exp(log(risk_ratio)-1.96*standard_error_log_risk_ratio), exp(log(risk_ratio)+1.96*standard_error_log_risk_ratio))
+confidence_interval_risk_ratio
+
+odds_ratio <- (sample_prop_neutrons/(1-sample_prop_neutrons))/(sample_prop_protons/(1-sample_prop_protons))
+odds_ratio
+# The odds of dying within a year in those who received neutrons was 1.54 that of those who received protons.
+standard_error_log_odds_ratio <- sqrt(1/53 + 1/29 + 1/39 + 1/33)
+confidence_interval_odds_ratio <- c(exp(log(odds_ratio)-1.96*standard_error_log_odds_ratio), exp(log(odds_ratio)+1.96*standard_error_log_odds_ratio))
+confidence_interval_odds_ratio
+```
+
+c. State the relevant null hypothesis for each of the measures of difference. Calculate the z-test statistic and p-value for each measure and interpret the results.
+```{r c}
+# since using z test stat, can use pnorm function to find p
+  # if t test, use pt and need to mention df aka 2*pt(-abs(t),df=n-1)
+# Risk difference: H0 is that p1=p0; risk difference = 0
+z_stat_risk_difference <- risk_difference/standard_error_risk_difference ## CHECK if standard error = pooled sd = 0.082
+  ## for risk difference, usually do pooled standard error when hypothesis testing
+z_stat_risk_difference
+p_value_risk_difference <- 2*pnorm(-abs(z_stat_risk_difference)) # pnorm does P(Z<z)
+p_value_risk_difference # p val is 0.1846329; larger than 0.05. thus, fail to reject null and proportions are equal
+## CHECK IF PVAL CLOSER to 0.186 after using pooled
+
+# Risk ratio: H0 is that p1=p0; risk ratio = 1 and log(risk ratio) = 0
+z_stat_risk_ratio <- log(risk_ratio)/standard_error_log_risk_ratio
+z_stat_risk_ratio
+p_value_risk_ratio <- 2*pnorm(-abs(z_stat_risk_ratio))
+p_value_risk_ratio # p val is 0.1993447; larger than 0.05. thus, fail to reject null and proportions are equal
+
+# Odds ratio: H0 is that p1=p0; odds ratio = 1 and log(odds ratio) = 0
+z_stat_odds_ratio <- log(odds_ratio)/standard_error_log_odds_ratio
+z_stat_odds_ratio
+p_value_odds_ratio <- 2*pnorm(-abs(z_stat_odds_ratio))
+p_value_odds_ratio # p val is 0.1872866; larger than 0.05. thus, fail to reject null and proportions are equal
+```
+
+d. For applied purposes, we typically choose and focus on one measure of difference and a single test statistic. This is specified during the analysis plan before conducting any data analysis. Which measure of difference would you choose and why?
+```{r d}
+# Choose the risk ratio or risk difference
+  # reject odds ratio (except when its a case control study or if logistic regressioon was done) since the log() makes it difficult to understand
+```
+
+e. Conduct a chi-squared test of the null hypothesis that there is no difference in the risk of death in 1 year for patients receiving neutron therapy compared to proton therapy.
+  i. Calculate the expected cell counts for the contingency table constructed in part (a) if the null hypothesis is true that there is no difference in the probability of death by treatment group.
+```{r e i}
+contingency_table
+
+n1 <- sum(contingency_table[1,])
+n0 <- sum(contingency_table[2,])
+observed_yes <- sum(contingency_table[,2])/sum(contingency_table)
+observed_no <- sum(contingency_table[,1])/sum(contingency_table)
+
+expected_table <- matrix(c(observed_no*n1,observed_yes*n1,observed_no*n0,observed_yes*n0),
+          ncol = 2,
+          byrow=TRUE) # does each row first so row 1: 1,2 and row 2: 3,4
+colnames(expected_table) <- colnames(contingency_table)
+rownames(expected_table) <- rownames(contingency_table)
+expected_table
+```
+  
+  ii. Calculate the chi-squared test statistic. Calculate the associated p-value using the pchisq(...) function in R.
+```{r e ii}
+chi_squared_test_stat <- sum(((contingency_table-expected_table)^2)/expected_table)
+chi_squared_test_stat
+
+pchisq(chi_squared_test_stat, df=1, lower.tail=FALSE) # 0.1863157; probability that we would have seen the observed counts under null hypothesis that probability is same for protons and neutrons; fail to reject null hypothesis
+
+# as chisq is aways positive, we are only interested in extreme positives so lower.tail is set to FALSE
+```
+  
+  iii. Check your calculation with the output of the chisq.test() function in R. Interpret the result of your hypothesis test.
+```{r e iii}
+chisq.test(contingency_table,
+           correct=FALSE)
+# p-value = 0.1863; larger than 0.05. thus, fail to reject null and proportions are equal
+```
+
+f. Compare your chi-squared test statistic and p-value to the test statistics and p-values for the risk difference, risk ratio, and odds ratio calculated in part (b).
+```{r f}
+# chi-squared test statistic is larger than risk difference, risk ratio and odds ratio
+
+# chi-squared p value is more than that of risk difference but less than that or risk ratio and odds ratio.
+
+
+## Prof's answer: 
+```
+
+g. Use chisq.test() to recalculate the chi-squared test with the Yates continuity correction. How has this changed the result?
+```{r g}
+chisq.test(contingency_table,
+           correct=TRUE)
+# test statistic decreased, p value increased. interpretation still the same wrt hypothesis.
+```
+
+# B3
+In this question, use the neutron.csv dataset to assess whether patients who experienced metastasis are more likely to die within one year.
+
+a. Construct a new variable meta1year classifying a binary outcome for patients who experienced metastasis within one year. This should use the variables meta and metatime.
+```{r a}
+# meta is yes/no indicating if metastases diagnosed before death
+# metatime is time to metastases (days); NA if no for meta
+  # less than a year is <365 days
+neutron <- neutron %>% mutate(
+  meta1year = ifelse(meta=="Yes" & metatime<365, ## can use as.integer(neutron$meta == 'Yes' & neutron$metatime < 365.25)
+                     'Yes',
+                     'No')
+)
+neutron
+```
+
+b. Construct a 2x2 contingency table summarising the relationship between metastasis within one year and death within one year. Calculate the sample proportions and odds.
+```{r b}
+meta_contingency_table <- table(neutron$meta1year, neutron$death1year)
+colnames(meta_contingency_table) <- c("NoDeath", "YesDeath")
+rownames(meta_contingency_table) <- c("NoMeta", "YesMeta")
+meta_contingency_table
+
+# sample proportions
+sample_prop_meta <- meta_contingency_table[2,2]/sum(meta_contingency_table[2,])
+sample_prop_meta
+sample_prop_nometa <- meta_contingency_table[1,2]/sum(meta_contingency_table[1,])
+sample_prop_nometa
+
+# odds ratio
+odds_meta <- sample_prop_meta/(1-sample_prop_meta)
+odds_meta
+odds_nometa <- sample_prop_nometa/(1-sample_prop_nometa)
+odds_nometa
+```
+
+c. Calculate the risk difference, risk ratio, and odds ratio for death within one year for those who experience metastasis and those who do not.
+```{r c}
+meta_risk_difference <- sample_prop_meta - sample_prop_nometa
+meta_risk_difference
+
+meta_risk_ratio <- sample_prop_meta/sample_prop_nometa
+meta_risk_ratio
+
+meta_odds_ratio <- (sample_prop_meta/(1-sample_prop_meta))/(sample_prop_nometa/(1-sample_prop_nometa))
+meta_odds_ratio
+```
+
+d. Conduct and interpret a hypothesis test for this outcome.
+```{r d}
+# H0: risk difference is 0
+standard_error_meta_risk_difference <- sqrt((sample_prop_meta*(1-sample_prop_meta)/sum(meta_contingency_table[1,])) + (sample_prop_nometa*(1-sample_prop_nometa)/sum(meta_contingency_table[2,]))) ## should use pooled se?
+z_stat_meta_risk_difference <- meta_risk_difference/standard_error_meta_risk_difference
+z_stat_meta_risk_difference ## z stat should be 4.105
+p_value_meta_risk_difference <- 2*pnorm(-abs(z_stat_meta_risk_difference)) # pnorm does P(Z<z)
+p_value_meta_risk_difference
+
+# small pvalue; reject null hypothesis. risk difference is not zero; meta and nonmeta do not have equal proportions of people dying.
+```
+
+# C1
+The chisq.test() function applied to this table gave a warning: Chi-squared approximation may be incorrect. In this question we will consider exact tests as an alternative to the chi-squared test and use simulations to explore the sample size guidance for validity of the chi-squared test.
+
+a. Why did the chisq.test() produce this warning for the contingency table above? Conduct an exact test for the contingency table using the R function fisher.test() and compare your inference to the results of chisq.test().
+```{r a}
+# Produced warning as one of the cell values in observed table was less than 5.
+control_table <- cbind(c(28,23), c(2,7))
+rownames(control_table) <- c("Control", "Intervention")
+colnames(control_table) <- c("Failure", "Success")
+control_table
+
+fisher.test(control_table) ## keeps the same margins but FILL(50 mins in)
+chisq.test(control_table)
+
+```
+
+
+b. Create a function in R to simulate 2x2 contingency tables and conduct hypothesis tests for equal proportions using the chi-squared test, chi-squared test with continuity correction, and the exact test. Your function should do the following steps:
+• Take two arguments: n the number of observations per exposure group (row total) in the contin- gency table, and p = c(p1, p2) the event probability in each exposure group.
+• Simulate a 2x2 contingency table based on the input sample size and probability. (Hint: There are different ways one could do this in R. One approach is to use the function rbinom(2, n, p) to simulate the number of events (first column), then subtract the number of successes from the input row total n to calculate the number of failures.)
+• For the simulated contingency table, calculate the chi-squared test, chi-squared test with conti- nuity correction, and the exact test (calculated with fisher.test()).
+• Return a vector with five values: (1) the chi-squared test statistic, (2) the p-value for the chi- squared test, (3) the chi-squared with the continuity correction test statistic, (4) the p-value for the chi-squared test with continuity correction, and (5) the p-value for the exact test.
+```{r b} 
+
+simulate_contingency_table <- function(n,p){
+  # n as total number of observations per exposure group; row total
+  # p as event probability per exposure group; p1 = event for exposure 1, p2 = event for exposure 2
+  
+  # rbinom returns no. of successes
+  success <- rbinom(2,n,p)
+  created_contin_table <- cbind(c(n-success[1], n-success[2]), # column 1 has failure
+                                c(success[1], success[2])) # column 2 has success
+  
+  test_stat <- chisq.test(created_contin_table, correct=FALSE)$statistic
+  pval <- chisq.test(created_contin_table, correct=FALSE)$p.value
+  test_stat_correct <- chisq.test(created_contin_table, correct=TRUE)$statistic
+  pval_correct <- chisq.test(created_contin_table, correct=TRUE)$p.value
+  pval_exact <- fisher.test(created_contin_table)$p.value
+
+  return(c(test_stat, pval, test_stat_correct, pval_correct, pval_exact))
+}
+
+#n <- 30
+#p <- 0.2
+#success <- rbinom(2,n,p)
+#success
+#testing_table <- cbind(c(n-success[1], n-success[2]), # column 1 has failure
+#                                c(success[1], success[2])) # column 2 has success
+#testing_table <- cbind(c(n[1]*p[1], n[2]*p[2]),c(n[1]*(1-p[1]), n[2]*(1-p[2])))
+#testing_table
+#chisq.test(testing_table, correct=FALSE)$statistic
+#chisq.test(testing_table, correct=FALSE)$p.value
+#fisher.test(control_table)$p.value
+#simulate_contingency_table(n,p)
+
+## unname()
+```
+
+c. Simulations under the null hypothesis. Under the null hypothesis, the row probabilities p1 = p2 = p. Use the function created in (b) to simulate a large number of replicates(5000 to 10,000) for sample sizes per group ranging from n = {5,10,25,50,100,250,500} and success probability p = {0.05, 0.1, 0.2, 0.3, 0.4, 0.5}. (Hint: Use the replicate() function to repeat the simulation function.)
+```{r c}
+contingency_df <- data.frame(test_stat = numeric(),
+           pval = numeric(),
+           test_stat_correct = numeric(),
+           pval_correct = numeric(),
+           pval_exact = numeric(),
+           n = numeric(), # column names
+           p = numeric()
+  ) 
+#str(contingency_df)
+
+n <- c(5,10,25,50,100,250,500)
+p <- c(0.05, 0.1, 0.2, 0.3, 0.4, 0.5)
+pb <- txtProgressBar(min = 0, max = length(n)*length(p), style = 3)
+k<-0
+for (i in n){
+  for (j in p){
+    intermediate_df <- replicate(5000, # produces this many columns
+              simulate_contingency_table(i,j))
+    intermediate_df <- as.data.frame(t(intermediate_df)) # transpose
+    intermediate_df$n <- i
+    intermediate_df$p <- j
+    #colnames(intermediate_df) <- c('test_stat', 'pval', 'test_stat_correct', 'pval_correct', 'pval_exact', 'n', 'p')
+    contingency_df <- rbind(contingency_df, intermediate_df)
+    #print(trialdf)
+    
+    k <- k+1
+    setTxtProgressBar(pb, k)
+  }
+}
+colnames(contingency_df) <- c('test_stat', 'pval', 'test_stat_correct', 'pval_correct', 'pval_exact', 'n', 'p')
+contingency_df <- contingency_df[,c(6,7,1:5)] # reorder columns
+contingency_df
+
+# if using replicate; replicate is a wrapper for the common use of sapply for repeated evaluation of an expression (which will usually involve random number generation).
+```
+
+```{r}
+# dplyr func 
+#setdiff
+```
+
+
+  i. For each combination of values n and p, based on the rules of thumb for validity of the chi-squared test provided in Kirkwood and Sterne, which test (chi-squared, chi-squared with continuity correction, exact test) would you apply?
+```{r c i}
+# Exact since probabilities are small, with high chance of cell value < 5
+# Otherwise, chi squared
+```
+
+  ii. For some of the simulations, the chi-squared test has returned NaN values for the test statistic and p-value. Why does this occur? (Hint: Think about the formula for the chi-squared statistic.) What proportion of simulations had NaN values for each value of n and p? What did the exact test return for cases where the chi-squared test returned NaN?
+```{r c unfin_ii}
+# Returned NaN since there are expected values that are equal to ; tried to divide by zero
+
+# What proportion of simulations had NaN values for each value of n and p? 
+
+# What did the exact test return for cases where the chi-squared test returned NaN?
+```
+
+  iii. Under the null hypothesis, the chi-squared test statistic for a 2x2 contingency table should follow a χ2 distribution with 1 degree of freedom. For each combination of sample size and success probability, plot a histogram or density plot of the simulated distribution of the chi-squared test statistic (without and with the continuity correction) and compare this to the chi-squared density with 1 degree of freedom.
+```{r c iii}
+library(tidyr)
+library(ggplot2)
+
+n <- c(5,10,25,50,100,250,500)
+p <- c(0.05, 0.1, 0.2, 0.3, 0.4, 0.5)
+
+# overlayed with and without continuity correction
+for (i in n){
+  for (j in p){
+    print(contingency_df %>% filter(n == i,
+                              p == j, 
+                              !is.na(test_stat),
+                              !is.na(test_stat_correct)) %>% select(test_stat, test_stat_correct) %>% 
+      gather(cols, value) %>% 
+      ggplot(aes(x = value, fill = cols)) + geom_histogram() + labs(title = paste('n=', as.character(i), ", p=", as.character(j))))
+  }
+}
+
+
+
+# compare this to the chi-squared density with 1 degree of freedom.
+curve(dchisq(x, df = 1), from = 0, to = 10,
+main = 'Chi-Square Distribution (df = 1)',
+ylab = 'Density',
+lwd = 2)
+
+# aligns!
+```
+
+```{r}
+## facet wrap n and p
+    ## adding in test_stat_correct?
+ggplot(contingency_df, aes(x = test_stat)) +
+  geom_histogram() +
+facet_grid(rows = vars(n),
+           cols = vars(p))
+```
+  
+  iv. For each combination of sample size and success probability, in what proportion of cases was the p-value for each test less than /alpha = 0.05, resulting in incorrectly rejecting the null hypothesis? This is the Type I error rate.
+```{r c iv}
+pval_df <- data.frame(n = as.numeric(), p = as.numeric(), proportion = as.numeric())
+for (i in n){
+  for (j in p){
+    type1 <- nrow(contingency_df %>% filter(n == i,
+                              p == j,
+                              pval < 0.05,
+                              pval_correct < 0.05,
+                              pval_exact < 0.05))/5000
+    row_df <- data.frame(i, j, type1)
+    pval_df <- rbind(pval_df,row_df)
+  }
+}
+colnames(pval_df) <- c('n', 'p', 'type1')
+pval_df
+```
+
+d. Simulations under the alternative hypothesis. Now, consider the case where there is a true difference between the event probabilities for each exposure group. Use your function from (b) to simulate a large number of replicates assuming a risk difference of 0.1, that is p1 = p2 + 0.1 for sample sizes n = {5, 10, 25, 50, 100, 250, 500} and true probability p2 = {0.05, 0.1, 0.2, 0.3, 0.4, 0.5}.
+
+For each combination of sample size and success probability, calculate the proportion of times in which each test (chi-squared, chi-squared with continuity correction, and exact test) correctly rejected the null hypothesis at the α = 0.5 level. This proportion is referred to as the power of the test. The proportion of times the test incorrectly failed to reject the null hypothesis is the Type II error rate, often denoted β; and the power is 1 − β. Optionally, you may also wish to explore how the power changes as the true risk difference (p1 − p2 ) increases.
+```{r d}
+n <- c(5, 10, 25, 50, 100, 250, 500)
+p2 <- c(0.05, 0.1, 0.2, 0.3, 0.4, 0.5)
+
+# rewrite functiono
+new_contingency_table <- function(n,p){
+  # n as total number of observations per exposure group; row total
+  # p as event probability per exposure group; p1 = event for exposure 1, p2 = event for exposure 2
+  
+  # rbinom returns no. of successes
+  # prob for event 1
+  success_1 <- rbinom(1,n,p[1])
+  success_2 <- rbinom(1,n,p[2])
+  new_contin_table <- cbind(c(n-success_1, n-success_1), # column 1 has failure
+                                c(success_1, success_2)) # column 2 has success
+  
+  test_stat <- chisq.test(new_contin_table, correct=FALSE)$statistic
+  pval <- chisq.test(new_contin_table, correct=FALSE)$p.value
+  test_stat_correct <- chisq.test(new_contin_table, correct=TRUE)$statistic
+  pval_correct <- chisq.test(new_contin_table, correct=TRUE)$p.value
+  pval_exact <- fisher.test(new_contin_table)$p.value
+
+  return(c(test_stat, pval, test_stat_correct, pval_correct, pval_exact))
+}
+
+# simulate large number of replicates
+new_contingency_df <- data.frame(test_stat = numeric(),
+           pval = numeric(),
+           test_stat_correct = numeric(),
+           pval_correct = numeric(),
+           pval_exact = numeric(),
+           n = numeric(), # column names
+           p1 = numeric(),
+           p2 = numeric()
+  ) 
+pb <- txtProgressBar(min = 0, max = length(n)*length(p2), style = 3)
+k<-0
+for (i in n){
+  for (j in p2){
+    p1 <- j+0.1
+    p <- c(p1,j)
+    intermediate_df <- replicate(5000, # produces this many columns
+              simulate_contingency_table(i,p))
+    intermediate_df <- as.data.frame(t(intermediate_df)) # transpose
+    intermediate_df$n <- i
+    intermediate_df$p1 <- p1
+    intermediate_df$p2 <- j
+    #colnames(intermediate_df) <- c('test_stat', 'pval', 'test_stat_correct', 'pval_correct', 'pval_exact', 'n', 'p')
+    new_contingency_df <- rbind(new_contingency_df, intermediate_df)
+    #print(trialdf)
+    
+    k <- k+1
+    setTxtProgressBar(pb, k)
+  }
+}
+colnames(new_contingency_df) <- c('test_stat', 'pval', 'test_stat_correct', 'pval_correct', 'pval_exact', 'n', 'p1', 'p2')
+new_contingency_df <- new_contingency_df[,c(6,7,8,1:5)] # reorder columns
+new_contingency_df
+
+# For each combination of sample size and success probability, calculate the proportion of times in which each test (chi-squared, chi-squared with continuity correction, and exact test) correctly rejected the null hypothesis at the α = 0.5 level. 
+  # reject when pval <= 0.05
+newpval_df <- data.frame(n = as.numeric(), p1 = as.numeric(), p2 = as.numeric(), proportion = as.numeric())
+for (i in n){
+  for (j in p2){
+    type1 <- nrow(new_contingency_df %>% filter(n == i,
+                              p2 == j,
+                              pval < 0.5,
+                              pval_correct < 0.5,
+                              pval_exact < 0.5))/5000
+    newrow_df <- data.frame(i, j+0.1, j, type1)
+    newpval_df <- rbind(newpval_df,newrow_df)
+  }
+}
+colnames(newpval_df) <- c('n', 'p1', 'p2', 'type1')
+newpval_df
+
+# The proportion of times the test incorrectly failed to reject the null hypothesis is the Type II error rate, often denoted β; and the power is 1 − β.
+newpval_df$type2 <- 1-newpval_df$type1
+newpval_df
+```
+
+
+

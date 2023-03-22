@@ -1,0 +1,323 @@
+---
+title: "problem set 8"
+author: "Divya Shridar"
+date: "12/1/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Import packages
+```{r}
+library(ggplot2)
+library(dplyr)
+library(survival)
+library(ggsurvfit)
+```
+
+#B1. 
+Revisit the neutron.csv dataset from Problem Set 4 containing data from a clinical trial comparing two forms of radiotherapy for cancer treatment. Cancer patients were randomly allocated to receive the standard therapy using photon particles or a new form using neutrons. Randomisation was stratified for four sites of cancer. The outcomes of interest is whether the new neutron treatment affects cancer survival compared to standard of care photon therapy.
+
+```{r B1 import data}
+neutron <- read.csv("neutron.csv")
+head(neutron) # randomly allocated to receive the standard therapy using photon particles or a new form using neutrons
+## RELEVEL REF CATEGORY FOR TREATMENT TO BE PHOTONS SINCE NEUTRONS ARE OF INTEREST
+neutron$treatment <- factor(neutron$treatment, c("Photons", "Neutrons"))
+
+# Randomisation was stratified for four sites of cancer; site variable
+
+#  The outcomes of interest is whether the new neutron treatment affects cancer survival compared to standard of care photon therapy.
+
+```
+Instead of analysing the probability of death within one year following diagnosis, now analyse death as time-to-event survival outcome.
+a. Calculate the incidence rate of death in each treatment group.
+```{r a}
+# stime is survival time in days
+# metatime is Time to metastases (days)
+
+# death is 0/1
+
+neutron %>% 
+  group_by(treatment) %>% 
+  summarise(sum_death = sum(death), 
+            sum_time = sum(stime),
+            trt_pop = n(), # count rows within the group given in groupby for fun
+            death_rate = sum_death/sum_time)
+
+## rate is death/time!
+```
+
+b. Estimate the median survival in each treatment group and plot the Kaplan-Meier estimate of the survival function.
+```{r}
+survest <- survfit(Surv(stime, death) ~ treatment, 
+                   data = neutron)
+
+# get median survival
+summary(survest)$table[,'median'] 
+
+# plot
+survest %>% 
+  ggsurvfit() +
+  labs(
+    x = "Time",
+    y = "Overall survival probability"
+  )
+```
+
+c. Test the null hypothesis that there is no difference in survival between treatment groups.
+```{r}
+# test difference via log rank
+
+survdiff(Surv(stime, death) ~ treatment,
+         data = neutron)
+# p = 0.05; reject null hyp; there is a diff?
+```
+
+d. Use Cox’s proportional hazards regression to compare survival between the two treatment groups. Interpret the hazard ratio and the 95% confidence interval.
+```{r d}
+# to get an estimate
+
+cox_fit <- coxph(formula = Surv(stime, death) ~ treatment,
+         data = neutron)
+
+summary(cox_fit)
+
+summary(cox_fit)$coef
+
+# hazsard ratio = 0.6709; 33% lower hazard for those on Photons [0.4518    0.9962]
+```
+
+e. Use Cox’s proportional hazards model to compare treatments adjust for cancer site and phase of trial. It is important to adjust for these variables because randomisation was (NOT) stratified by these variables. Interpret the results.
+```{r e}
+# means covariate, not strata()
+cox_fit_adj <- coxph(formula = Surv(stime, death) ~ treatment+site+factor(phase), # site=bladder, phase ref = 0
+         data = neutron)
+
+summary(cox_fit_adj)
+
+# if log hazard, use coef
+# if hazard, use exp(coef)
+```
+
+f. Write down the estimated regression equation for the model fit in part (e). Use the regression equation to estimate the hazard ratio comparing specific patient groups in the study:
+$$
+log h(t) = log h_0(t) + coef*covariate + coef*covariate....
+$$ 
+
+$$
+h(t) = h_0(t) * [exp(coef)]^{covariate} * [exp(coef)]^{covariate}
+$$
+
+
+$$
+h(t) = h_o(t)*[1.3716*I(Neutrons)] * [0.5158*I(siteCervix)] * [0.4204*I(siteProstate)] * [1.01061*I(siteRectum)] * [0.84560*I(phase=1)]
+$$
+
+  i. The hazard ratio comparing patients who have cancer of the rectum compared to those who have cancer of the prostate in the same phase and treatment group.
+```{r fi}
+# patients who have cancer of the rectum compared to those who have cancer of the prostate in the same phase and treatment group.
+  # if I(covariate) = 0, we remove it from calculation of ratio
+
+top <- 1.3716*1.01061*0.84560
+bottom <- 1.3716*0.4204*0.84560
+
+ratio <- top/bottom
+ratio
+```
+  
+  ii. The hazard ratio comparing patients who have cancer of the prostate on neutron therapy phase=0, compared to patients who have cancer of the cervix, on photon therapy phase=0.
+```{r fii}
+# cancer on prostate, neutron therapy, phase0
+first <- 1.3716*1*0.42036*1 
+
+# who have cancer of the cervix, on photon therapy phase=0.
+second <- 0.51584*1 
+
+ratio <- first/second
+ratio
+```
+
+g. Check the assumptions of the Cox regression analysis.
+```{r g}
+# plot residuals
+plot(cox.zph(fit = cox_fit_adj))
+
+# assumption doesnt hold
+```
+
+h. We are also interested in a combined outcome of survival time to either death or diagnosis of metastases.
+  i. Construct a new combined survival outcome variable as the time to either death or diagnosis of metastasis.
+```{r help}
+## not the right formula
+# not super sure since some peoop;e dont die and no metastasis; just give stime?
+neutron <- neutron %>% mutate(combin_survival = ifelse(meta=='Yes',
+                                            metatime,
+                                            stime))
+summary(neutron$combin_survival)
+
+## Prof's method
+
+## Combined event variable. If alive and no metastasis, no event occurred (=0) ## If either or both dead/metastases, code as event (=1)
+neutron$metadead <- ifelse(neutron$death == 0 & neutron$meta == "No", 0, 1)
+## Find the time of the event that came first - metastasis will
+## always occur first if present, and death otherwise
+neutron$meta_stime <- ifelse(neutron$meta == "Yes", neutron$metatime, neutron$stime)
+## Find the duration from metastasis onset to death
+neutron$meta_duration <- neutron$stime - neutron$metatime
+## Summary of this new variable for sense check
+summary(neutron$meta_duration)
+```
+  
+  ii. Use descriptive analysis to compare the occurrence and timing of metastasis and death. Are results likely to be very different for the combined outcome of metastasis or death?
+```{r help}
+## descriptive analysis: table + hist()
+
+
+# compare occurence
+anovafit <- aov(death ~ meta, 
+    data = neutron)
+summary(anovafit)
+# p value is significant, can reject null hypothesis of death being the same across meta yes and meta no
+
+
+# compare timing
+timingdeath_anovafit <- aov(stime ~ meta, 
+    data = neutron)
+summary(timingdeath_anovafit)
+# p value is not significant, cannot reject null hypothesis of survival time being same across meta yes and meta no
+
+
+# use combined
+timing_anovafit <- aov(combin_survival ~ meta, 
+    data = neutron)
+summary(timing_anovafit)
+# p value is significant, can reject null hypothesis of survival time being same across metayes and meta no
+```
+  
+  iii. Repeat your analysis of the effect of treatment adjusted for site and phase using this combined outcome of time to death or metastasis.
+```{r}
+# compare occurence
+anovafit <- aov(death ~ meta+site+phase, 
+    data = neutron)
+summary(anovafit)
+# p value is significant, can reject null hypothesis of death being the same across meta yes and meta no
+
+
+# compare timing
+timingdeath_anovafit <- aov(stime ~ meta+site+phase, 
+    data = neutron)
+summary(timingdeath_anovafit)
+# p value is not significant for meta, cannot reject null hypothesis of survival time being same across meta yes and meta no
+
+
+# use combined
+timing_anovafit <- aov(combin_survival ~ meta+site+phase, 
+    data = neutron)
+summary(timing_anovafit)
+# p value is significant, can reject null hypothesis of survival time being same across metayes and meta no
+```
+
+# C1. 
+In Lecture 8, we derived the likelihood function for a logistic regression model and the log-likelihood. 
+
+In this problem, optimise the log-likelihood function to find the maximum likelihood estimates, standard errors, confidence intervals, and p-values for the regression coefficients β0 and β1.
+
+Use the dataset on child lung function among a sample of children in Lima, Peru from earlier problem sets, in the data set perulung_ems.csv. Use presence of respiratory symptoms (variable respsymptoms) as the outcome and age as the exposure.
+```{r C1 import}
+perulung <- read.csv("perulung_ems.csv")
+perulung
+```
+
+a) Write an R function implementing the formula above to calculate the log likelihood as a function of parameters θ = {β0, β1}. (Hint: the first argument to your function should be a vector of parameters that includes both β0 and β1. For added flexibility, it might be useful to provide the outcome y and covariate value x1 as additional arguments.)
+```{r}
+ll_logistic <- function(theta, y, x1) {
+  beta0 <- theta[1]
+  beta1 <- theta[2]
+  
+  ll <- 0
+  for (i in 1:length(y)){
+    ll <- ll + y[i]*(beta0+beta1*x1[i]) - log(1 + exp(beta0 + beta1*x1[i]))
+  }
+  
+  return(ll)
+}
+```
+Test the function by calculating the log-likelihood for parameters where β0 is the log odds of the sample proportion of respsymptoms and the slope β1 varies from -0.5 to 0.5
+```{r}
+p_symp <- mean(perulung$respsymptoms)
+beta0_init <- log(p_symp / (1 - p_symp))
+```
+
+```{r}
+beta0 <- unname(prop.table(table(perulung$respsymptoms))[2]) # gives p of symptom
+## note that beta0 is actually log odds!! = log(p/1-p)
+beta0 <- log(beta0/(1-beta0))
+
+beta1_list <- seq(from = -0.5, to = 0.5, by = 0.1)
+for (i in beta1_list){
+  print(ll_logistic(c(beta0,i), perulung$respsymptoms, perulung$age))
+}
+```
+
+```{r} 
+# test against prof
+theta_init <- c(beta0, 0)
+ll_logistic(theta_init, perulung$respsymptoms, perulung$age)
+```
+
+
+b) Use the optim() function to find the values of θ that maximise the log-likelihood. See ?optim for more details on this function.
+Below are suggested values for the additional
+```{r}
+#optC <- optim(<par>, <fn>, y = <varname>, x1 = <varname>,
+#              method = "BFGS", control = list(fnscale = -1), hessian = TRUE)
+```
+
+• <par>: initial theta values for the optimisation. This should be a vector of the same length as theta. Using the test values from (a) would be sensible starting values (but the choice should not matter much–try repeating it with a few different values!).
+• <fn>: the name of the function to be minimized (or maximized), with first argument the vector of parameters over which minimization is to take place.
+• y = <varname>: fill in the name of the variable with the outcome as a vector.
+• x1 = <varname>: fill in the name of the variable with your exposure as a vector.
+• method = "BFGS": this tells optim() to use the Broyden, Fletcher, Goldfarb and Shanno optimi-
+sation algorithm, which uses derivatives to search for the optimum.
+• control = list(fnscale = -1): by default, the optim() function searches for the values of
+<par> that minimise <fn>. Setting fnscale = -1 tells optim() to search for the values that
+maximise the log likelihood.
+• hessian = TRUE: This tells optim() to also return the Hessian (matrix of second derivatives) at the optimised value—the quadratic approximation to the shape of the log-likelihood surface at the MLE. In likelihood theory, the negative of this matrix is called the Fisher information matrix or just the information matrix. This will be used to calculate the covariance, standard errors, and confidence intervals.
+
+What are the maximum likelihood estimates for β0 and β1? Interpret the values for the relationship between age and respiratory symptoms.
+```{r help}
+optC <- optim(c(beta0,0),  #theta aka beta0, beta1
+               ll_logistic, 
+               y = perulung$respsymptoms, 
+               x1 = perulung$age,
+              method = "BFGS", control = list(fnscale = -1), hessian = TRUE)
+optC
+```
+
+c) Calculate the inverse of the negative information matrix (negative of the Hessian) with solve(-optC$hessian). This is the estimate of the covariance matrix. Use the covariance matrix to calculate the standard error for βˆ0 and βˆ1 (Hint: square-root of the diagonal elements), 95% confidence intervals for βˆ0 and βˆ1, the z-statistic, and the p-values.
+```{r}
+# inverse of the negative information matrix (negative of the Hessian) aka estimate of covariance matrix
+solve(-optC$hessian)
+
+# calculate standard error via sqrt of diagonal element
+sqrt(diag(solve(-optC$hessian)))
+
+# 95% CI
+
+# z stat
+
+# pval
+```
+
+d) Use the glm() function to fit the same logistic regression model for respiratory symptoms as a function of age. Compare the results to your estimates from parts (b) and (c).
+```{r}
+
+```
+
+e) Repeat the exercise for parts (a) to (d) for a multiple logistic regression model with respiratory symptoms as a function of sex, age, and FEV1. (Hint: update the function to calculate the log-likelihood function in part (a) to (1) include additional parameters in the theta vector, (2) provide the values for additional covariates x2 and x3, and update the calculation for the linear predictor to include the additional parameters and covariates.)
+```{r}
+
+```
+
